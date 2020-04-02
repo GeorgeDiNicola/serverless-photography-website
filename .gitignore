@@ -1,6 +1,10 @@
 # Mac DS Store files
 .DS_Store
 
+# Webpack ignore
+static/dist/
+static/node_modules/
+
 # Distribution / packaging
 .Python
 build/
