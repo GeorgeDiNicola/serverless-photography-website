@@ -3,7 +3,7 @@
 
 # Webpack ignore
 static/dist/
-static/node_modules/
+node_modules/
 
 # Distribution / packaging
 .Python
