@@ -2,7 +2,7 @@
 .DS_Store
 
 # Webpack ignore
-static/dist/
+static/dist/*
 node_modules/
 
 # Distribution / packaging
