@@ -15,12 +15,16 @@ export default class App extends Component {
     ]
   };
 
-  constructor(props) {
-    super(props);  // you must also pass props to the constructor of the base class.
-    console.log('App - Constructor', this.props);
+  constructor() {
+    super();  // you must also pass props to the constructor of the base class.
+    console.log('App - Constructor');
     //this.state = this.props.something;
-  }
+  };
 
+  componentDidMount() {
+    // Ajax Call
+    console.log('App - Mounted');
+  };
 
   handleIncrement = counter => {
     const counters = [...this.state.counters];  // this is a fast way to copy the state object to the "counters" array!
@@ -28,7 +32,7 @@ export default class App extends Component {
     counters[index] = {...counter };  // clone the counter object received in the function. This is because we should not set the state directly
     counters[index].value++;
     this.setState({ counters });  // set the state to the new counters array
-  }
+  };
 
   handleReset = () => {
     const counters = this.state.counters.map(c => {
@@ -46,6 +50,8 @@ export default class App extends Component {
 
   // we have to wrap with React.Fragment since there are multiple components being rendered
   render() {
+    console.log("App - Rendered");
+
     return (
       <React.Fragment>
         <NavBar 

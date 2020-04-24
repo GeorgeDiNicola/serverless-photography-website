@@ -6,6 +6,8 @@ export default class Counters extends Component {
 
 	render() {
 
+	  console.log("Counters - Rendered")
+
 	  const { onReset, counters, onDelete, onIncrement } = this.props; // use of object destructuring
 	
 	// the Counter class is called 4 times (number of counter objects in state), and h4 is passed to counter.jsx through this.props.children

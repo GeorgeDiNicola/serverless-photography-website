@@ -2,12 +2,26 @@ import React, { Component } from 'react';
 
 export default class Counter extends Component {
 
+	componentDidUpdate(prevProps, prevState) {
+		console.log('prevProps', prevProps);
+		console.log('prevState', prevState);
+		if (prevProps.counter.value !== this.props.counter.value) {
+			// Ajax call and get new data from the server
+		}
+	};
+
+	componentWillUnmount() {
+		console.log("Counter - Unmount");
+	};
+
 	//constructor() {
 	//	super();  // call the constructor of the parent class
 	//	this.handleIncrement = this.handleIncrement.bind(this);  //gives the handleIncrement method access to the this method
 	//};
 
 	render() {
+		console.log("Counter - Rendered")
+
 		return (
 			<div>
 			  <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
