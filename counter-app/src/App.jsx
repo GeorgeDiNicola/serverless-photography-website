@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import NavBar from './components/navbar';
-import Counters from './components/counters';
+import AppRouter from './components/AppRouter.jsx';
+
 import './App.css';
+//import NavBar from './components/navbar';
+
 
 
 export default class App extends Component {
   
   state = {
-    counters: [
-      { id: 1, value: 4 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 }
+    photos: [
+      { id: 1, value: 1 },
+      { id: 2, value: 2 },
+      { id: 3, value: 3 },
+      { id: 4, value: 4 }
     ]
   };
 
@@ -26,6 +28,7 @@ export default class App extends Component {
     console.log('App - Mounted');
   };
 
+  /*
   handleIncrement = counter => {
     const counters = [...this.state.counters];  // this is a fast way to copy the state object to the "counters" array!
     const index = counters.indexOf(counter);
@@ -47,23 +50,14 @@ export default class App extends Component {
     const counters = this.state.counters.filter(c => c.id !== counterId);  // filter out the counter with the given id. get all of the ones without the given id.
     this.setState({ counters });  // overwrite the counters property with this counters constant
   };
+  */
 
   // we have to wrap with React.Fragment since there are multiple components being rendered
   render() {
     console.log("App - Rendered");
 
     return (
-      <React.Fragment>
-        <NavBar/>
-        <main className="container">
-          <Counters 
-            counters={this.state.counters}
-            onReset={this.handleReset}
-            onIncrement={this.handleIncrement}
-            onDelete={this.handleDelete}
-          />
-        </main>
-      </React.Fragment>
+      <AppRouter />
     );
   }
 }
