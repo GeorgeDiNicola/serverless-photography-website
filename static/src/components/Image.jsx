@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/image.css'
 
 export default class Image extends Component {
 
@@ -9,7 +10,7 @@ export default class Image extends Component {
 	render() {
 
 		return (
-		  <div>
+		  <div className="Image">
 		    <img src={this.props.src} width="500" alt="" />
 		  </div>
 		);
