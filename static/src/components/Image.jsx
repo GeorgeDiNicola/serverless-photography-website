@@ -10,7 +10,7 @@ export default class Image extends Component {
 
 		return (
 		  <div>
-		    <img src={this.props.imagePath} width="500" alt="" />
+		    <img src={this.props.src} width="500" alt="" />
 		  </div>
 		);
 	}
