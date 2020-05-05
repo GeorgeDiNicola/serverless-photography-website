@@ -21,12 +21,12 @@ export default class Photo extends Component {
         const {width, height} = this.state.dimensions;
 
 		return (
-		  <div>
-            dimensions width{width}, height{height}
-             <img 
+		  <div class="Image">
+            {/* dimensions width{width}, height{height} */}
+             <img
              	onLoad={this.onImgLoad} 
              	src={src}
-             	width="500" 
+             	width="800" 
 		    	alt=""
              />
            </div>

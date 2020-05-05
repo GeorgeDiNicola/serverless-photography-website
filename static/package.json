@@ -10,6 +10,7 @@
     "fs": "0.0.1-security",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-grid-gallery": "^0.5.5",
     "react-native": "^0.62.2",
     "react-responsive-image-grid": "^1.0.0",
     "react-router-dom": "^5.1.2",
