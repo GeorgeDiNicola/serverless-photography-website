@@ -7,6 +7,8 @@ import App from './App.jsx';
 import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.css";
 
+document.body.style = 'background: #333;';  // TODO: change this to CSS solution
+
 ReactDOM.render(<App />, document.getElementById('root'));  //this holds the root component
 
 // If you want your app to work offline and load faster, you can change

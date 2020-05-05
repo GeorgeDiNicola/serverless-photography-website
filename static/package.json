@@ -7,10 +7,16 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "fs": "0.0.1-security",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-grid-gallery": "^0.5.5",
+    "react-native": "^0.62.2",
+    "react-responsive-image-grid": "^1.0.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "reactstrap": "^8.4.1",
+    "require-dir": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
