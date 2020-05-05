@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Image from './Image';
+import Photo from './Photo';
 
 var listOfImages =[];
 
@@ -11,17 +11,18 @@ export default class Photography extends Component {
     componentWillMount() {
         listOfImages = this.importAll(require.context('../images/', false, /\.(png|jpe?g|svg)$/));
     }
-    
+
     render(){
+
         return(
           <div>
           {
             listOfImages.map(
               (image, index) =>    
-                <Image
+                <Photo
                   key={index} 
                   src={image} 
-                  alt="info"
+                  alt=""
                 />
             )
           }
