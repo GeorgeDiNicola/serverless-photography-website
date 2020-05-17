@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ReactPlayer from "react-player"
-import "../css/video.css"
+import ReactPlayer from "react-player";
+import "../css/video.css";
 
 export default class Videography extends Component {
 
