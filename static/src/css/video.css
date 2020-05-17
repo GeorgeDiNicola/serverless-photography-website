@@ -1,8 +1,8 @@
 h1 {
 	color: LightSeaGreen;
 	text-align: center;
-	padding-top: 25px;
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	padding-top: 15px;
+	font-family: "Georgia, serif";
 }
 
 .player-wrapper {
@@ -18,5 +18,5 @@ h1 {
 }
 
 .video-page {
-	padding: 10px;
+	padding: 0px;
 }
