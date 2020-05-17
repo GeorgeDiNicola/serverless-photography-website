@@ -1,0 +1,22 @@
+h1 {
+	color: LightSeaGreen;
+	text-align: center;
+	padding-top: 15px;
+	font-family: "Georgia, serif";
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 49%; /* Player ratio: (100 - navbar heigh) / (1280 / 720) */
+}
+ 
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+.video-page {
+	padding: 0px;
+}
