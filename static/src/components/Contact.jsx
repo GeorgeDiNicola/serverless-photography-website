@@ -51,12 +51,8 @@ export default class Contact extends Component {
                       <MDBCardBody className="white-text">
                         <h2>Contact Me</h2>
                         <hr className="hr-light" />
-                          <span class="glyphicon glyphicon-earphone" aria-hidden="true">
-                           (484)-574-2994</span>
-                          <span class="glyphicon glyphicon-envelope" aria-hidden="true"> 
-                            williamdenham107@gmail.com</span>
-                           <h5></h5>
-                           <h5></h5>
+                           <h5>(484)-574-2994</h5>
+                           <h5>williamdenham107@gmail.com</h5>
                            <h5>LinkedIn</h5>
                            <h5>Facebook</h5>
                         <div className="text-center mt-4 black-text">
