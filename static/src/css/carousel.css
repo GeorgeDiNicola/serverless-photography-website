@@ -1,4 +1,10 @@
-#container, .carousel {
+#container {
+	height:100%;
+	margin: 0;
+	width: 100%;
+}
+
+.carousel {
 	height:100%;
 	margin: 0;
 	width: 100%;

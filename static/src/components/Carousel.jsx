@@ -5,7 +5,7 @@ import "../css/carousel.css";
 
 var imgUrls = ["../images/1.jpg", "../images/2.jpg"];
 
-export default class Carousel extends React.Component {
+export default class Carousel extends Component {
   constructor (props) {
     super(props);
 
@@ -21,9 +21,10 @@ export default class Carousel extends React.Component {
     return r.keys().map(r);
   }
   
-  //componentWillMount() {
-  //  imgUrls = this.importAll(require.context('../images/', false, /\.(png|jpe?g|svg)$/));
-  //}
+  componentWillMount() {
+    imgUrls = this.importAll(require.context('../images/', false, /\.(png|jpe?g|svg)$/));
+  	imgUrls = ["../images/1.jpg", "../images/2.jpg"];
+  }
 
   previousSlide () {
     const lastIndex = imgUrls.length - 1;
@@ -56,7 +57,9 @@ export default class Carousel extends React.Component {
           glyph="&#9664;" 
         />
 
+        <h3>Hello1</h3>
         <ImageSlide url={ imgUrls[this.state.currentImageIndex] } />
+        <h3>Hello3</h3>
 
         <Arrow
           direction="right"
