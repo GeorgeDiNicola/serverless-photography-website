@@ -14,7 +14,6 @@ export default class Photo extends Component {
                                    width:img.naturalWidth}});
     }
 
-
 	render() {
 
 		const {src} = this.props;
