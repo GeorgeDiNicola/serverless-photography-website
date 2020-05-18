@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Photo from './Photo';
 
-var listOfImages =[];
+var listOfImages = [];
 
 export default class Photography extends Component {
 
