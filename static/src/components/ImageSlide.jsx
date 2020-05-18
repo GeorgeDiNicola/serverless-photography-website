@@ -15,10 +15,11 @@ const ImageSlide = ({ url }) => {
 
   return (
     <React.Fragment>
-    <div className="image-slide" style={styles}>
-    </div>
-    <h3>Hello2</h3>
+      <div className="image-slide" style={styles}>
+      </div>
+      <h3>Hello2</h3>
     </React.Fragment>
   );
 };
+
 export default ImageSlide;
