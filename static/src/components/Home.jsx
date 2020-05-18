@@ -8,7 +8,7 @@ export default class Home extends Component {
 
 	  return (
 	    <div id="container">
-	    <Carousel />
+	      <Carousel />
         </div>   
 	  )
     }
