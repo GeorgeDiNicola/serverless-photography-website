@@ -1,0 +1,9 @@
+.home-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 92vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
