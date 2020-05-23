@@ -1,9 +1,77 @@
-.home-image {
+.home-image1 {
+  background-image: url("../carousel_images/53.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 91vh;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transform: scale(1.1);
+}
+
+.home-image2 {
+  background-image: url("../carousel_images/28.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 91vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
+}
+
+.home-image3 {
+  background-image: url("../carousel_images/23.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 91vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
+}
+
+.home-image4 {
+  background-image: url("../carousel_images/71.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 91vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
+}
+
+.home-image5 {
+  background-image: url("../carousel_images/66.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 91vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
+}
+
+.home-image6 {
+  background-image: url("../carousel_images/33.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 91vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
 }

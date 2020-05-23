@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from "react-player";
+import {Carousel} from 'react-bootstrap';
 import "../css/video.css";
 
 export default class Videography extends Component {
@@ -13,22 +14,20 @@ export default class Videography extends Component {
 
 	render() {
 		return (
-		  <React.Fragment>
-		  <h1>Professional Video Reels</h1>
-		  <div className="video-page">
+		    <div className="player-wrapper">
+		    <Carousel interval="100000">
 		    {this.state.video_urls.map(url_text => 
-		    <div className='player-wrapper'>
-		    <ReactPlayer
-		      className='react-player'
-		      url={url_text}
-		      width='100%'
-		      height='100%'
-		      controls={true}
-		    />
-		    </div>
+		    /* have this be horizontal scrolling */
+		      <Carousel.Item>
+		        <ReactPlayer
+		          className='react-player'
+		          url={url_text}
+		          controls={true}
+		        />
+		      </Carousel.Item>
 		    )}
-		  </div>
-		  </React.Fragment>
+		    </Carousel>
+		    </div>
 		)
 	}
 }

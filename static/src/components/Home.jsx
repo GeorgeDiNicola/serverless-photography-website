@@ -2,36 +2,34 @@ import React, { Component } from 'react';
 import {Carousel} from 'react-bootstrap';
 import "../css/home.css"
 
-var listOfImages = [];
+var listOfClasses = [
+					"home-image1", 
+					"home-image2", 
+					"home-image3", 
+					"home-image4", 
+					"home-image5",
+					"home-image6"
+					];
 
 export default class Home extends Component {
-
-	importAll(r) {
-        return r.keys().map(r);
-    }
-    componentWillMount() {
-        listOfImages = this.importAll(require.context('../carousel_images/', false, /\.(png|jpe?g|svg)$/));
-    }
 
 	render() {
 
 	  return (
-	  	<div>
 	  	  <Carousel interval="3000">
           {
-            listOfImages.map(
-              (image, index) =>
+            listOfClasses.map(
+              (c, index) =>
                   <Carousel.Item>
                     <img
-                      className="home-image"
-                      src={image}
+                      className={c}
+                      //src={image}
                       alt=""
                     />
                   </Carousel.Item>
               )
             }
             </Carousel>
-          </div> 
 	  )
     }
 }

@@ -5,18 +5,27 @@ h1 {
 	font-family: "Georgia, serif";
 }
 
+
 .player-wrapper {
-  position: relative;
-  padding-top: 49%; /* Player ratio: (100 - navbar heigh) / (1280 / 720) */
+  padding-top: 5%;
+  margin: auto;
 }
  
 .react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
+  margin: auto;
+  width: 50%;
 }
 
-.video-page {
-	padding: 0px;
+
+.background-video {
+  background-image: url("https://www.youtube.com/watch?v=DRaWc9GhYRk");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 92vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 0.1px transparent;
 }
