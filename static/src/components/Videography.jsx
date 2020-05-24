@@ -15,17 +15,18 @@ export default class Videography extends Component {
 	render() {
 		return (
 		  <div className="player-wrapper">
-		      <Carousel className="center" interval="100000">
-		        {this.state.video_urls.map(url_text => 
-		          <Carousel.Item>
-		            <ReactPlayer
-		              className='react-player'
-		              url={url_text}
-		              controls={true}
-		            />
-		          </Carousel.Item>
-		        )}
-		      </Carousel>
+		    {/* for arrows in video, use div className="center" here */}
+		    <Carousel className="center" interval="1000000">
+		      {this.state.video_urls.map(url_text => 
+		        <Carousel.Item>
+		          <ReactPlayer
+		            className='react-player'
+		            url={url_text}
+		            controls={true}
+		          />
+		        </Carousel.Item>
+		      )}
+		    </Carousel>
 		  </div>
 		)
 	}

@@ -33,10 +33,10 @@ export default class Home extends Component {
               )
             }
         </Carousel>
-        <Contact>
-        </Contact>
         <Videography>
         </Videography>
+        <Contact>
+        </Contact>
         </React.Fragment>
 	  )
     }
