@@ -13,6 +13,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import '../css/navbar.css'
 
 // Stateless functional component
 export default function NavBar() {
