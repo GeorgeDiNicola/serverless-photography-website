@@ -26,7 +26,7 @@ export default class Contact extends Component {
         <MDBView>
           <MDBMask className="d-flex justify-content-center align-items-center gradient">
             <MDBContainer>
-                  <h1 className="h1-responsive font-weight-bold">Billy Denham</h1>
+                  <h1>Billy Denham</h1>
                   <hr className="hr-light" />
                   <h6>
                     Photographer based in Philadelphia, PA<br/>
