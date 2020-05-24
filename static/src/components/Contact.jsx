@@ -26,15 +26,14 @@ export default class Contact extends Component {
         <MDBView>
           <MDBMask className="d-flex justify-content-center align-items-center gradient">
             <MDBContainer>
-                  <h1>Billy Denham</h1>
-                  <hr className="hr-light" />
-                  <h6>
-                    Photographer based in Philadelphia, PA<br/>
-                    For general or work inquires please contact me at:<br/>
-                    <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
+              <h1>Billy Denham</h1>
+                <h6>
+                  Photographer based in Philadelphia, PA<br/>
+                  For general or work inquires please contact me at:<br/>
+                  <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
                   <br/>
-                    <a href="linkedin.com/in/william-denham-33724b180">Connect on LinkedIn</a>
-                  </h6>
+                  <a href="linkedin.com/in/william-denham-33724b180">Connect on LinkedIn</a>
+                </h6>
             </MDBContainer>
           </MDBMask>
         </MDBView>
