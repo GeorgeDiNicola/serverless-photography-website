@@ -14,22 +14,19 @@ export default class Videography extends Component {
 
 	render() {
 		return (
-		    <div className="player-wrapper">
-		    <div className="center">
-		    <Carousel interval="100000">
-		    {this.state.video_urls.map(url_text => 
-		    /* have this be horizontal scrolling */
-		      <Carousel.Item>
-		        <ReactPlayer
-		          className='react-player'
-		          url={url_text}
-		          controls={true}
-		        />
-		      </Carousel.Item>
-		    )}
-		    </Carousel>
-		    </div>
-		    </div>
+		  <div className="player-wrapper">
+		      <Carousel className="center" interval="100000">
+		        {this.state.video_urls.map(url_text => 
+		          <Carousel.Item>
+		            <ReactPlayer
+		              className='react-player'
+		              url={url_text}
+		              controls={true}
+		            />
+		          </Carousel.Item>
+		        )}
+		      </Carousel>
+		  </div>
 		)
 	}
 }
