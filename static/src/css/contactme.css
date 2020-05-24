@@ -37,12 +37,13 @@
   color: #fff !important;
 }
 
-h6 {
-  color: LightSeaGreen;
+h1 {
+  color: white;
+  font-family: 'Snell Roundhand';
 }
 
 h2 {
-  color: LightSeaGreen;
+  color: white;
   text-align: center;
 }
 
@@ -52,5 +53,6 @@ h5 {
 }
 
 h6 {
+  color: white;
 	text-align: center;
 }
