@@ -20,7 +20,6 @@ export default class AppRouter extends Component {
 		    <div>
 		      <NavBar />
 		      <div className="page-body">
-		        <Route exact path="/" component={Home}/>
 		        <Route exact path="/Home" component={Home}/>
 		        <Route exact path="/Photography" component={Photography}/>
 		        <Route exact path="/Videography" component={Videography}/>

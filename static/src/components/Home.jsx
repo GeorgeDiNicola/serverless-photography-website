@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Carousel} from 'react-bootstrap';
-import "../css/home.css"
+import Videography from './Videography';
+import Contact from './Contact';
+import "../css/home.css";
 
 var listOfClasses = [
 					"home-image1", 
@@ -16,7 +18,8 @@ export default class Home extends Component {
 	render() {
 
 	  return (
-	  	  <Carousel interval="3000">
+	  	  <React.Fragment>
+        <Carousel interval="3000">
           {
             listOfClasses.map(
               (c, index) =>
@@ -29,7 +32,12 @@ export default class Home extends Component {
                   </Carousel.Item>
               )
             }
-            </Carousel>
+        </Carousel>
+        <Contact>
+        </Contact>
+        <Videography>
+        </Videography>
+        </React.Fragment>
 	  )
     }
 }
