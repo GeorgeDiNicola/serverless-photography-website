@@ -20,7 +20,7 @@ import { Link, Section, animateScroll as scroll } from "react-scroll";  // might
 export default function NavBar() {
 
 	return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top scrolling-navbar">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black scrolling-navbar">
         <div class="container-fluid">
         <a class="navbar-brand" href="#">Billy Denham</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
