@@ -1,31 +1,16 @@
-h1 {
-	color: LightSeaGreen;
-	text-align: center;
-	padding-top: 15px;
-	font-family: "Georgia, serif";
-}
-
-
 .player-wrapper {
-  padding-top: 5%;
-  margin: auto;
+  position: relative;
+  height: 94vh;
+  width: 100%;
 }
  
-.react-player {
-  margin: auto;
-  width: 50%;
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-.background-video {
-  background-image: url("https://www.youtube.com/watch?v=DRaWc9GhYRk");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 92vh;
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: solid 0.1px transparent;
+.react-player {
+  margin: auto;
 }
