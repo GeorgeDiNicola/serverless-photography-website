@@ -14,6 +14,7 @@
   -moz-transition: height 0.5s linear;
   transition: height 0.5s linear;
 }
+
 #topbar a {
   color: #fff;
   font-size:1.3em;
@@ -50,43 +51,4 @@
 #stickynav #nav li a:hover { 
   text-decoration: none;
   background: #d8f0d0;
-}
-
-form .basic {
-  display: block;
-  font-size: 1.5em;
-  color: #555;
-  font-family: Arial, Tahoma, sans-serif;
-  padding: 4px 6px;
-  margin-bottom: 10px;
-}
- 
-form .basictxt {
-  display: block;
-  width: 550px;
-  height: 180px;
-  font-family: Arial, Tahoma, sans-serif;
-  color: #666;
-  padding: 5px 8px;
-  font-size: 1.6em;
-  line-height: 1.4em;
-}
- 
-/** page structure **/
-#w {
-  display: block;
-  width: 750px;
-  margin: 0 auto;
-  padding-top: 30px;
-}
- 
-#content {
-  display: block;
-  width: 100%;
-  background: #fff;
-  padding: 25px 20px;
-  padding-bottom: 35px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
