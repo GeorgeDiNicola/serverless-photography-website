@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ImageGallery from 'react-image-gallery';
 import Photo from './Photo';
+import "react-image-gallery/styles/css/image-gallery.css";
 
 var listOfImages = [];
 
@@ -36,7 +37,7 @@ export default class Photography extends Component {
             items={images} 
             showBullets={true}
             showIndex={true}
-            showThumbnails={false}
+            showThumbnails={true}
             lazyLoad={true}
             showPlayButton={false}
           />
