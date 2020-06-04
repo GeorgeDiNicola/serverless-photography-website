@@ -4,35 +4,28 @@ import Photo from './Photo';
 import "react-image-gallery/styles/css/image-gallery.css";
 
 var listOfImages = [];
-
-const images = [
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-  ];
+var images = [];
 
 export default class Photography extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   importAll(r) {
     return r.keys().map(r);
   }
   componentWillMount() {
-    listOfImages = this.importAll(require.context('../images/', false, /\.(png|jpe?g|svg)$/));
+    // import the list
+    listOfImages = this.importAll(require.context('../images/nature/', false, /\.(png|jpe?g|svg)$/));
+    // create a objects from the imported listOfImages
+    images = listOfImages.map(x => ({original: x, thumbnail: x}));
   }
 
   render(){
 
       return(
-        <div className="screen">
+        <div>
           <ImageGallery 
             items={images} 
             showBullets={true}

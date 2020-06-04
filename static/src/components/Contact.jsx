@@ -14,7 +14,6 @@ import {
   MDBInput,
   MDBFormInline
 } from "mdbreact";
-import '../images/83.jpg';
 import '../css/contactme.css';
 
 export default class Contact extends Component {
