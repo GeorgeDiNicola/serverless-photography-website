@@ -13,7 +13,7 @@ export default class Photography extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedFilter: "Events",
+      selectedFilter: "Still Life",
     };
     this.handleSelect = this.handleSelect.bind(this);
     this.filterPhotos = this.filterPhotos.bind(this);
@@ -54,9 +54,11 @@ export default class Photography extends Component {
       listOfImages = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
     }
     // use all images
+    /*
     else {
       listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
     }
+    */
     // create a objects from the imported listOfImages
     images = listOfImages.map(x => ({original: x, thumbnail: x}));
   }
@@ -78,6 +80,7 @@ export default class Photography extends Component {
           <DropdownButton id="dropdown-item-button" title={filterButtonTitle} onSelect={this.handleSelect}>
             <Dropdown.Item eventKey="All">All</Dropdown.Item>
             <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
+            <Dropdown.Item eventKey="Nature">Nature</Dropdown.Item>
             <Dropdown.Item eventKey="Portraits">Portraits</Dropdown.Item>
             <Dropdown.Item eventKey="Still Life">Still Life</Dropdown.Item>
             <Dropdown.Item eventKey="Street">Street</Dropdown.Item>
@@ -89,7 +92,7 @@ export default class Photography extends Component {
           <ImageGallery 
             items={images} 
             showBullets={true}
-            showIndex={true}
+            showIndex={false}
             showThumbnails={true}
             lazyLoad={true}
             showPlayButton={true}
