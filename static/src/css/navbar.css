@@ -1,5 +1,9 @@
 .navbar .navbar-nav {
   margin: auto;
-  white-space: nowrap; 
-  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.activated {
+    border-bottom: 1px solid black;
+    font-color: black;
 }
