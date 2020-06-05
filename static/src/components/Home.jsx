@@ -18,32 +18,20 @@ export default class Home extends Component {
 	render() {
 
 	  return (
-	  	  <React.Fragment>
-        <section id="home" class="section">
-          <Carousel interval="3000">
-            {
-              listOfClasses.map(
-                (c, index) =>
-                    <Carousel.Item>
-                      <img
-                        className={c}
-                        //src={image}
-                        alt=""
-                      />
-                    </Carousel.Item>
-                )
-              }
-          </Carousel>
-        </section>
-        <section id="videography" class="section">
-          <Videography>
-          </Videography>
-        </section>
-        <section id="contact" class="section">
-          <Contact>
-          </Contact>
-        </section>
-        </React.Fragment>
+      <Carousel interval="3000">
+        {
+          listOfClasses.map(
+            (c, index) =>
+              <Carousel.Item>
+                <img
+                  className={c}
+                  //src={image}
+                  alt=""
+                />
+              </Carousel.Item>
+          )
+         }
+      </Carousel>
 	  )
     }
 }
