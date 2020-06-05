@@ -11,6 +11,7 @@ var listOfClasses = [
 					"home-image6"
 		];
 
+// TODO: this could be converted to a functional component
 export default class Home extends Component {
 
 	render() {
