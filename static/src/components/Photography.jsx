@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../css/photography.css";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 var listOfImages = [];
 var images = [];
@@ -12,7 +13,7 @@ export default class Photography extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,  // for the drop-down menu filter
+      selectedFilter: "all",
     };
   }
 
@@ -21,59 +22,58 @@ export default class Photography extends Component {
   }
 
   componentWillMount() {
-    // import the list
-    listOfImages = this.importAll(require.context('../images/events/', false, /\.(png|jpe?g|svg)$/));
+    // import the list based on what the user chose in the drop-down
+    if (this.state.filter === 'Events') {
+      listOfImages = this.importAll(require.context('../images/events/', false, /\.(png|jpe?g|svg)$/));
+    }
+    else if (this.state.filter === 'Nature') {
+      listOfImages = this.importAll(require.context('../images/nature/', false, /\.(png|jpe?g|svg)$/));
+    }
+    else if (this.state.filter === 'Portraits') {
+      listOfImages = this.importAll(require.context('../images/portrait/', false, /\.(png|jpe?g|svg)$/));
+    }
+    else if (this.state.filter === 'Still Life') {
+      listOfImages = this.importAll(require.context('../images/still_life/', false, /\.(png|jpe?g|svg)$/));
+    }
+    else if (this.state.filter === 'Street') {
+      listOfImages = this.importAll(require.context('../images/street/', false, /\.(png|jpe?g|svg)$/));
+    }
+    else if (this.state.filter === 'Themed') {
+      listOfImages = this.importAll(require.context('../images/themed/', false, /\.(png|jpe?g|svg)$/));
+    }
+    else if (this.state.filter === 'Weddings') {
+      listOfImages = this.importAll(require.context('../images/weddings/', false, /\.(png|jpe?g|svg)$/));
+    }
+    else if (this.state.filter === 'Wild Life') {
+      listOfImages = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
+    }
+    // use all
+    else {
+      listOfImages = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
+    }
     // create a objects from the imported listOfImages
     images = listOfImages.map(x => ({original: x, thumbnail: x}));
   }
-
-  componentDidMount() {
-    document.addEventListener("mousedown", this.handleClickOutside);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClickOutside);
-  }
-
-  handleButtonClick = () => {
-    this.setState(state => {
-      return {
-        open: !state.open,
-      };
-    });
-  };
-
-  handleClickOutside = event => {
-    if (container.current && !container.current.contains(event.target)) {
-      this.setState({
-        open: false,
-      });
-    }
-  };
 
   render(){
 
       return(
         <React.Fragment>
         <div className="container" ref={container}>
-          <button type="button" class="button" onClick={this.handleButtonClick}>
-             ☰
-          </button>
-            {this.state.open && (
-            <div class="dropdown">
-              <ul>
-                <li>All</li>
-                <li>Events</li>
-                <li>Nature</li>
-                <li>Portraits</li>
-                <li>Still Life</li>
-                <li>Street</li>
-                <li>Themed</li>
-                <li>Weddings</li>
-                <li>Wild Life</li>
-              </ul>
-            </div>
-            )}
+          <Dropdown>
+            <DropdownToggle caret>
+              Filter
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem header>Header</DropdownItem>
+              <DropdownItem>Some Action</DropdownItem>
+              <DropdownItem disabled>Action (disabled)</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>Foo Action</DropdownItem>
+              <DropdownItem>Bar Action</DropdownItem>
+              <DropdownItem>Quo Action</DropdownItem>
+            </DropdownMenu>
+         </Dropdown>
         </div>
         <div>
           <ImageGallery 
