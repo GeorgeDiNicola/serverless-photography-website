@@ -3,7 +3,28 @@
   white-space: nowrap;
 }
 
-.activated {
+.activated-home {
     border-bottom: 1px solid black;
-    font-color: black;
+}
+.activated-photo {
+    border-bottom: 1px solid white;
+}
+.activated-video {
+    border-bottom: 1px solid white;
+}
+.activated-contact {
+    border-bottom: 1px solid white;
+}
+
+.nav-link#home {
+  color: black !important;
+}
+.nav-link#photo {
+  color: white !important;
+}
+.nav-link#video {
+  color: white !important;
+}
+.nav-link#contact {
+  color: white !important;
 }

@@ -1,9 +1,8 @@
 #classicformpage .view {
-  background-image: url("../images/street/13.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
   background-position: center center;
-  height: 94vh;
+  height: 100vh;
   padding-top: 50px;
 }
 
