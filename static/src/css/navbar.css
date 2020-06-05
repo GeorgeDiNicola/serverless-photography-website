@@ -1,3 +1,5 @@
-.container {
-  display: inline-block;
+.navbar .navbar-nav {
+  margin: auto;
+  width: 31%;
+  white-space: nowrap; 
 }
