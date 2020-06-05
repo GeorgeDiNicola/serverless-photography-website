@@ -13,6 +13,7 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-grid-gallery": "^0.5.5",
+    "react-image-gallery": "^1.0.7",
     "react-native": "^0.62.2",
     "react-player": "^2.0.1",
     "react-responsive-image-grid": "^1.0.0",
@@ -20,7 +21,8 @@
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",
     "reactstrap": "^8.4.1",
-    "require-dir": "^1.2.0"
+    "require-dir": "^1.2.0",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "style-loader": "^1.2.1"
   }
 }

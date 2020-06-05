@@ -27,10 +27,10 @@ export default function NavBar() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="./Home">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="./Photography">Photography</a>
-            <a class="nav-item nav-link" href="#videography">Videography</a>
-            <a class="nav-item nav-link" href="#contact">Contact Me</a>
+            <a class="nav-item nav-link" href="./Home#videography">Videography</a>
+            <a class="nav-item nav-link" href="./Home#contact">Contact Me</a>
           </div>
         </div>
       </nav>
