@@ -6,14 +6,13 @@ import "../css/photography.css";
 
 var listOfImages = [];
 var images = [];
-var container = React.createRef();
 
 export default class Photography extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      selectedFilter: "Nature",
+      selectedFilter: "Nature",  // set default filter
     };
     this.handleSelect = this.handleSelect.bind(this);
     this.filterPhotos = this.filterPhotos.bind(this);
@@ -76,7 +75,7 @@ export default class Photography extends Component {
 
       return(
         <React.Fragment>
-        <div className="container" ref={container}>
+        <div className="container">
           <DropdownButton id="dropdown-item-button" title={filterButtonTitle} onSelect={this.handleSelect}>
             <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
             <Dropdown.Item eventKey="Nature">Nature</Dropdown.Item>
