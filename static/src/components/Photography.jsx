@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Dropdown, DropdownButton, DropdownToggle, DropdownMenu, DropdownItem } from 'react-bootstrap';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../css/photography.css";
-import { Dropdown, DropdownButton, DropdownToggle, DropdownMenu, DropdownItem } from 'react-bootstrap';
 
 var listOfImages = [];
 var images = [];
@@ -13,7 +13,7 @@ export default class Photography extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedFilter: "Still Life",
+      selectedFilter: "Nature",
     };
     this.handleSelect = this.handleSelect.bind(this);
     this.filterPhotos = this.filterPhotos.bind(this);
@@ -78,7 +78,6 @@ export default class Photography extends Component {
         <React.Fragment>
         <div className="container" ref={container}>
           <DropdownButton id="dropdown-item-button" title={filterButtonTitle} onSelect={this.handleSelect}>
-            <Dropdown.Item eventKey="All">All</Dropdown.Item>
             <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
             <Dropdown.Item eventKey="Nature">Nature</Dropdown.Item>
             <Dropdown.Item eventKey="Portraits">Portraits</Dropdown.Item>
