@@ -11,8 +11,7 @@ import '../css/navbar.css'
 export default function NavBar() {
 
 	return (
-    <nav class="navbar navbar-expand-sm fixed-top navbar-light">
-      <div class="container">
+    <nav class="navbar navbar-expand fixed-top navbar-light">
           <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="./Home">Home</a>
@@ -28,7 +27,6 @@ export default function NavBar() {
                 <a class="nav-link" href="./Contact">Contact</a>
               </li>
           </ul>
-      </div>
     </nav>
   );
 }

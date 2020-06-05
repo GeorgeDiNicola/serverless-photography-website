@@ -1,5 +1,5 @@
 .navbar .navbar-nav {
   margin: auto;
-  width: 31%;
   white-space: nowrap; 
+  overflow-x: scroll;
 }
