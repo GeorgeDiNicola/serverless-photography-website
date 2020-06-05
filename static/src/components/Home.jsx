@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {Carousel} from 'react-bootstrap';
-import Videography from './Videography';
-import Contact from './Contact';
 import "../css/home.css";
 
 var listOfClasses = [
@@ -11,7 +9,7 @@ var listOfClasses = [
 					"home-image4", 
 					"home-image5",
 					"home-image6"
-					];
+		];
 
 export default class Home extends Component {
 
