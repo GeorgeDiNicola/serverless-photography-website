@@ -75,8 +75,7 @@ export default class Photography extends Component {
 
       return(
         <React.Fragment>
-        <div className="top-padding">
-        </div>
+        <div className="top-padding"></div>
         <div className="container">
           <DropdownButton id="dropdown-item-button" title={filterButtonTitle} onSelect={this.handleSelect}>
             <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
@@ -95,8 +94,8 @@ export default class Photography extends Component {
             showThumbnails={true}
             lazyLoad={true}
             showPlayButton={true}
-          />
+        />
         </React.Fragment>
-      )
+      );
     }
 }

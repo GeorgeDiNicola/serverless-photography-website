@@ -37,6 +37,12 @@ a.nav-link:hover {
   font-weight: bold;
 }
 
+a.nav-link#home:hover {
+  background: BlueViolet;
+  border-bottom: 1px solid black;
+}
+
 a.nav-link:hover {
   background: BlueViolet;
+  border-bottom: 1px solid white;
 }
