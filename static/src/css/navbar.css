@@ -36,3 +36,7 @@ a.nav-link:hover {
   color: white !important;
   font-weight: bold;
 }
+
+a.nav-link:hover {
+  background: BlueViolet;
+}
