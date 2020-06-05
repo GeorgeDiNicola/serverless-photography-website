@@ -16,15 +16,23 @@
     border-bottom: 1px solid white;
 }
 
+a.nav-link:hover {
+  color: red;
+}
+
 .nav-link#home {
   color: black !important;
+  font-weight: bold;
 }
 .nav-link#photo {
   color: white !important;
+  font-weight: bold;
 }
 .nav-link#video {
   color: white !important;
+  font-weight: bold;
 }
 .nav-link#contact {
   color: white !important;
+  font-weight: bold;
 }
