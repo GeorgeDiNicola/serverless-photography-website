@@ -1,38 +1,66 @@
-import React from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
+import React, { Component } from 'react';
 import '../css/navbar.css'
 
-// Stateless functional component
+export default class NavBar extends Component {
 
-export default function NavBar() {
+  constructor(props) {
+    super(props);
 
-	return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="#">Billy Denham</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="./Home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="./Photography">Photography</a>
-            <a class="nav-item nav-link" href="./Home#videography">Videography</a>
-            <a class="nav-item nav-link" href="./Home#contact">Contact Me</a>
-          </div>
-        </div>
+    // class methods
+    this.detectBrowserChange = this.detectBrowserChange.bind(this);
+  }
+  
+
+  detectBrowserChange() {
+    var currentWindiw = window.location.href;
+    if (currentWindiw.includes("Home")) {
+      this.activeHomePage = 'nav-item activated-home';
+      this.activePhotoPage = this.activeVideoPage = this.activeContactPage ='nav-item';
+      this.currentPageId = 'home';
+    }
+    else if (currentWindiw.includes("Photography")) {
+      this.activePhotoPage = 'nav-item activated-photo';
+      this.activeHomePage = this.activeVideoPage = this.activeContactPage ='nav-item';
+      this.currentPageId = 'photo';
+    }
+    else if (currentWindiw.includes("Videography")) {
+      this.activeVideoPage = 'nav-item activated-video';
+      this.activeHomePage = this.activePhotoPage = this.activeContactPage ='nav-item';
+      this.currentPageId = 'video';
+    }
+    else if (currentWindiw.includes("Contact")) {
+      this.activeContactPage = 'nav-item active activated-contact';
+      this.activeHomePage = this.activePhotoPage = this.activeVideoPage ='nav-item';
+      this.currentPageId = 'contact';
+    }
+    else {
+      this.activeHomePage = 'nav-item activated-home';
+      this.activePhotoPage = this.activeVideoPage = this.activeContactPage ='nav-item';
+      this.currentPageId = 'home';
+    }
+  }
+
+  render() {
+    this.detectBrowserChange()
+	
+    return (
+      <nav class="navbar navbar-expand fixed-top navbar-light">
+            <ul class="navbar-nav">
+                <li class={this.activeHomePage}>
+                  <a id={this.currentPageId} class="nav-link" href="./Home">Home</a>
+                </li>
+                <li class={this.activePhotoPage}>
+                  <a id={this.currentPageId} class="nav-link" href="./Photography">Photos</a>
+                </li>
+                {/*<a href="./Home">Brand</a>*/}
+                <li class={this.activeVideoPage}>
+                  <a id={this.currentPageId} class="nav-link" href="./Videography">Videos</a>
+                </li>
+                <li class={this.activeContactPage}>
+                  <a id={this.currentPageId} class="nav-link" href="./Contact">Contact</a>
+                </li>
+            </ul>
       </nav>
-  );
+    );
+  }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownButton, DropdownToggle, DropdownMenu, DropdownItem } from 'react-bootstrap';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../css/photography.css";
@@ -75,6 +75,7 @@ export default class Photography extends Component {
 
       return(
         <React.Fragment>
+        <div className="top-padding"></div>
         <div className="container">
           <DropdownButton id="dropdown-item-button" title={filterButtonTitle} onSelect={this.handleSelect}>
             <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
@@ -86,17 +87,15 @@ export default class Photography extends Component {
             <Dropdown.Item eventKey="Wild Life">Wild Life</Dropdown.Item>
           </DropdownButton>
         </div>
-        <div>
-          <ImageGallery 
+        <ImageGallery 
             items={images} 
             showBullets={true}
             showIndex={false}
             showThumbnails={true}
             lazyLoad={true}
             showPlayButton={true}
-          />
-        </div>
+        />
         </React.Fragment>
-      )
+      );
     }
 }

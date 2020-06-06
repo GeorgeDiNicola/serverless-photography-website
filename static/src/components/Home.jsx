@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {Carousel} from 'react-bootstrap';
-import Videography from './Videography';
-import Contact from './Contact';
 import "../css/home.css";
 
 var listOfClasses = [
@@ -11,39 +9,28 @@ var listOfClasses = [
 					"home-image4", 
 					"home-image5",
 					"home-image6"
-					];
+		];
 
+// TODO: this could be converted to a functional component
 export default class Home extends Component {
 
 	render() {
 
 	  return (
-	  	  <React.Fragment>
-        <section id="home" class="section">
-          <Carousel interval="3000">
-            {
-              listOfClasses.map(
-                (c, index) =>
-                    <Carousel.Item>
-                      <img
-                        className={c}
-                        //src={image}
-                        alt=""
-                      />
-                    </Carousel.Item>
-                )
-              }
-          </Carousel>
-        </section>
-        <section id="videography" class="section">
-          <Videography>
-          </Videography>
-        </section>
-        <section id="contact" class="section">
-          <Contact>
-          </Contact>
-        </section>
-        </React.Fragment>
+      <Carousel interval="3000">
+        {
+          listOfClasses.map(
+            (c, index) =>
+              <Carousel.Item>
+                <img
+                  className={c}
+                  //src={image}
+                  alt=""
+                />
+              </Carousel.Item>
+          )
+         }
+      </Carousel>
 	  )
     }
 }
