@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Carousel} from 'react-bootstrap';
 import "../css/home.css";
+import Videography from './Videography';  // without this the photography page will not render properly
 
 var listOfClasses = [
 					"home-image1", 
 					"home-image2", 
-					"home-image3", 
+					"home-image3",
 					"home-image4", 
 					"home-image5",
 					"home-image6"
