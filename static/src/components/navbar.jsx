@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import '../css/navbar.css'
 
 export default class NavBar extends Component {
@@ -48,9 +49,20 @@ export default class NavBar extends Component {
                 <li id={this.currentPageId} class={this.activeHomePage}>
                   <a id={this.currentPageId} class="nav-link" href="./Home">Home</a>
                 </li>
-                <li id={this.currentPageId} class={this.activePhotoPage}>
+                {/*<li id={this.currentPageId} class={this.activePhotoPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Photography">Photos</a>
                 </li>
+                */}
+                <DropdownButton id="dropdown-item-button" class={this.activePhotoPage} title="Photos" onSelect={this.handleSelect}>
+                  <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
+                  <Dropdown.Item eventKey="Nature">Nature</Dropdown.Item>
+                  <Dropdown.Item eventKey="Portraits">Portraits</Dropdown.Item>
+                  <Dropdown.Item eventKey="Still Life">Still Life</Dropdown.Item>
+                  <Dropdown.Item eventKey="Street">Street</Dropdown.Item>
+                  <Dropdown.Item eventKey="Weddings">Weddings</Dropdown.Item>
+                  <Dropdown.Item eventKey="Wild Life">Wild Life</Dropdown.Item>
+                </DropdownButton> 
+                {/*<a href="./Home">Brand</a>*/}
                 <li id={this.currentPageId} class={this.activeVideoPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Videography">Videos</a>
                 </li>

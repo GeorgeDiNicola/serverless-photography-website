@@ -52,3 +52,11 @@ a {
   background-position: center bottom;
   transition: all .3s ease-out;
 }
+
+#dropdown-item-button {
+  color: white !important;
+  font-weight: bold;
+  border: none !important;
+  padding-top: 9%;
+  outline: none !important;
+}
