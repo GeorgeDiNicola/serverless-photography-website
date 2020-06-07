@@ -54,10 +54,18 @@ a {
 }
 
 #dropdown-item-button {
-  background-color: transparent;
+  background-image: linear-gradient(yellow, yellow);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
   color: white !important;
   font-weight: bold;
   border: none !important;
   padding-top: 9%;
   outline: none !important;
+}
+
+#dropdown-item-button:hover {
+  background-size: 100% 3px, auto;
 }
