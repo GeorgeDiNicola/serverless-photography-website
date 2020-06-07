@@ -54,6 +54,7 @@ a {
 }
 
 #dropdown-item-button {
+  background-color: transparent;
   color: white !important;
   font-weight: bold;
   border: none !important;

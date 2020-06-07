@@ -53,7 +53,8 @@ export default class NavBar extends Component {
                   <a id={this.currentPageId} class="nav-link" href="./Photography">Photos</a>
                 </li>
                 */}
-                <DropdownButton id="dropdown-item-button" class={this.activePhotoPage} title="Photos" onSelect={this.handleSelect}>
+                <li id={this.currentPageId} class={this.activePhotoPage}>
+                <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>
                   <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
                   <Dropdown.Item eventKey="Nature">Nature</Dropdown.Item>
                   <Dropdown.Item eventKey="Portraits">Portraits</Dropdown.Item>
@@ -61,7 +62,8 @@ export default class NavBar extends Component {
                   <Dropdown.Item eventKey="Street">Street</Dropdown.Item>
                   <Dropdown.Item eventKey="Weddings">Weddings</Dropdown.Item>
                   <Dropdown.Item eventKey="Wild Life">Wild Life</Dropdown.Item>
-                </DropdownButton> 
+                </DropdownButton>
+                </li>
                 {/*<a href="./Home">Brand</a>*/}
                 <li id={this.currentPageId} class={this.activeVideoPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Videography">Videos</a>
