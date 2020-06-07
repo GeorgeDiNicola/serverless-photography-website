@@ -11,10 +11,10 @@ export default class Photography extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      selectedFilter: "Nature",  // set default filter
-    };
-    this.handleSelect = this.handleSelect.bind(this);
+    //this.state = {
+    //  selectedFilter: "Nature",  // set default filter
+    //};
+    //this.handleSelect = this.handleSelect.bind(this);
     this.filterPhotos = this.filterPhotos.bind(this);
   }
 
@@ -23,33 +23,34 @@ export default class Photography extends Component {
   }
 
   componentWillMount() {
-    this.filterPhotos(this.state.selectedFilter);
+    var currentWindow = window.location.href;
+    this.filterPhotos(currentWindow);
   }
 
   filterPhotos(photoCategory) {
     // import the list based on what the user chose in the drop-down
-    if (photoCategory === 'Events') {
+    if (photoCategory.includes("events")) {
       listOfImages = this.importAll(require.context('../images/events/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory === 'Nature') {
+    else if (photoCategory.includes("nature")) {
       listOfImages = this.importAll(require.context('../images/nature/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory === 'Portraits') {
+    else if (photoCategory.includes("portrait")) {
       listOfImages = this.importAll(require.context('../images/portrait/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory=== 'Still Life') {
+    else if (photoCategory.includes("still_life")) {
       listOfImages = this.importAll(require.context('../images/still_life/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory === 'Street') {
+    else if (photoCategory.includes("street")) {
       listOfImages = this.importAll(require.context('../images/street/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory === 'Themed') {
+    else if (photoCategory.includes("themed")) {
       listOfImages = this.importAll(require.context('../images/themed/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory === 'Weddings') {
+    else if (photoCategory.includes("weddings")) {
       listOfImages = this.importAll(require.context('../images/weddings/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory=== 'Wild Life') {
+    else if (photoCategory.includes("wild_life")) {
       listOfImages = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
     }
     // use all images
@@ -62,40 +63,21 @@ export default class Photography extends Component {
     images = listOfImages.map(x => ({original: x, thumbnail: x}));
   }
 
-  handleSelect(evt) {
-    this.setState({
-      selectedFilter: evt
-    });
-    this.filterPhotos(evt);
-  }
-
   render(){
 
-      var filterButtonTitle = 'Filter: ' + this.state.selectedFilter;
+      var currentWindow = window.location.href;
+      this.filterPhotos(currentWindow);
 
       return(
         <React.Fragment> 
         <div className="top-padding"></div>
-        {/*
-        <div className="container">
-          <DropdownButton id="dropdown-item-button" title={filterButtonTitle} onSelect={this.handleSelect}>
-            <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
-            <Dropdown.Item eventKey="Nature">Nature</Dropdown.Item>
-            <Dropdown.Item eventKey="Portraits">Portraits</Dropdown.Item>
-            <Dropdown.Item eventKey="Still Life">Still Life</Dropdown.Item>
-            <Dropdown.Item eventKey="Street">Street</Dropdown.Item>
-            <Dropdown.Item eventKey="Weddings">Weddings</Dropdown.Item>
-            <Dropdown.Item eventKey="Wild Life">Wild Life</Dropdown.Item>
-          </DropdownButton> 
-        </div>
-        */}
-        <ImageGallery 
+        <ImageGallery
             items={images} 
             showBullets={true}
             showIndex={false}
             showThumbnails={true}
             lazyLoad={true}
-            showPlayButton={true}
+            PlayButton={true}
         />
         </React.Fragment>
       );
