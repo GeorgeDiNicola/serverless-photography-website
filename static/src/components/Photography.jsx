@@ -74,8 +74,9 @@ export default class Photography extends Component {
       var filterButtonTitle = 'Filter: ' + this.state.selectedFilter;
 
       return(
-        <React.Fragment>
+        <React.Fragment> 
         <div className="top-padding"></div>
+        {/*
         <div className="container">
           <DropdownButton id="dropdown-item-button" title={filterButtonTitle} onSelect={this.handleSelect}>
             <Dropdown.Item eventKey="Events">Events</Dropdown.Item>
@@ -85,8 +86,9 @@ export default class Photography extends Component {
             <Dropdown.Item eventKey="Street">Street</Dropdown.Item>
             <Dropdown.Item eventKey="Weddings">Weddings</Dropdown.Item>
             <Dropdown.Item eventKey="Wild Life">Wild Life</Dropdown.Item>
-          </DropdownButton>
+          </DropdownButton> 
         </div>
+        */}
         <ImageGallery 
             items={images} 
             showBullets={true}
