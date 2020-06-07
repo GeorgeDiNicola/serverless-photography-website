@@ -59,6 +59,7 @@ a {
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: all .3s ease-out;
+  background-color: transparent;
   color: white !important;
   font-weight: bold;
   border: none !important;
