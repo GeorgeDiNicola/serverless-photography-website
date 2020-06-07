@@ -51,7 +51,6 @@ export default class NavBar extends Component {
                 <li id={this.currentPageId} class={this.activePhotoPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Photography">Photos</a>
                 </li>
-                {/*<a href="./Home">Brand</a>*/}
                 <li id={this.currentPageId} class={this.activeVideoPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Videography">Videos</a>
                 </li>
