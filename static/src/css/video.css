@@ -1,6 +1,6 @@
 .player-wrapper {
   position: relative;
-  height: 94vh;
+  padding-top: 5%;
   width: 100%;
 }
  
@@ -13,4 +13,5 @@
 
 .react-player {
   margin: auto;
+  height: 94vh;
 }
