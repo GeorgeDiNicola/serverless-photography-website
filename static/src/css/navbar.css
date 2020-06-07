@@ -4,20 +4,16 @@
 }
 
 .activated-home {
-    border-bottom: 1px solid black;
+    background-size: 100% 3px, auto;
 }
 .activated-photo {
-    border-bottom: 1px solid white;
+    background-size: 100% 3px, auto;
 }
 .activated-video {
-    border-bottom: 1px solid white;
+    background-size: 100% 3px, auto;
 }
 .activated-contact {
-    border-bottom: 1px solid white;
-}
-
-a.nav-link:hover {
-  color: red;
+    background-size: 100% 3px, auto;
 }
 
 .nav-link#home {
@@ -37,12 +33,22 @@ a.nav-link:hover {
   font-weight: bold;
 }
 
-a.nav-link#home:hover {
-  background: BlueViolet;
-  border-bottom: 1px solid black;
+a.nav-link:hover {
+  background-size: 100% 3px, auto;
 }
 
-a.nav-link:hover {
-  background: BlueViolet;
-  border-bottom: 1px solid white;
+li {
+  background-image: linear-gradient(black, white);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
+}
+
+a {
+  background-image: linear-gradient(yellow, yellow);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
 }

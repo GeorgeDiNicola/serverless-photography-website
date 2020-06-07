@@ -10,7 +10,6 @@ export default class NavBar extends Component {
     this.detectBrowserChange = this.detectBrowserChange.bind(this);
   }
   
-
   detectBrowserChange() {
     var currentWindiw = window.location.href;
     if (currentWindiw.includes("Home")) {
@@ -46,17 +45,17 @@ export default class NavBar extends Component {
     return (
       <nav class="navbar navbar-expand fixed-top navbar-light">
             <ul class="navbar-nav">
-                <li class={this.activeHomePage}>
+                <li id={this.currentPageId} class={this.activeHomePage}>
                   <a id={this.currentPageId} class="nav-link" href="./Home">Home</a>
                 </li>
-                <li class={this.activePhotoPage}>
+                <li id={this.currentPageId} class={this.activePhotoPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Photography">Photos</a>
                 </li>
                 {/*<a href="./Home">Brand</a>*/}
-                <li class={this.activeVideoPage}>
+                <li id={this.currentPageId} class={this.activeVideoPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Videography">Videos</a>
                 </li>
-                <li class={this.activeContactPage}>
+                <li id={this.currentPageId} class={this.activeContactPage}>
                   <a id={this.currentPageId} class="nav-link" href="./Contact">Contact</a>
                 </li>
             </ul>
