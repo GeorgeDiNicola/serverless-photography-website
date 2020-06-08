@@ -12,6 +12,7 @@ export default class Videography extends Component {
 		}
 	}
 
+	//TODO: implement scroll padding so the videos can snap in
 	render() {
 		return (
 		  <React.Fragment>
