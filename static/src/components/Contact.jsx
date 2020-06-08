@@ -6,7 +6,7 @@ export default class Contact extends Component {
 	render() {
 
 	  return (
-	    <div>
+	    <div className="w3-animate-left">
         <h1>Billy Denham</h1>
           <h6>
             Photographer based in Philadelphia, PA<br/>

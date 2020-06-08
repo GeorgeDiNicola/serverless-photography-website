@@ -81,8 +81,7 @@ export default class Photography extends Component {
       this.filterPhotos(currentWindow);
 
       return(
-        <React.Fragment>
-        <ImageGallery
+        <ImageGallery class="no-outline"
             items={images} 
             showBullets={true}
             showIndex={false}
@@ -90,7 +89,6 @@ export default class Photography extends Component {
             lazyLoad={true}
             PlayButton={true}
         />
-        </React.Fragment>
       );
     }
 }
