@@ -54,11 +54,9 @@ export default class Photography extends Component {
       listOfImages = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
     }
     // use all images
-    /*
     else {
       listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
     }
-    */
     // create a objects from the imported listOfImages
     images = listOfImages.map(x => ({original: x, thumbnail: x}));
   }

@@ -61,15 +61,15 @@ export default class NavBar extends Component {
                 </li>
                 */}
                 <li id={this.currentPageId} class={this.activePhotoPage}>
-                <DropdownButton id={this.dropDownButtonId} class="nav-link" title="Photos" onSelect={this.handleSelect}>
-                  <Dropdown.Item href="./Photography#events">Events</Dropdown.Item>
-                  <Dropdown.Item href="./Photography#nature">Nature</Dropdown.Item>
-                  <Dropdown.Item href="./Photography#portraits">Portraits</Dropdown.Item>
-                  <Dropdown.Item href="./Photography#still_life">Still Life</Dropdown.Item>
-                  <Dropdown.Item href="./Photography#street">Street</Dropdown.Item>
-                  <Dropdown.Item href="./Photography#weddings">Weddings</Dropdown.Item>
-                  <Dropdown.Item href="./Photography#wild_life">Wild Life</Dropdown.Item>
-                </DropdownButton>
+                  <DropdownButton id={this.dropDownButtonId} class="nav-link" title="Photos" onSelect={this.handleSelect}>
+                    <Dropdown.Item href="./Photography#events">Events</Dropdown.Item>
+                    <Dropdown.Item href="./Photography#nature">Nature</Dropdown.Item>
+                    <Dropdown.Item href="./Photography#portraits">Portraits</Dropdown.Item>
+                    <Dropdown.Item href="./Photography#still_life">Still Life</Dropdown.Item>
+                    <Dropdown.Item href="./Photography#street">Street</Dropdown.Item>
+                    <Dropdown.Item href="./Photography#weddings">Weddings</Dropdown.Item>
+                    <Dropdown.Item href="./Photography#wild_life">Wild Life</Dropdown.Item>
+                  </DropdownButton>
                 </li>
                 {/*<a href="./Home">Brand</a>*/}
                 <li id={this.currentPageId} class={this.activeVideoPage}>
