@@ -2,7 +2,6 @@ h1 {
   color: white;
   text-align: center;
   font-family: 'Snell Roundhand';
-  padding-top: 7%;
 }
 
 h2 {
@@ -33,4 +32,38 @@ h6 {
     left:0;
     opacity:1
   }
+}
+
+.w3-animate-right {
+  position:relative;
+  animation:animateright 1s
+}
+@keyframes animateright {
+  from {
+    right:-300px;
+    opacity:0
+  } 
+  to {
+    right:0;
+    opacity:1
+  }
+}
+
+.parentContainer {
+  position: relative;
+  text-align: center;
+  padding-top: 4%;
+}
+
+.left {
+  padding-right: 2%;
+}
+
+.right {
+  padding-left: 2%;
+}
+
+.inline {
+  display: inline-block;
+  
 }
