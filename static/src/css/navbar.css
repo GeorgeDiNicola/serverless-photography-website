@@ -1,6 +1,7 @@
 .navbar .navbar-nav {
   margin: auto;
   white-space: nowrap;
+  color: black;
 }
 
 .activated-home {
@@ -16,19 +17,7 @@
     background-size: 100% 3px, auto;
 }
 
-.nav-link#home {
-  color: black !important;
-  font-weight: bold;
-}
-.nav-link#photo {
-  color: white !important;
-  font-weight: bold;
-}
-.nav-link#video {
-  color: white !important;
-  font-weight: bold;
-}
-.nav-link#contact {
+.nav-link {
   color: white !important;
   font-weight: bold;
 }
@@ -68,23 +57,5 @@ a {
 }
 
 #dropdown-item-button:hover {
-  background-size: 100% 3px, auto;
-}
-
-#dropdown-item-button-home {
-  background-image: linear-gradient(yellow, yellow);
-  background-size: 0 3px, auto;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  transition: all .3s ease-out;
-  background-color: transparent;
-  color: black !important;
-  font-weight: bold;
-  border: none !important;
-  padding-top: 9%;
-  outline: none !important;
-}
-
-#dropdown-item-button-home:hover {
   background-size: 100% 3px, auto;
 }

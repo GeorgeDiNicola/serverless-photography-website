@@ -16,6 +16,7 @@ export default class Photography extends Component {
     //};
     //this.handleSelect = this.handleSelect.bind(this);
     this.filterPhotos = this.filterPhotos.bind(this);
+    this.handleLoad = this.handleLoad.bind(this);
   }
 
   importAll(r) {
@@ -25,7 +26,16 @@ export default class Photography extends Component {
   componentWillMount() {
     var currentWindow = window.location.href;
     this.filterPhotos(currentWindow);
+    console.log("handling load");
   }
+
+  componentDidMount() {
+    window.addEventListener('load', this.handleLoad);
+  }
+
+  componentWillUnmount() { 
+   window.removeEventListener('load', this.handleLoad)  
+ }
 
   filterPhotos(photoCategory) {
     // import the list based on what the user chose in the drop-down
@@ -61,14 +71,17 @@ export default class Photography extends Component {
     images = listOfImages.map(x => ({original: x, thumbnail: x}));
   }
 
+  handleLoad() {
+    console.log("handling load");
+  }
+
   render(){
 
       var currentWindow = window.location.href;
       this.filterPhotos(currentWindow);
 
       return(
-        <React.Fragment> 
-        <div className="top-padding"></div>
+        <React.Fragment>
         <ImageGallery
             items={images} 
             showBullets={true}

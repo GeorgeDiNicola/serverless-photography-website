@@ -17,7 +17,8 @@ export default class Home extends Component {
 
 	render() {
 
-	  return (
+	  // have to logo alternate between each photo
+    return (
       <Carousel interval="3000">
         {
           listOfClasses.map(
