@@ -16,6 +16,7 @@ export default class Videography extends Component {
 	render() {
 		return (
 		  <React.Fragment>
+		  <div className = "container">
 		  {this.state.video_urls.map(url_text => 
 		    <div className="player-wrapper">
 		      <ReactPlayer
@@ -25,6 +26,7 @@ export default class Videography extends Component {
 		       />
 		    </div>
 		  )}
+		  </div>
 		  </React.Fragment>
 		)
 

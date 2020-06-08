@@ -19,7 +19,7 @@ export default class Home extends Component {
 
 	  // have to logo alternate between each photo
     return (
-      <Carousel interval="3000">
+      <Carousel interval="3000" pause={false}>
         {
           listOfClasses.map(
             (c, index) =>
