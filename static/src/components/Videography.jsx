@@ -16,15 +16,13 @@ export default class Videography extends Component {
 		return (
 		  <React.Fragment>
 		  {this.state.video_urls.map(url_text => 
-		 <div className="w3-animate-left">
-		   <div className="player-wrapper">
-		          <ReactPlayer
-		            className='react-player'
-		            url={url_text}
-		            controls={true}
-		          />
+		    <div className="player-wrapper">
+		      <ReactPlayer
+		        className='react-player'
+		        url={url_text}
+		        controls={true}
+		       />
 		    </div>
-		  </div>
 		  )}
 		  </React.Fragment>
 		)
