@@ -1,9 +1,22 @@
+.logo-black {
+  background-image: url("../carousel_images/branded_black.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 92vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
+}
+
 .home-image1 {
   background-image: url("../carousel_images/53.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -12,11 +25,11 @@
 }
 
 .home-image2 {
-  background-image: url("../carousel_images/21.jpg");  
+  background-image: url("../carousel_images/23.jpg");  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -25,11 +38,11 @@
 }
 
 .home-image3 {
-  background-image: url("../carousel_images/20.jpg");
+  background-image: url("../carousel_images/21.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -42,7 +55,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -55,7 +68,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -68,7 +81,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: block;
   margin-left: auto;

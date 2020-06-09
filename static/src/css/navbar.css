@@ -1,48 +1,61 @@
 .navbar .navbar-nav {
   margin: auto;
   white-space: nowrap;
+  color: black;
 }
 
 .activated-home {
-    border-bottom: 1px solid black;
+    background-size: 100% 3px, auto;
 }
 .activated-photo {
-    border-bottom: 1px solid white;
+    background-size: 100% 3px, auto;
 }
 .activated-video {
-    border-bottom: 1px solid white;
+    background-size: 100% 3px, auto;
 }
 .activated-contact {
-    border-bottom: 1px solid white;
+    background-size: 100% 3px, auto;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: bold;
 }
 
 a.nav-link:hover {
-  color: red;
+  background-size: 100% 3px, auto;
 }
 
-.nav-link#home {
-  color: black !important;
-  font-weight: bold;
-}
-.nav-link#photo {
-  color: white !important;
-  font-weight: bold;
-}
-.nav-link#video {
-  color: white !important;
-  font-weight: bold;
-}
-.nav-link#contact {
-  color: white !important;
-  font-weight: bold;
+li {
+  background-image: linear-gradient(black, white);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
 }
 
-a.nav-link#home:hover {
-  background: BlueViolet;
-  border-bottom: 1px solid black;
+a {
+  background-image: linear-gradient(yellow, yellow);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
 }
 
-a.nav-link:hover {
-  background: BlueViolet;
-  border-bottom: 1px solid white;
+#dropdown-item-button {
+  background-image: linear-gradient(yellow, yellow);
+  background-size: 0 3px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
+  background-color: transparent;
+  color: white !important;
+  font-weight: bold;
+  border: none !important;
+  padding-top: 9%;
+  outline: none !important;
+}
+
+#dropdown-item-button:hover {
+  background-size: 100% 3px, auto;
 }

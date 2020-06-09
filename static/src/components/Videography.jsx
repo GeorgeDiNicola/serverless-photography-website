@@ -12,22 +12,21 @@ export default class Videography extends Component {
 		}
 	}
 
+	//TODO: implement scroll padding so the videos can snap in
 	render() {
 		return (
-		  <div className="player-wrapper">
-		    {/* for arrows in video, use div className="center" here */}
-		    <Carousel className="center" interval="1000000">
-		      {this.state.video_urls.map(url_text => 
-		        <Carousel.Item>
-		          <ReactPlayer
-		            className='react-player'
-		            url={url_text}
-		            controls={true}
-		          />
-		        </Carousel.Item>
-		      )}
-		    </Carousel>
-		  </div>
+		  <React.Fragment>
+		  {this.state.video_urls.map(url_text => 
+		    <div className="player-wrapper">
+		      <ReactPlayer
+		        className='react-player'
+		        url={url_text}
+		        controls={true}
+		       />
+		    </div>
+		  )}
+		  </React.Fragment>
 		)
+
 	}
 }
