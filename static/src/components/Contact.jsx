@@ -5,8 +5,6 @@ export default class Contact extends Component {
 
 	render() {
 
-    // The profile badge stopped working....
-
 	  return (
 
       <React.Fragment>
