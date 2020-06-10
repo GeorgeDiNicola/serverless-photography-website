@@ -8,7 +8,7 @@ export default class Videography extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			video_urls: ["https://www.youtube.com/watch?v=DRaWc9GhYRk", "https://www.youtube.com/watch?v=lABN5Gld4FQ"]
+			video_urls: ["https://www.youtube.com/watch?v=lABN5Gld4FQ", "https://www.youtube.com/watch?v=DRaWc9GhYRk"]
 		}
 	}
 
@@ -25,6 +25,8 @@ export default class Videography extends Component {
 		            className='react-player'
 		            url={url_text}
 		            controls={true}
+		            width='100%'
+                    height='100%'
 		          />
 		        </div>
 		      )}
