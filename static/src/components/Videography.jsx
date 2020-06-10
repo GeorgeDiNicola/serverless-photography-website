@@ -16,15 +16,34 @@ export default class Videography extends Component {
 	render() {
 		return (
 		  <React.Fragment>
-		  {this.state.video_urls.map(url_text => 
-		    <div className="player-wrapper">
-		      <ReactPlayer
-		        className='react-player'
-		        url={url_text}
-		        controls={true}
-		       />
-		    </div>
-		  )}
+		  <div>
+		  {/*
+		      {this.state.video_urls.map(url_text => 
+		        <div className="player-wrapper">
+		          <ReactPlayer
+		            className='react-player'
+		            url={url_text}
+		            controls={true}
+		          />
+		        </div>
+		      )}
+			*/}
+		  <div className="player-wrapper-top">
+		  <ReactPlayer
+		    className='react-player'
+		     url={this.state.video_urls[0]}
+		     controls={true}
+		  />
+		  </div>
+		  <div className="player-wrapper-bottom">
+		  <ReactPlayer
+		    className='react-player'
+		     url={this.state.video_urls[1]}
+		     controls={true}
+		  />
+		  </div>
+		  </div>
+
 		  </React.Fragment>
 		)
 

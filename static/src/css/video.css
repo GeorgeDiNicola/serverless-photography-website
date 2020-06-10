@@ -1,8 +1,19 @@
+.player-wrapper-top {
+  position: relative;
+  width: 100%;
+   padding-bottom: 10%;
+   padding-top: 10%
+}
+
+.player-wrapper-bottom {
+  position: relative;
+  width: 100%;
+  padding-bottom: 30%;
+}
+
 .player-wrapper {
   position: relative;
-  padding-top: 7%;
   width: 100%;
-  height: 93vh;
 }
  
 .center {
@@ -14,7 +25,6 @@
 
 .react-player {
   margin: auto;
-  height: 100vh;
 }
 
 .w3-animate-left {
