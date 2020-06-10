@@ -1,43 +1,40 @@
-.player-wrapper-top {
-  position: relative;
+.parentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   width: 100%;
-   padding-bottom: 10%;
-   padding-top: 10%
 }
 
-.player-wrapper-bottom {
-  position: relative;
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  border-radius: 8px;
+  height: 80vh;
   width: 100%;
-  padding-bottom: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container div {
+  scroll-snap-align: start;
+
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 0px;
+  padding: 0px;
 }
 
 .player-wrapper {
   position: relative;
   width: 100%;
-}
- 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 0px;
 }
 
 .react-player {
+  position: relative;
   margin: auto;
-}
-
-.w3-animate-left {
-	position:relative;
-	animation:animateleft 1s
-}
-@keyframes animateleft {
-	from {
-		left:-300px;
-		opacity:0
-	} 
-	to {
-		left:0;
-		opacity:1
-	}
 }

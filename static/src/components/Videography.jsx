@@ -13,11 +13,12 @@ export default class Videography extends Component {
 	}
 
 	//TODO: implement scroll padding so the videos can snap in
+	//TODO: put it back to dynamic!
 	render() {
 		return (
 		  <React.Fragment>
-		  <div>
-		  {/*
+		  <div class="parentContainer">
+		    <div class="container">
 		      {this.state.video_urls.map(url_text => 
 		        <div className="player-wrapper">
 		          <ReactPlayer
@@ -27,23 +28,8 @@ export default class Videography extends Component {
 		          />
 		        </div>
 		      )}
-			*/}
-		  <div className="player-wrapper-top">
-		  <ReactPlayer
-		    className='react-player'
-		     url={this.state.video_urls[0]}
-		     controls={true}
-		  />
-		  </div>
-		  <div className="player-wrapper-bottom">
-		  <ReactPlayer
-		    className='react-player'
-		     url={this.state.video_urls[1]}
-		     controls={true}
-		  />
-		  </div>
-		  </div>
-
+		    </div>
+       </div>
 		  </React.Fragment>
 		)
 
