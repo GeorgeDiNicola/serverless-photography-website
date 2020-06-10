@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactPlayer from "react-player";
-import {Carousel} from 'react-bootstrap';
 import "../css/video.css";
 
 export default class Videography extends Component {
@@ -12,8 +11,6 @@ export default class Videography extends Component {
 		}
 	}
 
-	//TODO: implement scroll padding so the videos can snap in
-	//TODO: put it back to dynamic!
 	render() {
 		return (
 		  <React.Fragment>
@@ -31,9 +28,8 @@ export default class Videography extends Component {
 		        </div>
 		      )}
 		    </div>
-       </div>
+          </div>
 		  </React.Fragment>
 		)
-
 	}
 }
