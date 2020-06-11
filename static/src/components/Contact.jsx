@@ -8,7 +8,7 @@ export default class Contact extends Component {
 	  return (
 
       <React.Fragment>
-      <div className="w3-animate-left parentContainer">
+      <div className="w3-animate-left">
         <h1>Billy Denham</h1>
           <h6>
             Photographer based in Philadelphia, PA<br/>

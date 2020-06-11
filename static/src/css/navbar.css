@@ -5,16 +5,16 @@
 }
 
 .activated-home {
-    background-size: 100% 3px, auto;
+    background-size: 100% 2px, auto;
 }
 .activated-photo {
-    background-size: 100% 3px, auto;
+    background-size: 100% 2px, auto;
 }
 .activated-video {
-    background-size: 100% 3px, auto;
+    background-size: 100% 2px, auto;
 }
 .activated-contact {
-    background-size: 100% 3px, auto;
+    background-size: 100% 2px, auto;
 }
 
 .nav-link {
@@ -23,12 +23,12 @@
 }
 
 a.nav-link:hover {
-  background-size: 100% 3px, auto;
+  background-size: 100% 2px, auto;
 }
 
 li {
-  background-image: linear-gradient(black, white);
-  background-size: 0 3px, auto;
+  background-image: linear-gradient(white, white);
+  background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: all .3s ease-out;
@@ -36,7 +36,7 @@ li {
 
 a {
   background-image: linear-gradient(yellow, yellow);
-  background-size: 0 3px, auto;
+  background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: all .3s ease-out;
