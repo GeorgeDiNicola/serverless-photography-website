@@ -21,6 +21,7 @@ export default class Contact extends Component {
         </div>
      </div>
       <div className="form-container">
+        <div className="w3-animate-fading">
         <form>
           <h6>For general or work inquires please fill out the form below</h6><br/>
           {/*<label for="fname">First Name</label>*/}
@@ -33,6 +34,7 @@ export default class Contact extends Component {
           <br/>
           <input type="submit" value="Submit"></input>
         </form>
+        </div>
       </div>
     <div className="footer">
           <div className="w3-animate-right">
