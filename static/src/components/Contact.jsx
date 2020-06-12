@@ -16,7 +16,7 @@ export default class Contact extends Component {
             <h6>
               Photographer based in Philadelphia, PA<br/>
             <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
-            <br/>
+            <br/><br/>
             </h6>
         </div>
      </div>

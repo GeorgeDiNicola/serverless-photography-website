@@ -125,22 +125,10 @@ input[type=submit]:hover {
   0% {
     opacity: 0
   } 50% {
-    opacity:1
+    opacity: 1
   } 100% {
-    opacity:0
+    opacity: 1
   }
-}
-
-.left {
-  padding-right: 2%;
-}
-
-.right {
-  padding-left: 2%;
-}
-
-.inline {
-  display: inline-block;
 }
 
 .fa {
