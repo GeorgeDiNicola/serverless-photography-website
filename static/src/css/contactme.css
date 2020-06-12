@@ -45,10 +45,8 @@ input[type=submit]:hover {
 }
 
 /* container is not taking up entire width, which messes up centering*/
-.container {
+.form-container {
   text-align: center;
-  width: 100%;
-  margin:0px auto;
 }
 
 .w3-animate-left {

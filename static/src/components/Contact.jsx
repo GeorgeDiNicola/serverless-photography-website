@@ -21,7 +21,7 @@ export default class Contact extends Component {
           </h6>
       </div>
      
-      <div class="container">
+      <div className="form-container">
         <form>
           {/*<label for="fname">First Name</label>*/}
           <input type="text" id="fname" name="firstname" placeholder="Your first name.."></input>
