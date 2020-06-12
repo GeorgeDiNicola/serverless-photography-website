@@ -1,3 +1,4 @@
+/*--- text styling selectors ---*/
 h1 {
   color: white;
   text-align: center;
@@ -21,13 +22,14 @@ h6 {
   text-align: center;
 }
 
+
+/*--- form styling selectors ---*/
 input[type=text], select, textarea {
-  border: 1px solid white; /* white border */
+  border: 1px solid white;
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
-  color: black;
   padding: 1vh;
 }
 
@@ -40,11 +42,30 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
+/* When moving the mouse over the submit button, add darker green color */
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: gray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: gray;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+
+/*--- container styling selectors ---*/
 #page-container {
    height: 91vh; /* will cover the 100% of viewport */
    overflow-y: scroll;
@@ -56,7 +77,6 @@ input[type=submit]:hover {
   padding: 2vh;
 }
 
-/* container is not taking up entire width, which messes up centering*/
 .form-container {
   text-align: center;
   padding: 1vh;
@@ -73,6 +93,8 @@ input[type=submit]:hover {
   text-align: center;
 }
 
+
+/*--- animation selectors ---*/
 .w3-animate-left {
   position:relative;
   animation:animateleft 1s
@@ -131,17 +153,9 @@ input[type=submit]:hover {
   }
 }
 
-.fa {
-  padding: 20px;
-  font-size: 25px;
-  width: 68px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
 
-.fa-git {
+/*--- social media button styling selectors --*/
+.fa {
   padding: 20px;
   font-size: 25px;
   width: 68px;
@@ -185,79 +199,14 @@ input[type=submit]:hover {
   color: white;
 }
 
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-}
-
 .fa-snapchat-ghost {
   background: #fffc00;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.fa-skype {
-  background: #00aff0;
-  color: white;
-}
-
-.fa-android {
-  background: #a4c639;
-  color: white;
-}
-
-.fa-dribbble {
-  background: #ea4c89;
-  color: white;
-}
-
 .fa-vimeo {
   background: #45bbff;
-  color: white;
-}
-
-.fa-tumblr {
-  background: #2c4762;
-  color: white;
-}
-
-.fa-vine {
-  background: #00b489;
-  color: white;
-}
-
-.fa-foursquare {
-  background: #45bbff;
-  color: white;
-}
-
-.fa-stumbleupon {
-  background: #eb4924;
-  color: white;
-}
-
-.fa-flickr {
-  background: #f40083;
-  color: white;
-}
-
-.fa-yahoo {
-  background: #430297;
-  color: white;
-}
-
-.fa-soundcloud {
-  background: #ff5500;
-  color: white;
-}
-
-.fa-reddit {
-  background: #ff5700;
-  color: white;
-}
-
-.fa-rss {
-  background: #ff6600;
   color: white;
 }
 

@@ -23,13 +23,21 @@ export default class Contact extends Component {
       <div className="form-container">
         <div className="w3-animate-fading">
         <form>
-          <h6>For general or work inquires please fill out the form below</h6><br/>
-          {/*<label for="fname">First Name</label>*/}
-          <input type="text" id="fname" name="firstname" placeholder="Your first name.."></input>
-          {/*<label for="lname">Last Name</label>*/}
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.."></input>
+          <h6>For general or work inquires please fill out the form below</h6>
           <br/>
-          {/*<label for="message">Message</label>*/}
+          <input 
+            type="text" 
+            id="fname" 
+            name="firstname" 
+            placeholder="First name.."
+          ></input>
+          <input 
+            type="text" 
+            id="lname" 
+            name="lastname" 
+            placeholder="Your last name.."
+          ></input>
+          <br/>
           <textarea id="message" name="message" placeholder="Write a message.."></textarea>
           <br/>
           <input type="submit" value="Submit"></input>
