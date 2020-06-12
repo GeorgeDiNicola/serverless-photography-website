@@ -10,7 +10,7 @@ export default class Contact extends Component {
       <React.Fragment>
       <div id="page-container">
       
-      <div id="content-wrap">
+
         <div className="w3-animate-left">
           <h1>Billy Denham</h1>
             <h6>
@@ -37,10 +37,7 @@ export default class Contact extends Component {
           <input type="submit" value="Submit"></input>
         </form>
       </div>
-      
-      </div>
-      
-        <footer>
+    <div>
           <div className="w3-animate-right">
             <h6>
             <a href="https://github.com/GeorgeDiNicola" class="fa fa-github" target="_blank"></a>
@@ -48,8 +45,7 @@ export default class Contact extends Component {
               Web Design & Development: George DiNicola 
             </h6> 
            </div>
-        </footer>
-        
+    </div>
         </div>
       </React.Fragment>
     );

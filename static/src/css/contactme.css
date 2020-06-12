@@ -45,11 +45,9 @@ input[type=submit]:hover {
 }
 
 #page-container {
-   height: 90.5vh; /* will cover the 100% of viewport */
-   overflow: hidden;
+   height: 91vh; /* will cover the 100% of viewport */
    display: block;
    position: relative;
-   padding-bottom: 100px; /* height of your footer */
 }
 
 /* container is not taking up entire width, which messes up centering*/
@@ -60,6 +58,14 @@ input[type=submit]:hover {
 #content-wrap {
   padding-top: 3vh;
   padding-bottom: 2.5rem;    /* Footer height */
+}
+
+footer {
+  bottom: 0;
+  height: 2em;
+  position: relative;
+  font-size: small;
+  width: 100%;
 }
 
 .w3-animate-left {
@@ -105,16 +111,6 @@ input[type=submit]:hover {
     bottom:0;
     opacity:1
   }
-}
-
-footer {
-  bottom: 0;
-  color: #707070;
-  height: 2em;
-  left: 0;
-  position: relative;
-  font-size: small;
-  width:100%;
 }
 
 .left {
