@@ -10,14 +10,15 @@ h2 {
   text-align: center;
 }
 
-h5 {
-	color: white;
-	font-size: 10px;
-}
-
 h6 {
   color: white;
 	text-align: center;
+}
+
+.footer-text {
+  font-size: 11px;
+  color: white;
+  text-align: center;
 }
 
 input[type=text], select, textarea {
@@ -51,9 +52,14 @@ input[type=submit]:hover {
    flex-direction: column;
 }
 
+.about-content {
+  padding: 2vh;
+}
+
 /* container is not taking up entire width, which messes up centering*/
 .form-container {
   text-align: center;
+  padding: 1vh;
 }
 
 #content-wrap {
@@ -64,6 +70,7 @@ input[type=submit]:hover {
   flex: 0 0 50px;
   margin-top: auto;
   padding-top: 3vh;
+  text-align: center;
 }
 
 .w3-animate-left {
@@ -133,6 +140,16 @@ input[type=submit]:hover {
   border-radius: 50%;
 }
 
+.fa-git {
+  padding: 20px;
+  font-size: 25px;
+  width: 68px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
 .fa:hover {
     opacity: 0.7;
 }
@@ -163,7 +180,7 @@ input[type=submit]:hover {
 }
 
 .fa-instagram {
-  background: #125688;
+  background: #E1306C;
   color: white;
 }
 
