@@ -12,33 +12,49 @@ export default class Contact extends Component {
       
       <div className="about-content">
         <div className="w3-animate-left">
-          <h1>Billy Denham</h1>
+          <div className="header-text">Billy Denham</div>
             <h6>
-              Photographer based in Philadelphia, PA<br/>
+              Photographer based in Philadelphia, PA
+            <br/>
             <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
-            <br/><br/>
+            <br/>
+            <br/>
             </h6>
         </div>
      </div>
       <div className="form-container">
         <div className="w3-animate-fading">
         <form>
-          <h6>For general or work inquires please fill out the form below</h6>
-          <br/>
-          <input 
+          <h6>For general or work inquiries, please fill out the form below</h6>
+          <input class="name-text-box"
             type="text" 
             id="fname" 
             name="firstname" 
             placeholder="First name.."
-          ></input>
-          <input 
+          ></input>&nbsp;&nbsp;&nbsp;
+          <input class="name-text-box"
             type="text" 
             id="lname" 
             name="lastname" 
-            placeholder="Your last name.."
+            placeholder="Last name.."
           ></input>
           <br/>
-          <textarea id="message" name="message" placeholder="Write a message.."></textarea>
+          <br/>
+          <input className="email-text-box"
+            type="text" 
+            id="email" 
+            name="email" 
+            placeholder="Email address.."
+          ></input>
+          <br/>
+          <br/>
+          <textarea 
+            id="message" 
+            name="message" 
+            placeholder="Write a message.."
+          >
+          </textarea>
+          <br/>
           <br/>
           <input type="submit" value="Submit"></input>
         </form>

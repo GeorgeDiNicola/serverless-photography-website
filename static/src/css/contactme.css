@@ -1,11 +1,4 @@
 /*--- text styling selectors ---*/
-h1 {
-  color: white;
-  text-align: center;
-  font-family: 'Snell Roundhand';
-  padding-top: 2vh;
-}
-
 h2 {
   color: white;
   text-align: center;
@@ -16,21 +9,37 @@ h6 {
 	text-align: center;
 }
 
+.header-text {
+  color: white;
+  text-align: center;
+  font-family: 'Snell Roundhand';
+  padding-top: 2vh;
+  font-size: 3.5em;
+}
+
 .footer-text {
-  font-size: 11px;
+  font-size: 0.8em;
   color: white;
   text-align: center;
 }
 
-
 /*--- form styling selectors ---*/
-input[type=text], select, textarea {
+input[type=text], select {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 1vh;
+}
+
+textarea {
   border: 1px solid white;
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
-  padding: 1vh;
+  padding: 2vh;
+  width: 40vw;
 }
 
 input[type=submit] {
@@ -64,6 +73,27 @@ input, select, textarea{
     color: white;
 }
 
+.form-control:valid {
+  background-color: black;
+}
+
+.name-text-box {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 1vh;
+  width: 28vw;
+}
+
+.email-text-box {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 1vh;
+  width: 50vw;
+}
 
 /*--- container styling selectors ---*/
 #page-container {
@@ -74,12 +104,12 @@ input, select, textarea{
 }
 
 .about-content {
-  padding: 2vh;
+  padding: 1vh;
+  text-align: center;
 }
 
 .form-container {
   text-align: center;
-  padding: 1vh;
 }
 
 #content-wrap {
@@ -157,8 +187,8 @@ input, select, textarea{
 /*--- social media button styling selectors --*/
 .fa {
   padding: 20px;
-  font-size: 25px;
-  width: 68px;
+  font-size: 24px;
+  width: 63px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
