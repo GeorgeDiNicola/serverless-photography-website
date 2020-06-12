@@ -13,7 +13,7 @@ h6 {
   color: white;
   text-align: center;
   font-family: 'Snell Roundhand';
-  padding-top: 2vh;
+  padding-top: 1vh;
   font-size: 3.5em;
 }
 
@@ -97,7 +97,7 @@ input, select, textarea{
 
 /*--- container styling selectors ---*/
 #page-container {
-   height: 91vh; /* will cover the 100% of viewport */
+   height: 92vh; /* will cover the 100% of viewport */
    overflow-y: scroll;
    display: flex;
    flex-direction: column;
