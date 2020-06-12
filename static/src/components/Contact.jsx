@@ -37,7 +37,7 @@ export default class Contact extends Component {
           <input type="submit" value="Submit"></input>
         </form>
       </div>
-    <div>
+    <div className="footer">
           <div className="w3-animate-right">
             <h6>
             <a href="https://github.com/GeorgeDiNicola" class="fa fa-github" target="_blank"></a>

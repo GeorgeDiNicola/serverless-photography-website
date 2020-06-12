@@ -46,8 +46,9 @@ input[type=submit]:hover {
 
 #page-container {
    height: 91vh; /* will cover the 100% of viewport */
-   display: block;
-   position: relative;
+   overflow-y: scroll;
+   display: flex;
+   flex-direction: column;
 }
 
 /* container is not taking up entire width, which messes up centering*/
@@ -57,15 +58,12 @@ input[type=submit]:hover {
 
 #content-wrap {
   padding-top: 3vh;
-  padding-bottom: 2.5rem;    /* Footer height */
 }
 
-footer {
-  bottom: 0;
-  height: 2em;
-  position: relative;
-  font-size: small;
-  width: 100%;
+.footer {
+  flex: 0 0 50px;
+  margin-top: auto;
+  padding-top: 3vh;
 }
 
 .w3-animate-left {
