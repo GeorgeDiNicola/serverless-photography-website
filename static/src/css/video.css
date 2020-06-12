@@ -18,7 +18,6 @@
 
 .container div {
   scroll-snap-align: start;
-
   height: 80vh;
   display: flex;
   justify-content: center;

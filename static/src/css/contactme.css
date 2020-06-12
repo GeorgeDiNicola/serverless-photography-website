@@ -2,6 +2,7 @@ h1 {
   color: white;
   text-align: center;
   font-family: 'Snell Roundhand';
+  padding-top: 2vh;
 }
 
 h2 {
@@ -17,6 +18,37 @@ h5 {
 h6 {
   color: white;
 	text-align: center;
+}
+
+input[type=text], select, textarea {
+  border: 1px solid white; /* white border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  color: black;
+  padding: 1vh;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* container is not taking up entire width, which messes up centering*/
+.container {
+  text-align: center;
+  width: 100%;
+  margin:0px auto;
 }
 
 .w3-animate-left {
@@ -64,17 +96,12 @@ h6 {
   }
 }
 
-footer {
+.footer {
   position: fixed;
   bottom: 0;
   color: white;
   width: 100%;
   text-align: center;
-}
-
-.parentContainer {
-  text-align: center;
-  padding-top: 4%;
 }
 
 .left {
