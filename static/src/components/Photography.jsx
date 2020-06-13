@@ -26,7 +26,6 @@ export default class Photography extends Component {
   componentWillMount() {
     var currentWindow = window.location.href;
     this.filterPhotos(currentWindow);
-    console.log("handling load");
   }
 
   componentDidMount() {

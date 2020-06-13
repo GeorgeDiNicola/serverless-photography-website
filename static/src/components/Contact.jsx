@@ -3,6 +3,22 @@ import '../css/contactme.css';
 
 export default class Contact extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      submittedForm: false
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    //do something
+    /*this.setState({
+      submittedForm: true
+    });*/
+    console.log("I work!");
+  }
+
 	render() {
 
 	  return (
@@ -26,7 +42,7 @@ export default class Contact extends Component {
       
       <div className="form-container">
         <div className="w3-animate-fading">
-          <form>
+          <form onSubmit={this.handleSubmit()}>
             <h6>
               For general or work inquiries, please fill out the form below
              </h6>
