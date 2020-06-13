@@ -59,3 +59,21 @@ a {
 #dropdown-item-button:hover {
   background-size: 100% 2px, auto;
 }
+
+#dropdown-item-button:focus {
+  outline: none !important;
+}
+
+.dropdown-item {
+  background-image: linear-gradient(DarkGray, DarkGray);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-in;
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+}
+
+.dropdown-item:hover {
+  background-size: 100% 200px, auto;
+}
