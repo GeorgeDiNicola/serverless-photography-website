@@ -59,9 +59,6 @@ export default class Photography extends Component {
     else if (photoCategory.includes("wild_life")) {
       listOfImages = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
     }
-    else if (photoCategory.includes("all")) {
-      listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
-    }
     // use all images
     else {
       listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
