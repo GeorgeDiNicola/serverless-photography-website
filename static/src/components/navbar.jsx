@@ -60,6 +60,7 @@ export default class NavBar extends Component {
                   <Dropdown.Item className="dropdown-item" href="./Photography#street">Street</Dropdown.Item>
                   <Dropdown.Item className="dropdown-itemn" href="./Photography#weddings">Weddings</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" href="./Photography#wild_life">Wild Life</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#all">All</Dropdown.Item>
                 </DropdownButton>
               </li>
               {/*<a href="./Home">Brand</a>*/}
