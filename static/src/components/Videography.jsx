@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from "react-player";
+import "react-bootstrap";
 import "../css/video.css";
 
 export default class Videography extends Component {
@@ -14,21 +15,21 @@ export default class Videography extends Component {
 	render() {
 		return (
 		  <React.Fragment>
-		  <div class="parentContainer">
+		  <div className="parentContainer">
 		    <div class="container">
 		      {this.state.video_urls.map(url_text => 
 		        <div className="player-wrapper">
 		          <ReactPlayer
 		            className='react-player'
-		            url={url_text}
-		            controls={true}
-		            width='100%'
-                    height='100%'
+		             url={url_text}
+		             controls={true}
+		             width='100%'
+	                 height='100%'
 		          />
 		        </div>
 		      )}
 		    </div>
-          </div>
+	      </div>
 		  </React.Fragment>
 		)
 	}

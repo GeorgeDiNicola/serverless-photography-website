@@ -17,6 +17,7 @@ export default class Photography extends Component {
     //this.handleSelect = this.handleSelect.bind(this);
     this.filterPhotos = this.filterPhotos.bind(this);
     this.handleLoad = this.handleLoad.bind(this);
+    this.shuffleList = this.shuffleList.bind(this);
   }
 
   importAll(r) {
@@ -34,6 +35,12 @@ export default class Photography extends Component {
 
   componentWillUnmount() { 
    window.removeEventListener('load', this.handleLoad)  
+ }
+
+ shuffleList(array) {
+   array.sort(function(a, b) {
+     return 0.5 - Math.random()
+   });
  }
 
   filterPhotos(photoCategory) {
@@ -62,11 +69,19 @@ export default class Photography extends Component {
     else if (photoCategory.includes("wild_life")) {
       listOfImages = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
     }
+    else if (photoCategory.includes("all")) {
+      listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
+    }
     // use all images
     else {
       listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
     }
-    // create a objects from the imported listOfImages
+    
+    // randomize the list of images when the user chooses to view "all" photos
+    if (photoCategory.includes("all")) {
+      this.shuffleList(images);
+    }
+    // create an object from the imported listOfImages
     images = listOfImages.map(x => ({original: x, thumbnail: x}));
   }
 

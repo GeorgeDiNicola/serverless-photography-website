@@ -4,13 +4,14 @@
   justify-content: center;
   height: 100vh;
   width: 100%;
+  padding: 0px;
 }
 
 .container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   border-radius: 8px;
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -18,7 +19,7 @@
 
 .container div {
   scroll-snap-align: start;
-  height: 80vh;
+  height: 72vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,4 +37,5 @@
 .react-player {
   position: relative;
   margin: auto;
+  height: 10vh;
 }

@@ -47,28 +47,29 @@ export default class NavBar extends Component {
 	
     return (
       <nav class={this.parentNavClass}>
-            <ul class="navbar-nav">
-                <li class={this.activeHomePage}>
-                  <a class="nav-link" href="./Home">Home</a>
-                </li>
-                <li class={this.activePhotoPage}>
-                  <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>
-                    <Dropdown.Item href="./Photography#events">Events</Dropdown.Item>
-                    <Dropdown.Item href="./Photography#nature">Nature</Dropdown.Item>
-                    <Dropdown.Item href="./Photography#portraits">Portraits</Dropdown.Item>
-                    <Dropdown.Item href="./Photography#still_life">Still Life</Dropdown.Item>
-                    <Dropdown.Item href="./Photography#street">Street</Dropdown.Item>
-                    <Dropdown.Item href="./Photography#weddings">Weddings</Dropdown.Item>
-                    <Dropdown.Item href="./Photography#wild_life">Wild Life</Dropdown.Item>
-                  </DropdownButton>
-                </li>
-                {/*<a href="./Home">Brand</a>*/}
-                <li class={this.activeVideoPage}>
-                  <a class="nav-link" href="./Videography">Videos</a>
-                </li>
-                <li class={this.activeContactPage}>
-                  <a class="nav-link" href="./Contact">Contact</a>
-                </li>
+            <ul class="navbar-nav navbar-expand-sm">
+              <li class={this.activeHomePage}>
+                <a class="nav-link" href="./">Home</a>
+              </li>
+              <li class={this.activePhotoPage}>
+                <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#events">Events</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#nature">Nature</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#portraits">Portraits</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#still_life">Still Life</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#street">Street</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-itemn" href="./Photography#weddings">Weddings</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#wild_life">Wild Life</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="./Photography#all">All</Dropdown.Item>
+                </DropdownButton>
+              </li>
+              {/*<a href="./Home">Brand</a>*/}
+              <li class={this.activeVideoPage}>
+                <a class="nav-link" href="./Videography">Videos</a>
+              </li>
+              <li class={this.activeContactPage}>
+                <a class="nav-link" href="./Contact">Contact</a>
+              </li>
             </ul>
       </nav>
     );
