@@ -5,7 +5,7 @@ import Home from './Home.jsx'
 import Photography from './Photography.jsx'
 import Videography from './Videography.jsx'
 import Contact from './Contact.jsx'
-import NavBar from './navbar';
+import NavBar from './Navbar';
 
 export default class AppRouter extends Component {
 	constructor(props) {
@@ -18,7 +18,7 @@ export default class AppRouter extends Component {
 		  <BrowserRouter>
 		    <div>
 		      <NavBar />
-		      <div className="page-body">
+		       <div className="page-body">
 		        <Route exact path="/" component={Home}/>
 		        <Route exact path="/Home" component={Home}/>
 		        <Route exact path="/Photography" component={Photography}/>
