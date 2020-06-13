@@ -12,7 +12,7 @@ export default class Photography extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBullets: true,
+      showBullets: false,
     };
     this.filterPhotos = this.filterPhotos.bind(this);
     this.shuffleList = this.shuffleList.bind(this);
