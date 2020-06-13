@@ -1,5 +1,5 @@
 .logo-black {
-  background-image: url("../carousel_images/branded_black.jpg");
+  background-image: url("../images/branded_black.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -12,7 +12,7 @@
 }
 
 .home-image1 {
-  background-image: url("../carousel_images/53.jpg");
+  background-image: url("../images/wild_life/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -25,7 +25,7 @@
 }
 
 .home-image2 {
-  background-image: url("../carousel_images/23.jpg");  
+  background-image: url("../images/nature/4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -38,7 +38,7 @@
 }
 
 .home-image3 {
-  background-image: url("../carousel_images/21.jpg");
+  background-image: url("../images/wild_life/2.jpg");  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -51,7 +51,7 @@
 }
 
 .home-image4 {
-  background-image: url("../carousel_images/33.jpg");
+  background-image: url("../images/street/2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -64,7 +64,7 @@
 }
 
 .home-image5 {
-  background-image: url("../carousel_images/66.jpg");
+  background-image: url("../images/nature/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -77,7 +77,33 @@
 }
 
 .home-image6 {
-  background-image: url("../carousel_images/1.jpg");
+  background-image: url("../images/nature/17.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 92vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
+}
+
+.home-image7 {
+  background-image: url("../images/wild_life/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 92vh;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1.1);
+}
+
+.home-image8 {
+  background-image: url("../images/street/6.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

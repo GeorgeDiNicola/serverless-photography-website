@@ -1,17 +1,7 @@
-h1 {
-  color: white;
-  text-align: center;
-  font-family: 'Snell Roundhand';
-}
-
+/*--- text styling selectors ---*/
 h2 {
   color: white;
   text-align: center;
-}
-
-h5 {
-	color: white;
-	font-size: 10px;
 }
 
 h6 {
@@ -19,6 +9,122 @@ h6 {
 	text-align: center;
 }
 
+.header-text {
+  color: white;
+  text-align: center;
+  font-family: 'Snell Roundhand';
+  padding-top: 1vh;
+  font-size: 3.5em;
+}
+
+.footer-text {
+  font-size: 0.8em;
+  color: white;
+  text-align: center;
+}
+
+/*--- form styling selectors ---*/
+input[type=text], select {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 1vh;
+}
+
+textarea {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 2vh;
+  width: 40vw;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: gray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: gray;
+}
+
+input, select, textarea{
+    color: white;
+}
+
+.form-control:valid {
+  background-color: black;
+}
+
+.name-text-box {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 1vh;
+  width: 28vw;
+}
+
+.email-text-box {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 1vh;
+  width: 50vw;
+}
+
+/*--- container styling selectors ---*/
+#page-container {
+   height: 92vh; /* will cover the 100% of viewport */
+   overflow-y: scroll;
+   display: flex;
+   flex-direction: column;
+}
+
+.about-content {
+  padding: 1vh;
+  text-align: center;
+}
+
+.form-container {
+  text-align: center;
+}
+
+#content-wrap {
+  padding-top: 3vh;
+}
+
+.footer {
+  flex: 0 0 50px;
+  margin-top: auto;
+  padding-top: 3vh;
+  text-align: center;
+}
+
+
+/*--- animation selectors ---*/
 .w3-animate-left {
   position:relative;
   animation:animateleft 1s
@@ -64,35 +170,25 @@ h6 {
   }
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  color: white;
-  width: 100%;
-  text-align: center;
+.w3-animate-fading{ 
+  animation:fading 7s
+}
+@keyframes fading {
+  0% {
+    opacity: 0
+  } 50% {
+    opacity: 1
+  } 100% {
+    opacity: 1
+  }
 }
 
-.parentContainer {
-  text-align: center;
-  padding-top: 4%;
-}
 
-.left {
-  padding-right: 2%;
-}
-
-.right {
-  padding-left: 2%;
-}
-
-.inline {
-  display: inline-block;
-}
-
+/*--- social media button styling selectors --*/
 .fa {
   padding: 20px;
-  font-size: 25px;
-  width: 68px;
+  font-size: 24px;
+  width: 63px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
@@ -129,12 +225,7 @@ footer {
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-pinterest {
-  background: #cb2027;
+  background: #E1306C;
   color: white;
 }
 
@@ -144,68 +235,8 @@ footer {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.fa-skype {
-  background: #00aff0;
-  color: white;
-}
-
-.fa-android {
-  background: #a4c639;
-  color: white;
-}
-
-.fa-dribbble {
-  background: #ea4c89;
-  color: white;
-}
-
 .fa-vimeo {
   background: #45bbff;
-  color: white;
-}
-
-.fa-tumblr {
-  background: #2c4762;
-  color: white;
-}
-
-.fa-vine {
-  background: #00b489;
-  color: white;
-}
-
-.fa-foursquare {
-  background: #45bbff;
-  color: white;
-}
-
-.fa-stumbleupon {
-  background: #eb4924;
-  color: white;
-}
-
-.fa-flickr {
-  background: #f40083;
-  color: white;
-}
-
-.fa-yahoo {
-  background: #430297;
-  color: white;
-}
-
-.fa-soundcloud {
-  background: #ff5500;
-  color: white;
-}
-
-.fa-reddit {
-  background: #ff5700;
-  color: white;
-}
-
-.fa-rss {
-  background: #ff6600;
   color: white;
 }
 

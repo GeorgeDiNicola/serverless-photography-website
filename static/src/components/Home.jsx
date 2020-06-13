@@ -13,6 +13,9 @@ var listOfClasses = [
           "logo-black",
 					"home-image5",
 					"home-image6",
+          "logo-black",
+          "home-image7",
+          "home-image8"
 		];
 
 // TODO: this could be converted to a functional component
