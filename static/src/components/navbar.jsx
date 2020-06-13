@@ -49,7 +49,7 @@ export default class NavBar extends Component {
       <nav class={this.parentNavClass}>
             <ul class="navbar-nav">
                 <li class={this.activeHomePage}>
-                  <a class="nav-link" href="./Home">Home</a>
+                  <a class="nav-link" href="./">Home</a>
                 </li>
                 <li class={this.activePhotoPage}>
                   <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>

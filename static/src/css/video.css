@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 94vh;
   width: 100%;
+  padding: 0px;
 }
 
 .container {
@@ -35,5 +36,11 @@
 
 .react-player {
   position: relative;
+  margin: auto;
+}
+
+.align-top {
+  vertical-align: top;
+  display: block;
   margin: auto;
 }
