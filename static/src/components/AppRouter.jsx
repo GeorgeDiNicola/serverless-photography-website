@@ -5,7 +5,7 @@ import Home from './Home.jsx'
 import Photography from './Photography.jsx'
 import Videography from './Videography.jsx'
 import Contact from './Contact.jsx'
-import NavBar from './Navbar';
+import NavBar from './navbar';
 
 export default class AppRouter extends Component {
 	constructor(props) {

@@ -11,12 +11,10 @@ export default class Photography extends Component {
 
   constructor(props) {
     super(props);
-    //this.state = {
-    //  selectedFilter: "Nature",  // set default filter
-    //};
-    //this.handleSelect = this.handleSelect.bind(this);
+    this.state = {
+      showBullets: true,
+    };
     this.filterPhotos = this.filterPhotos.bind(this);
-    this.handleLoad = this.handleLoad.bind(this);
     this.shuffleList = this.shuffleList.bind(this);
   }
 
@@ -26,16 +24,8 @@ export default class Photography extends Component {
 
   componentWillMount() {
     var currentWindow = window.location.href;
-    this.filterPhotos(currentWindow);
+    //this.filterPhotos(currentWindow);
   }
-
-  componentDidMount() {
-    window.addEventListener('load', this.handleLoad);
-  }
-
-  componentWillUnmount() { 
-   window.removeEventListener('load', this.handleLoad)  
- }
 
  shuffleList(array) {
    array.sort(function(a, b) {
@@ -77,16 +67,16 @@ export default class Photography extends Component {
       listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
     }
     
+    // create an object from the imported listOfImages
+    images = listOfImages.map(x => ({original: x, thumbnail: x}));
+
     // randomize the list of images when the user chooses to view "all" photos
     if (photoCategory.includes("all")) {
       this.shuffleList(images);
+      /*this.setState({
+        showBullets: false
+      });*/
     }
-    // create an object from the imported listOfImages
-    images = listOfImages.map(x => ({original: x, thumbnail: x}));
-  }
-
-  handleLoad() {
-    console.log("handling load");
   }
 
   render(){
@@ -97,7 +87,7 @@ export default class Photography extends Component {
       return(
         <ImageGallery class="no-outline"
             items={images} 
-            showBullets={true}
+            showBullets={this.state.showBullets}
             showIndex={false}
             showThumbnails={true}
             lazyLoad={true}
