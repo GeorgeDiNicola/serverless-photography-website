@@ -47,7 +47,10 @@ export default class NavBar extends Component {
 	
     return (
       <nav class={this.parentNavClass}>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav navbar-expand-sm">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+                 </button>
                 <li class={this.activeHomePage}>
                   <a class="nav-link" href="./">Home</a>
                 </li>

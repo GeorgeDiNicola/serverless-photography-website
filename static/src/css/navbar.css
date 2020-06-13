@@ -44,7 +44,7 @@ a {
 
 #dropdown-item-button {
   background-image: linear-gradient(yellow, yellow);
-  background-size: 0 3px, auto;
+  background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: all .3s ease-out;
@@ -52,7 +52,7 @@ a {
   color: white !important;
   font-weight: bold;
   border: none !important;
-  padding-top: 9%;
+  padding-top: 11%;
   outline: none !important;
 }
 

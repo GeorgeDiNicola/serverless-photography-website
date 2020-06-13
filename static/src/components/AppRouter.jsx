@@ -18,7 +18,7 @@ export default class AppRouter extends Component {
 		  <BrowserRouter>
 		    <div>
 		      <NavBar />
-		       <div className="page-body">
+		      <div className="page-body">
 		        <Route exact path="/" component={Home}/>
 		        <Route exact path="/Home" component={Home}/>
 		        <Route exact path="/Photography" component={Photography}/>
