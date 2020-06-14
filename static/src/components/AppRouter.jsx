@@ -12,41 +12,40 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "../css/loaders.css";
 
 export default class AppRouter extends Component {
-	constructor(props) {
-	  super(props);
-      this.state = {
-        component: null,
-      };
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      component: null,
+    };
+  }
 
-	componentDidMount() {
-    // set the component state asynchronously
-      setTimeout(() => {
-        this.setState({ component:
-          <BrowserRouter>
-		    <div>
-		      <NavBar />
-		        <div className="page-body">
-		          <Route exact path="/" component={Home}/>
-		          <Route exact path="/Home" component={Home}/>
-		          <Route exact path="/Photography" component={Photography}/>
-		          <Route exact path="/Videography" component={Videography}/>
-		          <Route exact path="/Contact" component={Contact}/>
-		        </div>
+  componentDidMount() {
+  // set the component state asynchronously
+    setTimeout(() => {
+      this.setState({ component:
+        <BrowserRouter>
+		  <div>
+		    <NavBar />
+		    <div className="page-body">
+		      <Route exact path="/" component={Home}/>
+		      <Route exact path="/Home" component={Home}/>
+		      <Route exact path="/Photography" component={Photography}/>
+		      <Route exact path="/Videography" component={Videography}/>
+		      <Route exact path="/Contact" component={Contact}/>
 		      </div>
-		    </BrowserRouter>
-        });
-	    }, 2000);  // ,5000); to show the spinner
-	  }
+		  </div>
+		</BrowserRouter>
+      });
+	}, 800);  // ,5000); to show the spinner
+  }
 
-	render() {
-
-		return (
-		  this.state.component || (
-          <div className="loader">
-            <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
-          </div>
-          )
-		)
-	}
+  render() {
+    return (
+	  this.state.component || (
+        <div className="loader">
+          <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+        </div>
+      )
+    )
+  }
 }

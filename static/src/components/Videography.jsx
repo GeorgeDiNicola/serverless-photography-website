@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactPlayer from "react-player";
-import "react-bootstrap";
 import "../css/video.css";
 
 var listOfYoutubeLinks = [
