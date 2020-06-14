@@ -2,50 +2,39 @@ import React, { Component } from 'react';
 import AppRouter from './components/AppRouter.jsx';
 import './App.css';
 
+import Loader from 'react-loader-spinner';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import "./css/loaders.css";
+
 
 export default class App extends Component {
 
-  constructor() {
-    super();  // you must also pass props to the constructor of the base class.
-    console.log('App - Constructor');
-    //this.state = this.props.something;
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      component: null,
+    };
+  }
 
   componentDidMount() {
-    // Ajax Call
-    console.log('App - Mounted');
-  };
+   // set the component state asynchronously
+    setTimeout(() => {
+      this.setState({ component:
+        <AppRouter />
+      });
+    });  // ,5000); to show the spinner
+  }
 
-  /*
-  handleIncrement = counter => {
-    const counters = [...this.state.counters];  // this is a fast way to copy the state object to the "counters" array!
-    const index = counters.indexOf(counter);
-    counters[index] = {...counter };  // clone the counter object received in the function. This is because we should not set the state directly
-    counters[index].value++;
-    this.setState({ counters });  // set the state to the new counters array
-  };
-
-  handleReset = () => {
-    const counters = this.state.counters.map(c => {
-      c.value = 0;
-      return c;
-    });
-    this.setState({ counters });
-  };
-
-  handleDelete = counterId => {
-    // create an array for the counters that are not going to be deleted
-    const counters = this.state.counters.filter(c => c.id !== counterId);  // filter out the counter with the given id. get all of the ones without the given id.
-    this.setState({ counters });  // overwrite the counters property with this counters constant
-  };
-  */
-
-  // we have to wrap with React.Fragment since there are multiple components being rendered
   render() {
     console.log("App - Rendered");
 
     return (
-      <AppRouter />
+      this.state.component || (
+        <div className="loader">
+          <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+        </div>
+      )
+      
     );
   }
 }
