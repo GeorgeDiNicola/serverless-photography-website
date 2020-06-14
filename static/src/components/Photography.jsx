@@ -22,16 +22,11 @@ export default class Photography extends Component {
     return r.keys().map(r);
   }
 
-  componentWillMount() {
-    var currentWindow = window.location.href;
-    //this.filterPhotos(currentWindow);
+  shuffleList(array) {
+    array.sort(function(a, b) {
+      return 0.5 - Math.random()
+    });
   }
-
- shuffleList(array) {
-   array.sort(function(a, b) {
-     return 0.5 - Math.random()
-   });
- }
 
   filterPhotos(photoCategory) {
     // import the list based on what the user chose in the drop-down

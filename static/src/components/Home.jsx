@@ -53,7 +53,6 @@ export default class Home extends Component {
     });  // ,5000); to show the spinner
   }
 
-
 	render() {
 
     return (
