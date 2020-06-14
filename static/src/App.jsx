@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import AppRouter from './components/AppRouter.jsx';
-
 import './App.css';
-//import NavBar from './components/navbar';
-
 
 
 export default class App extends Component {

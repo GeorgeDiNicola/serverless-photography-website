@@ -3,6 +3,10 @@ import {Carousel} from 'react-bootstrap';
 import "../css/home.css";
 import Videography from './Videography';  // without this the photography page will not render properly
 
+import ReactPlaceholder from 'react-placeholder';
+import "react-placeholder/lib/reactPlaceholder.css";
+import { TextBlock, RectShape } from 'react-placeholder/lib/placeholders';
+
 var listOfClasses = [
 					"logo-black",
           "home-image1",
@@ -18,14 +22,14 @@ var listOfClasses = [
           "home-image8"
 		];
 
+
 // TODO: this could be converted to a functional component
 export default class Home extends Component {
 
 	render() {
 
-	  // have to logo alternate between each photo
     return (
-      <Carousel interval="2000" pause={false}>
+        <Carousel interval="2000" pause={false}>
         {
           listOfClasses.map(
             (c, index) =>
@@ -38,7 +42,7 @@ export default class Home extends Component {
               </Carousel.Item>
           )
          }
-      </Carousel>
+        </Carousel>
 	  )
     }
 }

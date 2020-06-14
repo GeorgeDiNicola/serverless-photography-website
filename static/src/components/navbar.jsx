@@ -63,7 +63,6 @@ export default class NavBar extends Component {
                   <Dropdown.Item className="dropdown-item" href="./Photography#all">All</Dropdown.Item>
                 </DropdownButton>
               </li>
-              {/*<a href="./Home">Brand</a>*/}
               <li class={this.activeVideoPage}>
                 <a class="nav-link" href="./Videography">Videos</a>
               </li>

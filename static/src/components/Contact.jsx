@@ -11,12 +11,11 @@ export default class Contact extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit() {
-    //do something
-    /*this.setState({
-      submittedForm: true
-    });*/
+  handleSubmit(event) {
+    this.setState({ submittedForm: true });
     console.log("I work!");
+    console.log(this.state.submittedForm);
+    event.preventDefault();  // this prevents the page from re-loading when the form is submitted
   }
 
 	render() {
@@ -40,9 +39,12 @@ export default class Contact extends Component {
         </div>
       </div>
       
+    {/* ternary operator for conditional rendering of the form */}
+      {!this.state.submittedForm ?
+      
       <div className="form-container">
         <div className="w3-animate-fading">
-          <form onSubmit={this.handleSubmit()}>
+          <form onSubmit={this.handleSubmit}>
             <h6>
               For general or work inquiries, please fill out the form below
              </h6>
@@ -78,10 +80,13 @@ export default class Contact extends Component {
             </textarea>
             <br/>
             <br/>
-            <input type="submit" value="Submit"></input>
+            <input type="submit" value="Submit" onclick="return false"></input>
           </form>
+          <p>{ this.state.submittedForm }</p>
         </div>
       </div>
+
+      : <h2>Message sent. Thank you!</h2>}
     
       <div className="footer">
         <div className="w3-animate-right">
