@@ -13,10 +13,10 @@ export default class Contact extends Component {
 
   handleSubmit(event) {
     this.setState({ submittedForm: true });
-    console.log("I work!");
-    console.log(this.state.submittedForm);
     event.preventDefault();  // this prevents the page from re-loading when the form is submitted
   }
+
+  //TODO: define a sendEmail method
 
 	render() {
 

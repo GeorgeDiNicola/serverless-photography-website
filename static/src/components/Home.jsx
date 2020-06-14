@@ -3,9 +3,9 @@ import {Carousel} from 'react-bootstrap';
 import "../css/home.css";
 import Videography from './Videography';  // without this the photography page will not render properly
 
-import ReactPlaceholder from 'react-placeholder';
-import "react-placeholder/lib/reactPlaceholder.css";
-import { TextBlock, RectShape } from 'react-placeholder/lib/placeholders';
+import Loader from 'react-loader-spinner';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import "../css/loaders.css";
 
 var listOfClasses = [
 					"logo-black",
@@ -22,14 +22,20 @@ var listOfClasses = [
           "home-image8"
 		];
 
-
-// TODO: this could be converted to a functional component
 export default class Home extends Component {
 
-	render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      component: null,
+    };
+  }
 
-    return (
-        <Carousel interval="2000" pause={false}>
+  componentDidMount() {
+    // set the component state asynchronously
+    setTimeout(() => {
+      this.setState({
+        component: <Carousel interval="2000" pause={false}>
         {
           listOfClasses.map(
             (c, index) =>
@@ -43,6 +49,21 @@ export default class Home extends Component {
           )
          }
         </Carousel>
+      });
+    
+    });
+  }
+
+
+	render() {
+
+    return (
+        this.state.component || (
+        <div className="loader">
+          <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+        </div>
+      )
+
 	  )
     }
 }
