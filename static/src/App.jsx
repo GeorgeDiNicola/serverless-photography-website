@@ -22,7 +22,7 @@ export default class App extends Component {
       this.setState({ component:
         <AppRouter />
       });
-    });  // ,5000); to show the spinner
+    }, 1000);  // ,5000); to show the spinner
   }
 
   render() {
@@ -34,7 +34,6 @@ export default class App extends Component {
           <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
         </div>
       )
-      
     );
   }
 }
