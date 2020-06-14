@@ -50,8 +50,7 @@ export default class Home extends Component {
          }
         </Carousel>
       });
-    
-    });
+    });  // ,5000); to show the spinner
   }
 
 
@@ -59,11 +58,10 @@ export default class Home extends Component {
 
     return (
         this.state.component || (
-        <div className="loader">
-          <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
-        </div>
-      )
-
-	  )
-    }
+          <div className="loader">
+            <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+          </div>
+        )
+     )
+  }
 }
