@@ -20,7 +20,7 @@ var listOfImages = [
 
 const Home = () => (
   
-  <Carousel interval="2000" pause={false}>
+  <Carousel interval="2500" pause={false}>
     {listOfImages.map((c, index) =>
       <Carousel.Item>
         <img
