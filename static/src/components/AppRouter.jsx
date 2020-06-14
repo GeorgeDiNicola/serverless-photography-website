@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {Route, Link, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 
 import Home from './Home.jsx'
 import Photography from './Photography.jsx'
 import Videography from './Videography.jsx'
 import Contact from './Contact.jsx'
-import NavBar from './navbar';
+import NavBar from './navbar.jsx';
 
 const AppRouter = () => (
 
