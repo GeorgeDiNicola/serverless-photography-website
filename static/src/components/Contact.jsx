@@ -15,27 +15,37 @@ export default class Contact extends Component {
       messageText: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
+    this.handleLastNameChange = this.handleLastNameChange.bind(this);
+    this.handleEmailAddressChange = this.handleEmailAddressChange.bind(this);
+    this.handlemessageTextChange = this.handlemessageTextChange.bind(this);
   }
 
   handleSubmit(event) {
-    this.setState({ submittedForm: true });
+    if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && this.state.messageText.length > 0) {
+      this.setState({ submittedForm: true });
+    }
     event.preventDefault();  // this prevents the page from re-loading when the form is submitted
   }
 
-  handleChange(input) {
-    if (input === "firstName") {
-      console.log("change detected");
-    }
-    else if (input === "lastName") {
-      console.log("change detected");
-    }
-    else if (input === "emailAddress") {
-      console.log("change detected");
-    }
-    else if (input === "messageText") {
-      console.log("change detected");
-    }
+  handleFirstNameChange(event) {
+    this.setState({firstName: event.target.value});
+    console.log(this.state.firstName);
+  }
+
+  handleLastNameChange(event) {
+    this.setState({lastName: event.target.value});
+    console.log(this.state.lastName);
+  }
+
+  handleEmailAddressChange(event) {
+    this.setState({emailAddress: event.target.value});
+    console.log(this.state.emailAddress);
+  }
+
+  handlemessageTextChange(event) {
+    this.setState({messageText: event.target.value});
+    console.log(this.state.messageText);
   }
 
   //TODO: define a sendEmail method
@@ -74,16 +84,18 @@ export default class Contact extends Component {
               class="name-text-box"
               type="text" 
               id="fname" 
-              name="firstname" 
+              name="firstname"
+              firstName={this.state.firstName}
               placeholder="First name.."
-              onChange={this.handleChange("firstName")}
+              onChange={this.handleFirstNameChange}
             ></input>&nbsp;&nbsp;&nbsp;
             <input class="name-text-box"
               type="text" 
               id="lname" 
               name="lastname" 
+              lastName={this.state.lastName}
               placeholder="Last name.."
-              onChange={this.handleChange("lastName")}
+              onChange={this.handleLastNameChange}
             ></input>
             <br/>
             <br/>
@@ -91,17 +103,19 @@ export default class Contact extends Component {
               className="email-text-box"
               type="text" 
               id="email" 
-              name="email" 
+              name="email"
+              emailAddress={this.state.emailAddress}
               placeholder="Email address.."
-              onChange={this.handleChange("emailAddress")}
+              onChange={this.handleEmailAddressChange}
             ></input>
             <br/>
             <br/>
             <textarea 
               id="message" 
               name="message" 
+              messageText={this.state.messageText}
               placeholder="Write a message.."
-              onChange={this.handleChange("messageText")}
+              onChange={this.handlemessageTextChange}
             >
             </textarea>
             <br/>
