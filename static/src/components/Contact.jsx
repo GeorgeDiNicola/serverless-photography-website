@@ -1,19 +1,41 @@
 import React, { Component } from 'react';
 import '../css/contact.css';
 
+const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+
 export default class Contact extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      submittedForm: false
+      submittedForm: false,
+      firstName: null,
+      lastName: null,
+      emailAddress: null,
+      messageText: null,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(event) {
     this.setState({ submittedForm: true });
     event.preventDefault();  // this prevents the page from re-loading when the form is submitted
+  }
+
+  handleChange(input) {
+    if (input === "firstName") {
+      console.log("change detected");
+    }
+    else if (input === "lastName") {
+      console.log("change detected");
+    }
+    else if (input === "emailAddress") {
+      console.log("change detected");
+    }
+    else if (input === "messageText") {
+      console.log("change detected");
+    }
   }
 
   //TODO: define a sendEmail method
@@ -35,7 +57,7 @@ export default class Contact extends Component {
             <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
             <br/>
             <br/>
-           </h6>
+          </h6>
         </div>
       </div>
       
@@ -54,12 +76,14 @@ export default class Contact extends Component {
               id="fname" 
               name="firstname" 
               placeholder="First name.."
+              onChange={this.handleChange("firstName")}
             ></input>&nbsp;&nbsp;&nbsp;
             <input class="name-text-box"
               type="text" 
               id="lname" 
               name="lastname" 
               placeholder="Last name.."
+              onChange={this.handleChange("lastName")}
             ></input>
             <br/>
             <br/>
@@ -69,6 +93,7 @@ export default class Contact extends Component {
               id="email" 
               name="email" 
               placeholder="Email address.."
+              onChange={this.handleChange("emailAddress")}
             ></input>
             <br/>
             <br/>
@@ -76,13 +101,13 @@ export default class Contact extends Component {
               id="message" 
               name="message" 
               placeholder="Write a message.."
+              onChange={this.handleChange("messageText")}
             >
             </textarea>
             <br/>
             <br/>
             <input type="submit" value="Submit" onclick="return false"></input>
           </form>
-          <p>{ this.state.submittedForm }</p>
         </div>
       </div>
 
