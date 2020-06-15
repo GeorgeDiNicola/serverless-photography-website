@@ -22,7 +22,7 @@ export default class Contact extends Component {
   }
 
   handleSubmit(event) {
-    if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && this.state.messageText.length > 0) {
+    if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && validEmailRegex.test(this.state.emailAddress) && this.state.messageText.length > 0) {
       this.setState({ submittedForm: true });
     }
     event.preventDefault();  // this prevents the page from re-loading when the form is submitted
@@ -30,27 +30,28 @@ export default class Contact extends Component {
 
   handleFirstNameChange(event) {
     this.setState({firstName: event.target.value});
-    console.log(this.state.firstName);
   }
 
   handleLastNameChange(event) {
     this.setState({lastName: event.target.value});
-    console.log(this.state.lastName);
   }
 
   handleEmailAddressChange(event) {
     this.setState({emailAddress: event.target.value});
-    console.log(this.state.emailAddress);
   }
 
   handlemessageTextChange(event) {
     this.setState({messageText: event.target.value});
-    console.log(this.state.messageText);
   }
 
   //TODO: define a sendEmail method
 
 	render() {
+
+    console.log(this.state.firstName);
+    console.log(this.state.lastName);
+    console.log(this.state.emailAddress);
+    console.log(this.state.messageText);
 
 	  return (
 
