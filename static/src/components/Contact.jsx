@@ -22,10 +22,10 @@ export default class Contact extends Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();  // this prevents the page from re-loading when the form is submitted
     if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && validEmailRegex.test(this.state.emailAddress) && this.state.messageText.length > 0) {
       this.setState({ submittedForm: true });
     }
-    event.preventDefault();  // this prevents the page from re-loading when the form is submitted
   }
 
   handleFirstNameChange(event) {
@@ -43,6 +43,8 @@ export default class Contact extends Component {
   handlemessageTextChange(event) {
     this.setState({messageText: event.target.value});
   }
+
+  // TODO: methods for adding text about incorrect fields before submitting
 
   //TODO: define a sendEmail method
 

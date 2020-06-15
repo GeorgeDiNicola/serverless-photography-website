@@ -39,7 +39,8 @@ textarea {
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 2vh;
-  width: 40vw;
+  width: 20vw;
+  height: 20vh;
 }
 
 input[type=submit] {
@@ -83,7 +84,7 @@ input, select, textarea{
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 1vh;
-  width: 28vw;
+  width: 15vw;
 }
 
 .email-text-box {
@@ -92,7 +93,7 @@ input, select, textarea{
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 1vh;
-  width: 50vw;
+  width: 25vw;
 }
 
 /*--- container styling selectors ---*/
