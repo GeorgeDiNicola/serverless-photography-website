@@ -13,8 +13,13 @@ h6 {
   color: white;
   text-align: center;
   font-family: 'Snell Roundhand';
-  padding-top: 1vh;
   font-size: 3.5em;
+}
+
+.error-text {
+  font-size: 0.8em;
+  color: red;
+  text-align: center;
 }
 
 .footer-text {
@@ -30,16 +35,6 @@ input[type=text], select {
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 1vh;
-}
-
-textarea {
-  border: 1px solid white;
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-  background-color: black;
-  padding: 2vh;
-  width: 40vw;
 }
 
 input[type=submit] {
@@ -82,8 +77,11 @@ input, select, textarea{
   border-radius: 4px; /* Rounded borders */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
-  padding: 1vh;
-  width: 28vw;
+  padding: 3vh;
+  width: 20vw;
+  /*width: 300px;*/
+  max-width: 400px;
+  min-width: 200px;
 }
 
 .email-text-box {
@@ -92,8 +90,25 @@ input, select, textarea{
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 1vh;
-  width: 50vw;
+  width: 35vw;
+  /*width: 400px;*/
+  max-width: 500px;
+  min-width: 250px;
 }
+
+textarea {
+  border: 1px solid white;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: black;
+  padding: 2vh;
+  height: 20vh;
+  width: 40vw;
+  max-width: 330px;
+  min-width: 200px;
+}
+
 
 /*--- container styling selectors ---*/
 #page-container {
@@ -104,7 +119,6 @@ input, select, textarea{
 }
 
 .about-content {
-  padding: 1vh;
   text-align: center;
 }
 
@@ -209,11 +223,6 @@ input, select, textarea{
   color: white;
 }
 
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
 .fa-linkedin {
   background: #007bb5;
   color: white;
@@ -226,21 +235,5 @@ input, select, textarea{
 
 .fa-instagram {
   background: #E1306C;
-  color: white;
-}
-
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.fa-vimeo {
-  background: #45bbff;
-  color: white;
-}
-
-.fa-github {
-  background:#24292e;
   color: white;
 }

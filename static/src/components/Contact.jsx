@@ -1,19 +1,75 @@
 import React, { Component } from 'react';
-import '../css/contactme.css';
+import '../css/contact.css';
+
+const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
 export default class Contact extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      submittedForm: false
+      submittedForm: false,
+      firstName: "",
+      lastName: "",
+      emailAddress: "",
+      messageText: "",
+      errorText: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
+    this.handleLastNameChange = this.handleLastNameChange.bind(this);
+    this.handleEmailAddressChange = this.handleEmailAddressChange.bind(this);
+    this.handleMessageTextChange = this.handleMessageTextChange.bind(this);
   }
 
   handleSubmit(event) {
-    this.setState({ submittedForm: true });
     event.preventDefault();  // this prevents the page from re-loading when the form is submitted
+    if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && validEmailRegex.test(this.state.emailAddress) && this.state.messageText.length > 0) {
+      this.setState({ submittedForm: true });
+    }
+    
+    if (this.state.firstName.length < 1) {
+      this.setState({errorText: "Please enter your first name"});
+    } else if (this.state.lastName.length < 1) {
+      this.setState({errorText: "Please enter your last name"});
+    } else if (this.state.emailAddress.length < 1) {
+      this.setState({errorText: "Please enter your email address"});
+    } else if (!validEmailRegex.test(this.state.emailAddress)) {
+      this.setState({errorText: "Invalid email address"});
+    } else if (this.state.messageText.length < 1) {
+      this.setState({errorText: "Please enter a message"});
+    }
+  }
+
+  handleFirstNameChange(event) {
+    this.setState({firstName: event.target.value});
+    if (event.target.value.length > 0) {
+      this.setState({errorText: ""});
+    }
+  }
+
+  handleLastNameChange(event) {
+    this.setState({lastName: event.target.value});
+    if (event.target.value.length > 0) {
+      this.setState({errorText: ""});
+    }
+  }
+
+  handleEmailAddressChange(event) {
+    this.setState({emailAddress: event.target.value});
+    if (this.state.errorText === "Please enter your email address" && event.target.value.length > 0) {
+      this.setState({errorText: ""});
+    }
+    if (this.state.errorText === "Invalid email address" && validEmailRegex.test(event.target.value)) {
+      this.setState({errorText: ""});
+    }
+  }
+
+  handleMessageTextChange(event) {
+    this.setState({messageText: event.target.value});
+    if (event.target.value.length > 0) {
+      this.setState({errorText: ""});
+    }
   }
 
   //TODO: define a sendEmail method
@@ -35,7 +91,7 @@ export default class Contact extends Component {
             <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
             <br/>
             <br/>
-           </h6>
+          </h6>
         </div>
       </div>
       
@@ -52,14 +108,18 @@ export default class Contact extends Component {
               class="name-text-box"
               type="text" 
               id="fname" 
-              name="firstname" 
+              name="firstname"
+              firstName={this.state.firstName}
               placeholder="First name.."
+              onInput={this.handleFirstNameChange}
             ></input>&nbsp;&nbsp;&nbsp;
             <input class="name-text-box"
               type="text" 
               id="lname" 
               name="lastname" 
+              lastName={this.state.lastName}
               placeholder="Last name.."
+              onInput={this.handleLastNameChange}
             ></input>
             <br/>
             <br/>
@@ -67,26 +127,34 @@ export default class Contact extends Component {
               className="email-text-box"
               type="text" 
               id="email" 
-              name="email" 
+              name="email"
+              emailAddress={this.state.emailAddress}
               placeholder="Email address.."
+              onInput={this.handleEmailAddressChange}
             ></input>
             <br/>
             <br/>
             <textarea 
               id="message" 
               name="message" 
+              messageText={this.state.messageText}
               placeholder="Write a message.."
+              onInput={this.handleMessageTextChange}
             >
             </textarea>
             <br/>
             <br/>
             <input type="submit" value="Submit" onclick="return false"></input>
+            <br/>
+            <span className="error-text">
+              {this.state.errorText}
+            </span> 
           </form>
-          <p>{ this.state.submittedForm }</p>
         </div>
       </div>
 
-      : <h2>Message sent. Thank you!</h2>}
+      : <h2>Message sent. Thank you!</h2>
+    }
     
       <div className="footer">
         <div className="w3-animate-right">
