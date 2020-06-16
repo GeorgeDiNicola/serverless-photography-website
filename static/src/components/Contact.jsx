@@ -27,41 +27,47 @@ export default class Contact extends Component {
     if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && validEmailRegex.test(this.state.emailAddress) && this.state.messageText.length > 0) {
       this.setState({ submittedForm: true });
     }
-    if (!validEmailRegex.test(this.state.emailAddress)) {
-      this.setState({errorText: "Invalid email address"});
-    } else if (this.state.messageText.length < 1) {
-      this.setState({errorText: "Please enter a message"});
-    } else if (this.state.firstName.length < 1) {
+    
+    if (this.state.firstName.length < 1) {
       this.setState({errorText: "Please enter your first name"});
     } else if (this.state.lastName.length < 1) {
       this.setState({errorText: "Please enter your last name"});
+    } else if (this.state.emailAddress.length < 1) {
+      this.setState({errorText: "Please enter your email address"});
+    } else if (!validEmailRegex.test(this.state.emailAddress)) {
+      this.setState({errorText: "Invalid email address"});
+    } else if (this.state.messageText.length < 1) {
+      this.setState({errorText: "Please enter a message"});
     }
   }
 
   handleFirstNameChange(event) {
     this.setState({firstName: event.target.value});
-    if (this.state.firstName.length > 0) {
+    if (event.target.value.length > 0) {
       this.setState({errorText: ""});
     }
   }
 
   handleLastNameChange(event) {
     this.setState({lastName: event.target.value});
-    if (this.state.lastName.length > 0) {
+    if (event.target.value.length > 0) {
       this.setState({errorText: ""});
     }
   }
 
   handleEmailAddressChange(event) {
     this.setState({emailAddress: event.target.value});
-    if (validEmailRegex.test(this.state.emailAddress)) {
+    if (this.state.errorText === "Please enter your email address" && event.target.value.length > 0) {
+      this.setState({errorText: ""});
+    }
+    if (this.state.errorText === "Invalid email address" && validEmailRegex.test(event.target.value)) {
       this.setState({errorText: ""});
     }
   }
 
   handlemessageTextChange(event) {
     this.setState({messageText: event.target.value});
-    if (this.state.messageText.length > 0) {
+    if (event.target.value.length > 0) {
       this.setState({errorText: ""});
     }
   }
@@ -69,11 +75,6 @@ export default class Contact extends Component {
   //TODO: define a sendEmail method
 
 	render() {
-
-    console.log(this.state.firstName);
-    console.log(this.state.lastName);
-    console.log(this.state.emailAddress);
-    console.log(this.state.messageText);
 
 	  return (
 
