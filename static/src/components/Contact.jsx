@@ -110,7 +110,7 @@ export default class Contact extends Component {
               name="firstname"
               firstName={this.state.firstName}
               placeholder="First name.."
-              onChange={this.handleFirstNameChange}
+              onInput={this.handleFirstNameChange}
             ></input>&nbsp;&nbsp;&nbsp;
             <input class="name-text-box"
               type="text" 
@@ -118,7 +118,7 @@ export default class Contact extends Component {
               name="lastname" 
               lastName={this.state.lastName}
               placeholder="Last name.."
-              onChange={this.handleLastNameChange}
+              onInput={this.handleLastNameChange}
             ></input>
             <br/>
             <br/>
@@ -129,7 +129,7 @@ export default class Contact extends Component {
               name="email"
               emailAddress={this.state.emailAddress}
               placeholder="Email address.."
-              onChange={this.handleEmailAddressChange}
+              onInput={this.handleEmailAddressChange}
             ></input>
             <br/>
             <br/>
@@ -138,7 +138,7 @@ export default class Contact extends Component {
               name="message" 
               messageText={this.state.messageText}
               placeholder="Write a message.."
-              onChange={this.handlemessageTextChange}
+              onInput={this.handlemessageTextChange}
             >
             </textarea>
             <br/>
