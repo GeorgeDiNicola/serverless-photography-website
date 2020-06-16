@@ -9,10 +9,11 @@ export default class Contact extends Component {
     super(props);
     this.state = {
       submittedForm: false,
-      firstName: null,
-      lastName: null,
-      emailAddress: null,
-      messageText: null,
+      firstName: "",
+      lastName: "",
+      emailAddress: "",
+      messageText: "",
+      errorText: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -26,25 +27,44 @@ export default class Contact extends Component {
     if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && validEmailRegex.test(this.state.emailAddress) && this.state.messageText.length > 0) {
       this.setState({ submittedForm: true });
     }
+    if (!validEmailRegex.test(this.state.emailAddress)) {
+      this.setState({errorText: "Invalid email address"});
+    } else if (this.state.messageText.length < 1) {
+      this.setState({errorText: "Please enter a message"});
+    } else if (this.state.firstName.length < 1) {
+      this.setState({errorText: "Please enter your first name"});
+    } else if (this.state.lastName.length < 1) {
+      this.setState({errorText: "Please enter your last name"});
+    }
   }
 
   handleFirstNameChange(event) {
     this.setState({firstName: event.target.value});
+    if (this.state.firstName.length > 0) {
+      this.setState({errorText: ""});
+    }
   }
 
   handleLastNameChange(event) {
     this.setState({lastName: event.target.value});
+    if (this.state.lastName.length > 0) {
+      this.setState({errorText: ""});
+    }
   }
 
   handleEmailAddressChange(event) {
     this.setState({emailAddress: event.target.value});
+    if (validEmailRegex.test(this.state.emailAddress)) {
+      this.setState({errorText: ""});
+    }
   }
 
   handlemessageTextChange(event) {
     this.setState({messageText: event.target.value});
+    if (this.state.messageText.length > 0) {
+      this.setState({errorText: ""});
+    }
   }
-
-  // TODO: methods for adding text about incorrect fields before submitting
 
   //TODO: define a sendEmail method
 
@@ -124,11 +144,16 @@ export default class Contact extends Component {
             <br/>
             <br/>
             <input type="submit" value="Submit" onclick="return false"></input>
+            <br/>
+            <span className="error-text">
+              {this.state.errorText}
+            </span> 
           </form>
         </div>
       </div>
 
-      : <h2>Message sent. Thank you!</h2>}
+      : <h2>Message sent. Thank you!</h2>
+    }
     
       <div className="footer">
         <div className="w3-animate-right">

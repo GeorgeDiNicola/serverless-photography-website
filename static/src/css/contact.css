@@ -13,8 +13,13 @@ h6 {
   color: white;
   text-align: center;
   font-family: 'Snell Roundhand';
-  padding-top: 1vh;
   font-size: 3.5em;
+}
+
+.error-text {
+  font-size: 0.8em;
+  color: red;
+  text-align: center;
 }
 
 .footer-text {
@@ -39,7 +44,7 @@ textarea {
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 2vh;
-  width: 20vw;
+  width: 25vw;
   height: 20vh;
 }
 
@@ -83,8 +88,9 @@ input, select, textarea{
   border-radius: 4px; /* Rounded borders */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
-  padding: 1vh;
-  width: 15vw;
+  padding: 3vh;
+  /*width: 20vw;*/
+  width: 300px;
 }
 
 .email-text-box {
@@ -93,7 +99,8 @@ input, select, textarea{
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 1vh;
-  width: 25vw;
+  /*width: 20vw;*/
+  width: 400px;
 }
 
 /*--- container styling selectors ---*/
@@ -105,7 +112,6 @@ input, select, textarea{
 }
 
 .about-content {
-  padding: 1vh;
   text-align: center;
 }
 
