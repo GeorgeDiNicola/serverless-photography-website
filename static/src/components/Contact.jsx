@@ -19,7 +19,7 @@ export default class Contact extends Component {
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
     this.handleEmailAddressChange = this.handleEmailAddressChange.bind(this);
-    this.handlemessageTextChange = this.handlemessageTextChange.bind(this);
+    this.handleMessageTextChange = this.handleMessageTextChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -65,7 +65,7 @@ export default class Contact extends Component {
     }
   }
 
-  handlemessageTextChange(event) {
+  handleMessageTextChange(event) {
     this.setState({messageText: event.target.value});
     if (event.target.value.length > 0) {
       this.setState({errorText: ""});
@@ -139,7 +139,7 @@ export default class Contact extends Component {
               name="message" 
               messageText={this.state.messageText}
               placeholder="Write a message.."
-              onInput={this.handlemessageTextChange}
+              onInput={this.handleMessageTextChange}
             >
             </textarea>
             <br/>

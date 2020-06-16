@@ -81,6 +81,7 @@ input, select, textarea{
   width: 20vw;
   /*width: 300px;*/
   max-width: 400px;
+  min-width: 200px;
 }
 
 .email-text-box {
@@ -92,6 +93,7 @@ input, select, textarea{
   width: 35vw;
   /*width: 400px;*/
   max-width: 500px;
+  min-width: 250px;
 }
 
 textarea {
@@ -104,6 +106,7 @@ textarea {
   height: 20vh;
   width: 40vw;
   max-width: 330px;
+  min-width: 200px;
 }
 
 
