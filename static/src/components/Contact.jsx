@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import '../css/contact.css';
 import emailjs from 'emailjs-com';
+import {u_token} from "../config/config.js";
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
+console.log(u_token);
 
 export default class Contact extends Component {
 
@@ -52,7 +54,7 @@ export default class Contact extends Component {
       "lastName": lname,
       "emailAddress": email
     };
-    emailjs.send('default_service','form_submission', template_params, "****");
+    emailjs.send('default_service','form_submission', template_params, u_token);
   }
 
   handleFirstNameChange(event) {
