@@ -16,3 +16,4 @@ The goal of this project is to create a sever-less static web application to hos
 * react-router-dom
 * react-image-gallery
 * react-player
+* emailjs-com
