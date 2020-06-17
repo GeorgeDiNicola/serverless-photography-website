@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import '../css/contact.css';
+import emailjs from 'emailjs-com';
+import {u_token} from "../config/config.js";
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+
+console.log(u_token);
 
 export default class Contact extends Component {
 
@@ -20,12 +24,14 @@ export default class Contact extends Component {
     this.handleLastNameChange = this.handleLastNameChange.bind(this);
     this.handleEmailAddressChange = this.handleEmailAddressChange.bind(this);
     this.handleMessageTextChange = this.handleMessageTextChange.bind(this);
+    this.sendEmail = this.sendEmail.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();  // this prevents the page from re-loading when the form is submitted
     if (this.state.firstName.length > 0 && this.state.lastName.length > 0 && validEmailRegex.test(this.state.emailAddress) && this.state.messageText.length > 0) {
       this.setState({ submittedForm: true });
+      this.sendEmail(this.state.messageText, this.state.firstName, this.state.lastName, this.state.emailAddress);
     }
     
     if (this.state.firstName.length < 1) {
@@ -39,6 +45,16 @@ export default class Contact extends Component {
     } else if (this.state.messageText.length < 1) {
       this.setState({errorText: "Please enter a message"});
     }
+  }
+
+  sendEmail(message, fname, lname, email) {
+    var template_params = {
+      "messageText": message,
+      "firstName": fname,
+      "lastName": lname,
+      "emailAddress": email
+    };
+    emailjs.send('default_service','form_submission', template_params, u_token);
   }
 
   handleFirstNameChange(event) {
@@ -86,7 +102,7 @@ export default class Contact extends Component {
           <div className="header-text">Billy Denham
           </div>
           <h6>
-            Photographer based in Philadelphia, PA
+            Photographer, Videographer, and Editor based in Philadelphia, PA
             <br/>
             <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
             <br/>

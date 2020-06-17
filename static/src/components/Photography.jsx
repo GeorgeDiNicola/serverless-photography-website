@@ -11,9 +11,6 @@ export default class Photography extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      showBullets: false,
-    };
     this.filterPhotos = this.filterPhotos.bind(this);
     this.shuffleList = this.shuffleList.bind(this);
   }
@@ -79,7 +76,7 @@ export default class Photography extends Component {
       return(
         <ImageGallery class="no-outline"
             items={images} 
-            showBullets={this.state.showBullets}
+            showBullets={false}
             showIndex={false}
             showThumbnails={true}
             lazyLoad={true}
