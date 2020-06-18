@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Gallery from 'react-grid-gallery';
+import "../css/photogrid.css";
+
 
 var listOfImages = [];
 var images = [];
@@ -39,7 +41,14 @@ export default class PhotoGrid extends Component {
   getPhotos() {
   	listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
     // create an object from the imported listOfImages
-    images = listOfImages.map(x => ({src: x, thumbnail: x}));
+    images = listOfImages.map(x => ({src: x, thumbnail: x, width: 4, height: 3}));
+    //this.shuffleList(images);
+  }
+
+  shuffleList(array) {
+    array.sort(function(a, b) {
+      return 0.5 - Math.random()
+    });
   }
 
   render(){
@@ -47,8 +56,15 @@ export default class PhotoGrid extends Component {
 	this.getPhotos();
 
     return(
-      <Gallery images={images}/>
+      <div className="gridContainer">
+      <Gallery 
+        images={images}
+        showLightboxThumbnails={true}
+        backdropClosesModal={true}
+        direction={"column"}
+      />
+      </div>
     );
   }
-  
+
  }

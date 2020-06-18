@@ -6,6 +6,7 @@ import Photography from './Photography.jsx'
 import Videography from './Videography.jsx'
 import Contact from './Contact.jsx'
 import PhotoGrid from './PhotoGrid.jsx';
+import GridGallery from './GridGallery.jsx';
 import NavBar from './navbar.jsx';
 
 const AppRouter = () => (
