@@ -53,7 +53,7 @@ export default class PhotoGrid extends Component {
         images={images}
         showLightboxThumbnails={true}
         backdropClosesModal={true}
-        margin={7}
+        margin={5}
       />
       </div>
     );
