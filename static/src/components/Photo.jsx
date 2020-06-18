@@ -26,7 +26,7 @@ export default class Photo extends Component {
              <img
              	onLoad={this.onImgLoad} 
              	src={src}
-             	width="800" 
+             	//width="800" 
 		    	alt=""
              />
            </div>
