@@ -12,7 +12,7 @@
 }
 
 .home-image1 {
-  background-image: url("../images/wild_life/3.jpg");
+  background-image: url("../images/wild_life/3_2905_1939.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -23,9 +23,9 @@
   margin-right: auto;
   transform: scale(1.1);
 }
-/*
+
 .home-image2 {
-  background-image: url("../images/nature/4.jpg");
+  background-image: url("../images/nature/25_2048_904.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -36,10 +36,10 @@
   margin-right: auto;
   transform: scale(1.1);
 }
-*/
+
 
 .home-image3 {
-  background-image: url("../images/wild_life/2.jpg");  
+  background-image: url("../images/wild_life/2_4777_3164.jpg");  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -52,7 +52,7 @@
 }
 
 .home-image4 {
-  background-image: url("../images/street/2.jpg");
+  background-image: url("../images/street/2_2048_1367.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -65,7 +65,7 @@
 }
 
 .home-image5 {
-  background-image: url("../images/nature/3.jpg");
+  background-image: url("../images/nature/3_4257_2820.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -78,7 +78,7 @@
 }
 
 .home-image6 {
-  background-image: url("../images/nature/17.jpg");
+  background-image: url("../images/nature/14_4185_2772.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -91,7 +91,7 @@
 }
 
 .home-image7 {
-  background-image: url("../images/wild_life/1.jpg");
+  background-image: url("../images/wild_life/1_3872_2592.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -104,7 +104,7 @@
 }
 
 .home-image8 {
-  background-image: url("../images/street/6.jpg");
+  background-image: url("../images/street/6_2048_1367.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

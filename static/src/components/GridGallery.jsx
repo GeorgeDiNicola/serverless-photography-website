@@ -25,9 +25,9 @@ export default class GridGallery extends Component {
     return r.keys().map(r);	
   }	
 
-  componentDidMount() {
+  componentWillMount() {
     //getPhotos() {
-    listOfImages = this.importAll(require.context('../images/dimPhotos/', true, /\.(png|jpe?g|svg)$/));
+    listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
     var index;
     for (index = 0; index < listOfImages.length; ++index) {
        var meta = this.getMeta(listOfImages[index]);
@@ -47,8 +47,6 @@ export default class GridGallery extends Component {
   }
 
   render(){
-
-    this.importAll(require.context('../images/street/', false, /\.(png|jpe?g|svg)$/));
 
     return(	
       //{this.getPhotos}
