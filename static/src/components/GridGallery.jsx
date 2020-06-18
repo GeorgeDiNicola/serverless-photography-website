@@ -9,7 +9,7 @@ export default class GridGallery extends Component {
 
   constructor(props) {
     super(props);
-    //this.getPhotos = this.getPhotos.bind(this);
+    this.handleClickPhoto= this.handleClickPhoto.bind(this);
   }
 
   getMeta(src){
@@ -17,15 +17,16 @@ export default class GridGallery extends Component {
     var res2 = res[0].split("_");
     var width = res2[1];
     var height = res2[2];
+    // create an object from the imported listOfImages
     var metaData = {src: src, width: width, height: height};
     return metaData;
   }
 
-   importAll(r) {	
+  importAll(r) {	
     return r.keys().map(r);	
   }	
 
-  componentWillMount() {
+  componentDidMount() {
     //getPhotos() {
     listOfImages = this.importAll(require.context('../images/', true, /\.(png|jpe?g|svg)$/));
     var index;
@@ -33,10 +34,6 @@ export default class GridGallery extends Component {
        var meta = this.getMeta(listOfImages[index]);
        images.push(meta);
     };
-    console.log(images);
-
-    // create an object from the imported listOfImages
-    //images = listOfImages.map(x => ({src: x, thumbnail: x, width: 4, height: 3}));
     this.shuffleList(images);
   }
 
@@ -44,6 +41,13 @@ export default class GridGallery extends Component {
     array.sort(function(a, b) {	
       return 0.5 - Math.random()	
     });	
+  }
+
+  handleClickPhoto(event, photo) {
+    console.log(photo.previous);
+    console.log(photo.photo.src);
+    console.log(photo.index);
+    console.log(photo.next);
   }
 
   render(){
@@ -54,6 +58,7 @@ export default class GridGallery extends Component {
       <Gallery 
         photos={images} 
         direction={"column"}
+        onClick={this.handleClickPhoto}
       />
       </React.Fragment>
     );	

@@ -46,13 +46,13 @@ export default class NavBar extends Component {
     this.detectBrowserChange()
 	
     return (
-      <nav class={this.parentNavClass}>
-            <ul class="navbar-nav navbar-expand-sm">
-              <li class={this.activeHomePage}>
-                <a class="nav-link" href="./">Home</a>
+      <nav className={this.parentNavClass}>
+            <ul className="navbar-nav navbar-expand-sm">
+              <li className={this.activeHomePage}>
+                <a className="nav-link" href="./">Home</a>
               </li>
-              <li class={this.activePhotoPage}>
-                <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>
+              <li className={this.activePhotoPage}>
+                <DropdownButton id="dropdown-item-button" className="nav-link" title="Photos" onSelect={this.handleSelect}>
                   <Dropdown.Item className="dropdown-item" href="./Photography#events">Events</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" href="./Photography#nature">Nature</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" href="./Photography#portraits">Portraits</Dropdown.Item>
@@ -63,11 +63,11 @@ export default class NavBar extends Component {
                   <Dropdown.Item className="dropdown-item" href="./Photography#all">All</Dropdown.Item>
                 </DropdownButton>
               </li>
-              <li class={this.activeVideoPage}>
-                <a class="nav-link" href="./Videography">Videos</a>
+              <li className={this.activeVideoPage}>
+                <a className="nav-link" href="./Videography">Videos</a>
               </li>
-              <li class={this.activeContactPage}>
-                <a class="nav-link" href="./Contact">Contact</a>
+              <li className={this.activeContactPage}>
+                <a className="nav-link" href="./Contact">Contact</a>
               </li>
             </ul>
       </nav>
