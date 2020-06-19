@@ -32,7 +32,7 @@ export default function GridGallery() {
               views={photos.map(x => ({
                 ...x,
                 srcset: x.srcSet,
-                caption: x.title
+                frameProps: {autoSize: true | true | 'width' | 'height'},
               }))}
             />
           </Modal>
