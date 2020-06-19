@@ -24,7 +24,11 @@ export default function GridGallery() {
 
   return (
       <React.Fragment>
-      <Gallery photos={photos} onClick={openLightbox} />
+      <Gallery 
+        direction={"column"} 
+        photos={photos} 
+        onClick={openLightbox} 
+      />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
@@ -33,6 +37,7 @@ export default function GridGallery() {
               views={
                 photos.map(x => ({
                 ...x,
+                srcset: x.srcSet,
                  }))
                 }
             />

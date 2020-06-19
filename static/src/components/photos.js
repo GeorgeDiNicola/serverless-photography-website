@@ -23,7 +23,7 @@ function getPhotos() {
        var meta = getMeta(listOfImages[index]);
        images.push(meta);
     };
-    //shuffleList(images);
+    shuffleList(images);
     return images;
   }
 
