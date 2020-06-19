@@ -88,8 +88,6 @@ export default class Contact extends Component {
     }
   }
 
-  //TODO: define a sendEmail method
-
 	render() {
 
 	  return (
@@ -102,7 +100,9 @@ export default class Contact extends Component {
           <div className="header-text">Billy Denham
           </div>
           <h6>
-            Photographer, Videographer, and Editor based in Philadelphia, PA
+            Photographer | Videographer | Editor 
+            <br/>
+            Philadelphia, PA
             <br/>
             <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
             <br/>
@@ -121,7 +121,7 @@ export default class Contact extends Component {
               For general or work inquiries, please fill out the form below
              </h6>
             <input 
-              class="name-text-box"
+              className="name-text-box"
               type="text" 
               id="fname" 
               name="firstname"
@@ -129,7 +129,8 @@ export default class Contact extends Component {
               placeholder="First name.."
               onInput={this.handleFirstNameChange}
             ></input>&nbsp;&nbsp;&nbsp;
-            <input class="name-text-box"
+            <input 
+              className="name-text-box"
               type="text" 
               id="lname" 
               name="lastname" 

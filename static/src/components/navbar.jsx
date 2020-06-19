@@ -20,7 +20,7 @@ export default class NavBar extends Component {
       this.activePhotoPage = this.activeVideoPage = this.activeContactPage ='nav-item';
       this.parentNavClass = "navbar navbar-expand"
     }
-    else if (currentWindow.includes("Photography")) {
+    else if (currentWindow.includes("Photography") || currentWindow.includes("All")) {
       this.activePhotoPage = 'nav-item activated-photo';
       this.activeHomePage = this.activeVideoPage = this.activeContactPage ='nav-item';
       this.parentNavClass = "navbar navbar-expand"
@@ -44,15 +44,16 @@ export default class NavBar extends Component {
 
   render() {
     this.detectBrowserChange()
-	
+  
     return (
       <nav class={this.parentNavClass}>
             <ul class="navbar-nav navbar-expand-sm">
-              <li class={this.activeHomePage}>
+              <li className={this.activeHomePage}>
                 <a class="nav-link" href="./">Home</a>
               </li>
-              <li class={this.activePhotoPage}>
+              <li className={this.activePhotoPage}>
                 <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>
+                  <Dropdown.Item className="dropdown-item" href="./All">All</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" href="./Photography#events">Events</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" href="./Photography#nature">Nature</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" href="./Photography#portraits">Portraits</Dropdown.Item>
@@ -60,13 +61,12 @@ export default class NavBar extends Component {
                   <Dropdown.Item className="dropdown-item" href="./Photography#street">Street</Dropdown.Item>
                   <Dropdown.Item className="dropdown-itemn" href="./Photography#weddings">Weddings</Dropdown.Item>
                   <Dropdown.Item className="dropdown-item" href="./Photography#wild_life">Wild Life</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="./Photography#all">All</Dropdown.Item>
                 </DropdownButton>
               </li>
-              <li class={this.activeVideoPage}>
+              <li className={this.activeVideoPage}>
                 <a class="nav-link" href="./Videography">Videos</a>
               </li>
-              <li class={this.activeContactPage}>
+              <li className={this.activeContactPage}>
                 <a class="nav-link" href="./Contact">Contact</a>
               </li>
             </ul>

@@ -14,12 +14,12 @@ var listOfImages = [
 					"home-image6",
           "logo-black",
           "home-image7",
-          "home-image8"
+          "home-image8",
 ];
 
 const Home = () => (
   
-  <Carousel interval="2500" pause={false}>
+  <Carousel interval="6000" pause={false}>
     {listOfImages.map((c, index) =>
       <Carousel.Item>
         <img
