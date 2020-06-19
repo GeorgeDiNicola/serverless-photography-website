@@ -1,11 +1,6 @@
 .container-gallery {
-  height: 80% !important;
-  z-index: 999;
-}
-
-#dropdown-item-button {
-  background-color: black;
-  border-color: white;
+  border: none !important;
+  outline: none !important;
 }
 
 .parentClass {
