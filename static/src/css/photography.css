@@ -8,6 +8,11 @@
   height: 100vh !important;
 }
 
+/* override the height of the image gallery slide to make the thumbnails at the bottom more visible*/
+.image-gallery-slide {
+  height: 80vh !important;
+}
+
 /* override the blue outline when focused in the react-image-gallery component */
 .image-gallery-slide:focus {
   outline: none !important;
