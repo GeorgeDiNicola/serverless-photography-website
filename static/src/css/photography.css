@@ -1,9 +1,14 @@
-.container {
-  position: relative;
-  display: inline-block;
+.container-gallery {
+  height: 60vh !important;
+  width: 80% !important;
 }
 
 #dropdown-item-button {
   background-color: black;
   border-color: white;
+}
+
+.parentClass {
+	height: 60vh;
+	display: flex;
 }
