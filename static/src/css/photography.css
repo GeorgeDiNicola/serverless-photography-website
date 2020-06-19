@@ -1,7 +1,15 @@
+/* override the default height on the clicked image in the react-images Carousel component */
 .react-images__track {
-	height: 99vh !important;
+  height: 99vh !important;
 }
 
+/* override the default height on the clicked image in the react-images Carousel component */
 .react-images__view-image {
-	height: 100vh !important;
+  height: 100vh !important;
+}
+
+/* override the blue outline when focused in the react-image-gallery component */
+.image-gallery-slide:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
