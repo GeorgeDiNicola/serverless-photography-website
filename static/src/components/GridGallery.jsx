@@ -1,6 +1,7 @@
 import React, { Component, useState, useCallback } from 'react';	
 import { render } from 'react-dom';	
 import Gallery from 'react-photo-gallery';
+import Modal from 'react-bootstrap/Modal'
 
 var listOfImages = [];	
 var images = [];	
@@ -9,6 +10,10 @@ export default class GridGallery extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      photoIndex: 0,
+      isOpen: false,
+    };
     this.handleClickPhoto= this.handleClickPhoto.bind(this);
   }
 
@@ -48,9 +53,12 @@ export default class GridGallery extends Component {
     console.log(photo.photo.src);
     console.log(photo.index);
     console.log(photo.next);
+    this.setState({ isOpen: true });
   }
 
   render(){
+
+    const { photoIndex, isOpen } = this.state;
 
     return(	
       //{this.getPhotos}
@@ -60,6 +68,11 @@ export default class GridGallery extends Component {
         direction={"column"}
         onClick={this.handleClickPhoto}
       />
+      <Modal show={true}>
+        <img
+          src="https://cdn.britannica.com/95/156695-131-FF89C9FA/oak-tree.jpg"
+        />
+      </Modal>
       </React.Fragment>
     );	
   }	
