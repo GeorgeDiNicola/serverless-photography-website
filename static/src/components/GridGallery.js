@@ -35,10 +35,8 @@ export default function GridGallery() {
                 ...x,
                  }))
                 }
-
             />
-          </Modal>
-          
+          </Modal>   
         ) : null}
       </ModalGateway>
       </React.Fragment>
