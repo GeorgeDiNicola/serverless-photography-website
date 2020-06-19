@@ -1,7 +1,6 @@
 import React, { Component, useState, useCallback } from 'react';	
 import { render } from 'react-dom';	
 import Gallery from 'react-photo-gallery';
-import { SRLWrapper } from "simple-react-lightbox";
 
 
 var listOfImages = [];	
@@ -64,15 +63,12 @@ export default class GridGallery extends Component {
 
     const { photoIndex, isOpen } = this.state;
 
-    return(	
-      //{this.getPhotos}
-        <SRLWrapper>
-          <Gallery 
-            photos={images} 
-            direction={"column"}
-            onClick={this.handleClickPhoto}
-          />
-        </SRLWrapper>
+    return(
+        <Gallery 
+          photos={images} 
+          direction={"column"}
+          onClick={this.handleClickPhoto}
+        />
     );	
   }	
 
