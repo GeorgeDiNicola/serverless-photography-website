@@ -1,10 +1,12 @@
 import React, { Component, useState, useCallback } from 'react';	
 import { render } from 'react-dom';	
 import Gallery from 'react-photo-gallery';
-import Modal from 'react-bootstrap/Modal'
+import { SRLWrapper } from "simple-react-lightbox";
+
 
 var listOfImages = [];	
 var images = [];	
+
 
 export default class GridGallery extends Component {	
 
@@ -13,6 +15,7 @@ export default class GridGallery extends Component {
     this.state = {
       photoIndex: 0,
       isOpen: false,
+      currentPhoto: "",
     };
     this.handleClickPhoto= this.handleClickPhoto.bind(this);
   }
@@ -54,6 +57,7 @@ export default class GridGallery extends Component {
     console.log(photo.index);
     console.log(photo.next);
     this.setState({ isOpen: true });
+    this.setState({ currentPhoto: photo.photo.src });
   }
 
   render(){
@@ -62,18 +66,13 @@ export default class GridGallery extends Component {
 
     return(	
       //{this.getPhotos}
-      <React.Fragment>
-      <Gallery 
-        photos={images} 
-        direction={"column"}
-        onClick={this.handleClickPhoto}
-      />
-      <Modal show={true}>
-        <img
-          src="https://cdn.britannica.com/95/156695-131-FF89C9FA/oak-tree.jpg"
-        />
-      </Modal>
-      </React.Fragment>
+        <SRLWrapper>
+          <Gallery 
+            photos={images} 
+            direction={"column"}
+            onClick={this.handleClickPhoto}
+          />
+        </SRLWrapper>
     );	
   }	
 

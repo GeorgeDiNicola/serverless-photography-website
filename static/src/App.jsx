@@ -5,6 +5,7 @@ import './App.css';
 import Loader from 'react-loader-spinner';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./css/loaders.css";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 
 export default class App extends Component {
@@ -20,7 +21,9 @@ export default class App extends Component {
    // set the component state asynchronously
     setTimeout(() => {
       this.setState({ component:
+        <SimpleReactLightbox>
         <AppRouter />
+        </SimpleReactLightbox>
       });
     }, 1000);  // ,5000); to show the spinner
   }
