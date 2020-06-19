@@ -2,6 +2,7 @@ import React, { Component, useState, useCallback } from 'react';
 import { render } from 'react-dom';	
 import Gallery from 'react-photo-gallery';
 import Carousel, { Modal, ModalGateway } from "react-images";
+import "../css/photography.css";
 
 import { photos } from "./photos";
 
@@ -21,24 +22,25 @@ export default function GridGallery() {
     setViewerIsOpen(false);
   };
 
-    return (
-    <div>
+  return (
+      <React.Fragment>
       <Gallery photos={photos} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
+              frameProps={{autoSize: true | true | 'width' | 'height'}}
               views={photos.map(x => ({
                 ...x,
                 srcset: x.srcSet,
-                frameProps: {autoSize: true | true | 'width' | 'height'},
               }))}
             />
           </Modal>
+          
         ) : null}
       </ModalGateway>
-    </div>
+      </React.Fragment>
   );
 
     

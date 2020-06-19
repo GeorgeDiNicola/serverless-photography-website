@@ -9,6 +9,7 @@
 
 .container {
   scroll-snap-type: y mandatory;
+  overflow-y: scroll;
   border-radius: 8px;
   height: 85vh;
   width: 100%;

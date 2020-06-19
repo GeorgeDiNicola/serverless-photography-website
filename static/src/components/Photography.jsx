@@ -62,7 +62,7 @@ export default class Photography extends Component {
             showThumbnails={true}
             lazyLoad={true}
             PlayButton={true}
-            thumbnailPosition="right"
+            thumbnailPosition="bottom"
           />
       );
   }

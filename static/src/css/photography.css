@@ -1,6 +1,6 @@
 .container-gallery {
-  height: 60vh !important;
-  width: 80% !important;
+  height: 80% !important;
+  z-index: 999;
 }
 
 #dropdown-item-button {
@@ -11,4 +11,8 @@
 .parentClass {
 	height: 60vh;
 	display: flex;
+}
+
+.size-carousel {
+	height: 100vh;
 }

@@ -102,7 +102,9 @@ export default class Contact extends Component {
           <div className="header-text">Billy Denham
           </div>
           <h6>
-            Photographer, Videographer, and Editor based in Philadelphia, PA
+            Photographer | Videographer | Editor 
+            <br/>
+            Philadelphia, PA
             <br/>
             <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
             <br/>
