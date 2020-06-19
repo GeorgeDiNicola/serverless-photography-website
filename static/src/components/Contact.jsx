@@ -88,8 +88,6 @@ export default class Contact extends Component {
     }
   }
 
-  //TODO: define a sendEmail method
-
 	render() {
 
 	  return (

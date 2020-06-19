@@ -62,6 +62,7 @@ a {
 
 #dropdown-item-button:focus {
   outline: none !important;
+  box-shadow: none !important;
 }
 
 .dropdown-item {
