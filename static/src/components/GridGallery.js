@@ -30,11 +30,12 @@ export default function GridGallery() {
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              frameProps={{autoSize: true | true | 'width' | 'height'}}
-              views={photos.map(x => ({
+              views={
+                photos.map(x => ({
                 ...x,
-                srcset: x.srcSet,
-              }))}
+                 }))
+                }
+
             />
           </Modal>
           
