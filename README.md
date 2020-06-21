@@ -1,19 +1,20 @@
 # serverless-photography-website
 
-The goal of this project is to create a sever-less static web application to host on AWS.
+The goal of this project is to create a severless static web application to host on AWS.
 
 # Technology Used:
 * React
 * Javascript
-* HTML
-* CSS
+* HTML5
+* CSS3
 * Webpack
 * Amazon Web Services (AWS)
 
 # Project Dependencies:
+* emailjs-com
 * react
 * react-bootstrap
-* react-router-dom
-* react-image-gallery
+* react-images
+* react-photo-gallery
 * react-player
-* emailjs-com
+* react-router-dom
