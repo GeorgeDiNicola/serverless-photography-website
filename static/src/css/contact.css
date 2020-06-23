@@ -205,7 +205,6 @@ textarea {
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  border-radius: 50%;
 }
 
 .fa:hover {
@@ -223,7 +222,7 @@ textarea {
 }
 
 .fa-linkedin {
-  background: #007bb5;
+  /*background: #007bb5;*/
   color: white;
 }
 
@@ -233,6 +232,6 @@ textarea {
 }
 
 .fa-instagram {
-  background: #E1306C;
+  /*background: #E1306C;*/
   color: white;
 }

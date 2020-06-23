@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, BrowserRouter} from 'react-router-dom';
+import {Route, Switch, Link, BrowserRouter} from 'react-router-dom';
 
 import Home from './Home.jsx'
 import Photography from './Photography.jsx'
@@ -14,12 +14,14 @@ const AppRouter = () => (
       <div>
       <NavBar />
       <div className="page-body">
+      <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/Home" component={Home}/>
         <Route exact path="/Photography" component={Photography}/>
         <Route exact path="/Videography" component={Videography}/>
         <Route exact path="/Contact" component={Contact}/>
         <Route exact path="/All" component={GridGallery}/>
+      </Switch>
       </div>
       </div>
     </BrowserRouter>

@@ -6,6 +6,8 @@ import Loader from 'react-loader-spinner';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "./css/loaders.css";
 
+import { createBrowserHistory } from 'history';
+
 
 export default class App extends Component {
 
