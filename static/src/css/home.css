@@ -3,12 +3,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+}
+@media screen and (max-width: 500px) {
+    .home-image1 {
+        background-image: url("../brand/branded_black.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 92.5vh;
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        transform: scale(1.1);
+    }
 }
 
 /* birds and guitar */
@@ -17,7 +31,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -28,9 +42,9 @@
     .home-image1 {
         background-image: url("../images/street/14_1367_2048.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -44,7 +58,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -55,9 +69,9 @@
     .home-image2 {
         background-image: url("../images/events/3_1367_2048.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -72,7 +86,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -83,9 +97,9 @@
     .home-image3 {
         background-image: url("../images/wild_life/6_2999_4528.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -100,7 +114,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -111,9 +125,9 @@
     .home-image4 {
         background-image: url("../images/weddings/3_4912_7360.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -128,7 +142,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -141,7 +155,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -155,7 +169,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -166,9 +180,9 @@
     .home-image6 {
         background-image: url("../images/portrait/1_1367_2048.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -182,7 +196,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -193,9 +207,9 @@
     .home-image7 {
         background-image: url("../images/street/8_2291_3422.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -209,7 +223,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 92vh;
+  height: 92.5vh;
   width: 100%;
   display: block;
   margin-left: auto;
@@ -220,9 +234,9 @@
     .home-image8 {
         background-image: url("../images/nature/21_4696_7036.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 92vh;
+        height: 92.5vh;
         width: 100%;
         display: block;
         margin-left: auto;
