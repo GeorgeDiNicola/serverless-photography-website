@@ -9,6 +9,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image1 {
@@ -22,6 +23,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -37,6 +39,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image1 {
@@ -50,6 +53,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -64,6 +68,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image2 {
@@ -77,6 +82,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -92,6 +98,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image3 {
@@ -105,6 +112,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -120,6 +128,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image4 {
@@ -133,6 +142,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -148,6 +158,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image5 {
@@ -161,6 +172,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -175,6 +187,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image6 {
@@ -188,6 +201,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -202,6 +216,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image7 {
@@ -215,6 +230,7 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }
 
@@ -229,6 +245,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: scale(1.1);
+  overflow: hidden; /* Hide scrollbars */
 }
 @media screen and (max-width: 500px) {
     .home-image8 {
@@ -242,5 +259,6 @@
         margin-left: auto;
         margin-right: auto;
         transform: scale(1.1);
+        overflow: hidden; /* Hide scrollbars */
     }
 }

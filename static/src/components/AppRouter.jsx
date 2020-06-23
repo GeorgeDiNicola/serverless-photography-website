@@ -14,14 +14,12 @@ const AppRouter = () => (
       <div>
       <NavBar />
       <div className="page-body">
-      <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/Home" component={Home}/>
-        <Route exact path="/Photography" component={Photography}/>
-        <Route exact path="/Videography" component={Videography}/>
-        <Route exact path="/Contact" component={Contact}/>
-        <Route exact path="/All" component={GridGallery}/>
-      </Switch>
+        <Route path="/Home" component={Home}/>
+        <Route path="/Photography" component={Photography}/>
+        <Route path="/Videography" component={Videography}/>
+        <Route path="/Contact" component={Contact}/>
+        <Route path="/All" component={GridGallery}/>
       </div>
       </div>
     </BrowserRouter>

@@ -2,18 +2,21 @@
 	height:100%;
 	margin: 0;
 	width: 100%;
+	overflow: hidden; /* Hide scrollbars */
 }
 
 .carousel {
 	height:100%;
 	margin: 0;
 	width: 100%;
+	overflow: hidden; /* Hide scrollbars */
 }
 
 .image-slide {
 	height: 100%;
 	width: 100%;
 	transition: background-image .3s ease-in-out;
+	overflow: hidden; /* Hide scrollbars */
 }
 
 .slide-arrow {

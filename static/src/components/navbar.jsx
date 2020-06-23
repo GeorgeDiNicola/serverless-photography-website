@@ -6,10 +6,6 @@ export default class NavBar extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      selectedPhotoFilter: "",  // set default filter
-    };
-    // class methods
     this.detectBrowserChange = this.detectBrowserChange.bind(this);
   }
   
@@ -49,25 +45,25 @@ export default class NavBar extends Component {
       <nav class={this.parentNavClass}>
             <ul class="navbar-nav navbar-expand-sm">
               <li className={this.activeHomePage}>
-                <a class="nav-link" href="./">Home</a>
+                <a class="nav-link" href="/">Home</a>
               </li>
               <li className={this.activePhotoPage}>
                 <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>
-                  <Dropdown.Item className="dropdown-item" href="./All">All</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="./Photography#events">Events</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="./Photography#nature">Nature</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="./Photography#portraits">Portraits</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="./Photography#still_life">Still Life</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="./Photography#street">Street</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-itemn" href="./Photography#weddings">Weddings</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="./Photography#wild_life">Wild Life</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="/All">All</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="/Photography#events">Events</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="/Photography#nature">Nature</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="/Photography#portraits">Portraits</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="/Photography#still_life">Still Life</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="/Photography#street">Street</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-itemn" href="/Photography#weddings">Weddings</Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" href="/Photography#wild_life">Wild Life</Dropdown.Item>
                 </DropdownButton>
               </li>
               <li className={this.activeVideoPage}>
-                <a class="nav-link" href="./Videography">Videos</a>
+                <a class="nav-link" href="/Videography">Videos</a>
               </li>
               <li className={this.activeContactPage}>
-                <a class="nav-link" href="./Contact">Contact</a>
+                <a class="nav-link" href="/Contact">Contact</a>
               </li>
             </ul>
       </nav>

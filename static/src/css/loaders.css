@@ -1,4 +1,5 @@
 .loader {
   text-align: center;
-  padding: 30vh
+  padding: 30vh;
+  overflow: hidden; /* Hide scrollbars */
 }
