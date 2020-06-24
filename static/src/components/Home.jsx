@@ -21,7 +21,6 @@ const Home = () => (
     {listOfImages.map((image, index) =>
       <Carousel.Item>
         <img className="carousel-photo"
-          //className={c}
           src={image}
           alt=""
          />
