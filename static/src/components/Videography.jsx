@@ -17,7 +17,6 @@ const Videography = () => (
 		    className='react-player'
 		    url={url_text}
 		    controls={true}
-		    width='100%'
 	        height='100%'
 		  />
 		</div>

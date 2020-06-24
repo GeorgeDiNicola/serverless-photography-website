@@ -34,7 +34,6 @@ export default class Home extends Component {
     this.state = {
       isDesktop: false //This is where I am having problems
     };
-
     this.updatePredicate = this.updatePredicate.bind(this);
   }
   componentDidMount() {
@@ -47,14 +46,12 @@ export default class Home extends Component {
   }
 
   updatePredicate() {
-    this.setState({ isDesktop: window.innerWidth > 600 });
+    this.setState({ isDesktop: window.innerWidth > 400 });
   }
 
   render() {
 
     const isDesktop = this.state.isDesktop;
-
-    console.log(this.state.isDesktop);
   
     return(
       <div>
