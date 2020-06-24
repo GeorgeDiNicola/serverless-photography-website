@@ -5,8 +5,6 @@ import {u_token} from "../config/config.js";
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
-console.log(u_token);
-
 export default class Contact extends Component {
 
   constructor(props) {
