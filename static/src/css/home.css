@@ -9,16 +9,3 @@
   overflow: hidden; /* Hide scrollbars */
   /* transform: scale(1.1); */
 }
-@media screen and (max-width: 500px) {
-    .carousel-photo {
-        max-width: 100%;
-        height: auto;
-        padding-top: 0;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		object-fit: contain;
-	    background-position: center center;
-		overflow: hidden; /* Hide scrollbars */
-    }
-}
