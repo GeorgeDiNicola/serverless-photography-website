@@ -130,9 +130,7 @@ textarea {
 }
 
 .footer {
-  flex: 0 0 50px;
   margin-top: auto;
-  padding-top: 3vh;
   text-align: center;
 }
 
@@ -199,12 +197,13 @@ textarea {
 
 /*--- social media button styling selectors --*/
 .fa {
-  padding: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   font-size: 24px;
-  width: 63px;
+  width: 40px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin: 3px 1px;
 }
 
 .fa:hover {

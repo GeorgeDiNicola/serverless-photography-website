@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Route, Switch, Link, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 
+/* Desktop components */
 import Home from './Home.jsx'
 import Photography from './Photography.jsx'
 import Videography from './Videography.jsx'

@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import AppRouter from './components/AppRouter.jsx';
+import MobileAppRouter from './components/MobileAppRouter.jsx';
 import './App.css';
-
-import Loader from 'react-loader-spinner';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import "./css/loaders.css";
-
-import { createBrowserHistory } from 'history';
 
 
 export default class App extends Component {
@@ -14,27 +9,35 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      component: null,
+      isDesktop: false //This is where I am having problems
     };
+    this.updatePredicate = this.updatePredicate.bind(this);
+  }
+  componentDidMount() {
+    this.updatePredicate();
+    window.addEventListener("resize", this.updatePredicate);
   }
 
-  componentDidMount() {
-   // set the component state asynchronously
-    setTimeout(() => {
-      this.setState({ component:
-        <AppRouter />
-      });
-    }, 1000);  // ,5000); to show the spinner
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updatePredicate);
+  }
+
+  updatePredicate() {
+    this.setState({ isDesktop: window.innerWidth > 425 });
   }
 
   render() {
 
-    return (
-      this.state.component || (
-        <div className="loader">
-          <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
-        </div>
-      )
-    );
+  	var isDesktop = this.state.isDesktop;
+
+  	return(
+  	  <div>
+  	    {isDesktop ? (
+           <AppRouter />
+  	  	  ) : (
+  	  	   <MobileAppRouter />
+  	     )}
+  	  </div>
+  	)
   }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactPlayer from "react-player";
 import "../css/video.css";
 
@@ -17,7 +17,6 @@ const Videography = () => (
 		    className='react-player'
 		    url={url_text}
 		    controls={true}
-		    width='100%'
 	        height='100%'
 		  />
 		</div>
