@@ -2,7 +2,6 @@ import React, { Component, useState, useCallback } from 'react';
 import { render } from 'react-dom';	
 import Gallery from 'react-photo-gallery';
 import Carousel, { Modal, ModalGateway } from "react-images";
-import LazyLoad from 'react-lazyload';
 import "../css/photography.css";
 
 import { photos } from "./photos";
@@ -24,8 +23,7 @@ export default function GridGallery() {
   };
 
   return (
-      <React.Fragment>
-      <LazyLoad>
+    <React.Fragment>
       <Gallery 
         direction={"column"} 
         photos={photos} 
@@ -46,7 +44,6 @@ export default function GridGallery() {
           </Modal>   
         ) : null}
       </ModalGateway>
-      </LazyLoad>
-      </React.Fragment>
+    </React.Fragment>
   );   
 }
