@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Switch, Link, BrowserRouter} from 'react-router-dom';
+import {Route, BrowserRouter} from 'react-router-dom';
 
 /* Mobile components */
 import MobileHome from './MobileHome.jsx'

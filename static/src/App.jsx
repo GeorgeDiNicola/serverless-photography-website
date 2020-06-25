@@ -23,7 +23,7 @@ export default class App extends Component {
   }
 
   updatePredicate() {
-    this.setState({ isDesktop: window.innerWidth > 350 });
+    this.setState({ isDesktop: window.innerWidth > 425 });
   }
 
   render() {
@@ -33,9 +33,9 @@ export default class App extends Component {
   	return(
   	  <div>
   	    {isDesktop ? (
-          <MobileAppRouter />
+           <AppRouter />
   	  	  ) : (
-  	  	  <AppRouter />
+  	  	   <MobileAppRouter />
   	     )}
   	  </div>
   	)

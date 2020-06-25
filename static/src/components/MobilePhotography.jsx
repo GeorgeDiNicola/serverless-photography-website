@@ -2,7 +2,6 @@ import React, { useEffect, useRef, Component } from 'react'
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import "../css/photography.css";
-import ReactDOM from "react-dom";
 
 
 var images = [];

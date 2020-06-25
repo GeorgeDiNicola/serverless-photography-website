@@ -6,6 +6,13 @@ function getMeta(src) {
     var res2 = res[0].split("_");
     var width = res2[1];
     var height = res2[2];
+    if (width > height) {
+      width = 4
+      height = 3
+    } else if (height > width) {
+      width = 3
+      height = 4
+    }
     // create an object from the imported listOfImages
     var metaData = {src: src, width: width, height: height};
     return metaData;

@@ -1,5 +1,4 @@
-import React, { Component, useState, useCallback } from 'react';	
-import { render } from 'react-dom';	
+import React, { useState, useCallback } from 'react';
 import Gallery from 'react-photo-gallery';
 import Carousel, { Modal, ModalGateway } from "react-images";
 import "../css/photography.css";
