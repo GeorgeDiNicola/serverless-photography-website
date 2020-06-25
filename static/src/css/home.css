@@ -9,3 +9,15 @@
   overflow: hidden; /* Hide scrollbars */
   /* transform: scale(1.1); */
 }
+
+.mobile-home-background {
+  background-image: url("../brand/branded_black_portrait.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 92vh;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /* Hide scrollbars */
+}
