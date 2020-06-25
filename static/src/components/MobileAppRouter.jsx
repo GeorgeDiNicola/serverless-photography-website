@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Route, Switch, Link, BrowserRouter} from 'react-router-dom';
 
-/* Desktop components */
-import Home from './Home.jsx'
+/* Mobile components */
+import MobileHome from './MobileHome.jsx'
 import Photography from './Photography.jsx'
 import Videography from './Videography.jsx'
 import Contact from './Contact.jsx'
@@ -15,8 +15,8 @@ const AppRouter = () => (
       <div>
       <NavBar />
       <div className="page-body">
-        <Route exact path="/" component={Home}/>
-        <Route path="/Home" component={Home}/>
+        <Route exact path="/" component={MobileHome}/>
+        <Route path="/Home" component={MobileHome}/>
         <Route path="/Photography" component={Photography}/>
         <Route path="/Videography" component={Videography}/>
         <Route path="/Contact" component={Contact}/>
