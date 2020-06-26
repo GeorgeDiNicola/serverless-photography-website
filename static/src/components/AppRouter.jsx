@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import {Route, BrowserRouter} from 'react-router-dom';
 
 /* Desktop components */
-import Home from './Home.jsx'
-import Photography from './Photography.jsx'
-import Videography from './Videography.jsx'
-import Contact from './Contact.jsx'
+import Home from './Home.jsx';
+import Photography from './Photography.jsx';
+import Videography from './Videography.jsx';
+import Contact from './Contact.jsx';
 import GridGallery from './GridGallery.js';
 import NavBar from './navbar.jsx';
+
+/*Mobile Components*/
+import MobilePhotography from './MobilePhotography.jsx';
 
 const AppRouter = () => (
 
@@ -17,7 +20,7 @@ const AppRouter = () => (
       <div className="page-body">
         <Route exact path="/" component={Home}/>
         <Route path="/Home" component={Home}/>
-        <Route path="/Photography" component={Photography}/>
+        <Route path="/Photography" component={MobilePhotography}/>
         <Route path="/Videography" component={Videography}/>
         <Route path="/Contact" component={Contact}/>
         <Route path="/All" component={GridGallery}/>
