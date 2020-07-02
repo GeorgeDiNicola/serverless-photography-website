@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../css/contact.css';
 import emailjs from 'emailjs-com';
 import {u_token} from "../config/config.js";
+import '../css/contact.css';
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
