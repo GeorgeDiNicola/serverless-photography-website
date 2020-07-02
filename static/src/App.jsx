@@ -23,7 +23,7 @@ export default class App extends Component {
   }
 
   updatePredicate() {
-    this.setState({ isDesktop: window.innerWidth > 425 });
+    this.setState({ isDesktop: window.innerWidth > 425 && window.innerWidth >= window.innerHeight});  // check size and orientation of the browser window
   }
 
   render() {

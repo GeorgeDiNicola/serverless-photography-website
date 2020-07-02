@@ -22,6 +22,7 @@ const MobileHome = () => (
     fade={true}
     indicators={false}
     touch={false}  // prevents accidental pausing on mobile devices
+    keyboard={false} // prevents accidental pausing on mobile devices
    >
     {homeImages.map((image, index) =>
       <Carousel.Item>
