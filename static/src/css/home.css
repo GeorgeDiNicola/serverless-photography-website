@@ -11,7 +11,8 @@
 }
 
 .mobile-carousel-photo {
-  height: 80vh;
+  width: 100%;
+  height: 91vh;
   margin-left: auto;
   margin-right: auto;
   display: block;

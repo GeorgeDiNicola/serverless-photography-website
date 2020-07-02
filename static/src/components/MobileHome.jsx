@@ -27,7 +27,7 @@ const MobileHome = () => (
     {homeImages.map((image, index) =>
       <Carousel.Item>
         <img 
-          className="carousel-photo"
+          className="mobile-carousel-photo"
           src={image}
           alt=""
         />
