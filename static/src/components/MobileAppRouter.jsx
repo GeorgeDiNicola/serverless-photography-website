@@ -6,7 +6,7 @@ import MobileHome from './MobileHome.jsx';
 import MobilePhotography from './MobilePhotography.jsx';
 import Videography from './Videography.jsx';
 import MobileContact from './MobileContact.jsx';
-import GridGallery from './GridGallery.js';
+import MobileGridGallery from './MobileGridGallery.js';
 import NavBar from './navbar.jsx';
 
 const AppRouter = () => (
@@ -20,7 +20,7 @@ const AppRouter = () => (
         <Route path="/Photography" component={MobilePhotography}/>
         <Route path="/Videography" component={Videography}/>
         <Route path="/Contact" component={MobileContact}/>
-        <Route path="/All" component={GridGallery}/>
+        <Route path="/All" component={MobileGridGallery}/>
       </div>
       </div>
     </BrowserRouter>
