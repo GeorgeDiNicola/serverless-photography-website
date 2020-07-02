@@ -6,18 +6,6 @@
   display: block;
   object-fit: cover;
   background-position: center center;
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden; /* Hide scrollbar */
   /* transform: scale(1.1); */
-}
-
-.mobile-home-background {
-  background-image: url("../brand/branded_black_portrait.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  height: 85vh;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden; /* Hide scrollbars */
 }

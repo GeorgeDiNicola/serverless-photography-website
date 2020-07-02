@@ -1,6 +1,6 @@
 import React from 'react';
-import "../css/home.css";
 import {Carousel} from 'react-bootstrap';
+import "../css/home.css";
 
 const homeImages = [
           require("../brand/branded_black_portrait.jpg"),
@@ -8,7 +8,7 @@ const homeImages = [
           require("../brand/branded_black_portrait.jpg"),
           require("../images/nature/10_1367_2048.jpg"),
           require("../brand/branded_black_portrait.jpg"),
-          require("../images/wild_life/6_2999_4528.jpg"),
+          require("../images/street/8_2291_3422.jpg"),
           require("../brand/branded_black_portrait.jpg"),
           require("../images/still_life/10_2686_4055.jpg"),
 ];
@@ -21,6 +21,7 @@ const MobileHome = () => (
     controls={false}
     fade={true}
     indicators={false}
+    touch={false}  // prevents accidental pausing on mobile devices
    >
     {homeImages.map((image, index) =>
       <Carousel.Item>
@@ -28,6 +29,7 @@ const MobileHome = () => (
           className="carousel-photo"
           src={image}
           alt=""
+          height="80%"
         />
       </Carousel.Item>
     )}

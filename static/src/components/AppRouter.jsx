@@ -11,6 +11,7 @@ import NavBar from './navbar.jsx';
 
 /*Mobile Components*/
 import MobilePhotography from './MobilePhotography.jsx';
+import MobileHome from './MobileHome.jsx';
 
 const AppRouter = () => (
 
@@ -20,7 +21,7 @@ const AppRouter = () => (
       <div className="page-body">
         <Route exact path="/" component={Home}/>
         <Route path="/Home" component={Home}/>
-        <Route path="/Photography" component={MobilePhotography}/>
+        <Route path="/Photography" component={Photography}/>
         <Route path="/Videography" component={Videography}/>
         <Route path="/Contact" component={Contact}/>
         <Route path="/All" component={GridGallery}/>
