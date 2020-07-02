@@ -89,14 +89,24 @@ export default function GridGallery() {
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
-            <Carousel
+            <Carousel  // TODO: FORMAT THIS FOR MOBILE!
               currentIndex={currentImage}
               views={
                 categorizedPhotos.map(x => ({
-                ...x,
-                srcset: x.srcSet,
+                  ...x,
+                  srcset: x.srcSet,
                  }))
-                }
+              }
+              styles={{
+                view: base => ({
+                ...base,
+                overflow: 'hidden',
+                height: "50vh !important",
+                backgroundColor: 'transparent',
+                display: 'block',
+                margin: 'auto',
+                }),
+              }}
             />
           </Modal>   
         ) : null}

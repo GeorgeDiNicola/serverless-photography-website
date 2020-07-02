@@ -9,6 +9,7 @@ import Contact from './Contact.jsx';
 import GridGallery from './GridGallery.js';
 import NavBar from './navbar.jsx';
 
+
 const AppRouter = () => (
 
 	  <BrowserRouter>
