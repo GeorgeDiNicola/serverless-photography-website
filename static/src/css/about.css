@@ -1,0 +1,23 @@
+.main-container {
+  padding-top: 2vh;
+  overflow-x: hidden;
+}
+
+.left-aligned-image {
+  display: inline-block;
+}
+
+.right-aligned-text {
+  color: white;
+  text-align: left;
+  display: inline-block;
+  width: 45%;
+}
+
+.portrait-image {
+
+}
+
+img {
+  float: left;
+}

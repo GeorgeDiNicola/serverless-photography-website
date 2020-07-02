@@ -16,6 +16,9 @@
 .activated-contact {
     background-size: 100% 2px, auto;
 }
+.activated-about {
+    background-size: 100% 2px, auto;
+}
 
 .nav-link {
   color: white !important;
