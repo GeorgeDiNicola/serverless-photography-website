@@ -1,69 +1,116 @@
-import React, { useEffect, useRef, Component } from 'react'
-import ImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css";
+import React, { useState, useCallback } from 'react';
+import Gallery from 'react-photo-gallery';
+import Carousel, { Modal, ModalGateway } from "react-images";
 import "../css/photography.css";
 
+export default function GridGallery() { 
 
-var images = [];
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  var listOfImages = [];  
+  var images = [];  
+  var categorizedPhotos = [];
 
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
 
-export default class Photography extends Component {
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
 
-  constructor(props) {
-    super(props);
-    this.filterPhotos = this.filterPhotos.bind(this);
+  const getMeta = (src) => {
+    src = src + '';
+    var res = src.split(".");
+    var res2 = res[0].split("_");
+    var width = res2[1];
+    var height = res2[2];
+    // create an object from the imported listOfImages
+    var metaData = {src: src, width: width, height: height};
+    return metaData;
   }
 
-  importAll(r) {
-    return r.keys().map(r);
+  const importAll = (r) => {
+    return r.keys().map(r); 
   }
 
-  filterPhotos(photoCategory) {
+  const filterPhotos = (photoCategory) => {
     // import the list based on what the user chose in the drop-down
     if (photoCategory.includes("events")) {
-      images = this.importAll(require.context('../images/events/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/events/', false, /\.(png|jpe?g|svg)$/));
     }
     else if (photoCategory.includes("nature")) {
-      images = this.importAll(require.context('../images/nature/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/nature/', false, /\.(png|jpe?g|svg)$/));
     }
     else if (photoCategory.includes("portrait")) {
-      images = this.importAll(require.context('../images/portrait/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/portrait/', false, /\.(png|jpe?g|svg)$/));
     }
     else if (photoCategory.includes("still_life")) {
-      images = this.importAll(require.context('../images/still_life/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/still_life/', false, /\.(png|jpe?g|svg)$/));
     }
     else if (photoCategory.includes("street")) {
-      images = this.importAll(require.context('../images/street/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/street/', false, /\.(png|jpe?g|svg)$/));
     }
     else if (photoCategory.includes("themed")) {
-      images = this.importAll(require.context('../images/themed/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/themed/', false, /\.(png|jpe?g|svg)$/));
     }
     else if (photoCategory.includes("weddings")) {
-      images = this.importAll(require.context('../images/weddings/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/weddings/', false, /\.(png|jpe?g|svg)$/));
     }
     else if (photoCategory.includes("wild_life")) {
-      images = this.importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
+      images = importAll(require.context('../images/wild_life/', false, /\.(png|jpe?g|svg)$/));
     }
     
-    // create an object from the imported listOfImages
-    images = images.map(x => ({original: x, thumbnail: x}));
+    return images;
+ } 
+
+ const getPhotos = () => {
+    var currentWindow = window.location.href;
+    console.log(currentWindow);
+    listOfImages = filterPhotos(currentWindow);
+    console.log('retrieved list of images');
+    var index;
+    for (index = 0; index < listOfImages.length; ++index) {
+       var meta = getMeta(listOfImages[index]);
+       categorizedPhotos.push(meta);
+    };
   }
 
-  render() {
-
-      var currentWindow = window.location.href;
-      this.filterPhotos(currentWindow);
-
-      return(
-          <ImageGallery 
-            items={images} 
-            showBullets={false}
-            showIndex={false}
-            lazyLoad={true}
-            PlayButton={true}
-            showThumbnails={true}
-            thumbnailPosition="bottom"
-          />
-      );
-  }
+  return (
+    <React.Fragment>
+      <Gallery 
+        direction={"column"} 
+        photos={categorizedPhotos} 
+        onClick={openLightbox}
+        onLoad={getPhotos()}
+      />
+      <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={closeLightbox}>
+            <Carousel  // TODO: FORMAT THIS FOR MOBILE!
+              currentIndex={currentImage}
+              views={
+                categorizedPhotos.map(x => ({
+                  ...x,
+                  srcset: x.srcSet,
+                 }))
+              }
+              styles={{
+                view: base => ({
+                ...base,
+                overflow: 'hidden',
+                height: "50vh !important",
+                backgroundColor: 'transparent',
+                display: 'block',
+                margin: 'auto',
+                }),
+              }}
+            />
+          </Modal>   
+        ) : null}
+      </ModalGateway>
+    </React.Fragment>
+  );   
 }
