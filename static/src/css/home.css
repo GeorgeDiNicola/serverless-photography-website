@@ -9,3 +9,13 @@
   overflow: hidden; /* Hide scrollbar */
   /* transform: scale(1.1); */
 }
+
+.mobile-carousel-photo {
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  object-fit: cover;
+  background-position: center center;
+  overflow: hidden; /* Hide scrollbar */
+}

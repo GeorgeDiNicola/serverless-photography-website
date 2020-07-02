@@ -8,7 +8,7 @@ const homeImages = [
           require("../brand/branded_black_portrait.jpg"),
           require("../images/nature/10_1367_2048.jpg"),
           require("../brand/branded_black_portrait.jpg"),
-          require("../images/street/8_2291_3422.jpg"),
+          require("../images/events/5_1367_2048.jpg"),
           require("../brand/branded_black_portrait.jpg"),
           require("../images/still_life/10_2686_4055.jpg"),
 ];
@@ -30,7 +30,6 @@ const MobileHome = () => (
           className="carousel-photo"
           src={image}
           alt=""
-          height="80%"
         />
       </Carousel.Item>
     )}

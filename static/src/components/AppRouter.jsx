@@ -9,10 +9,6 @@ import Contact from './Contact.jsx';
 import GridGallery from './GridGallery.js';
 import NavBar from './navbar.jsx';
 
-/*Mobile Components*/
-import MobilePhotography from './MobilePhotography.jsx';
-import MobileHome from './MobileHome.jsx';
-
 const AppRouter = () => (
 
 	  <BrowserRouter>
