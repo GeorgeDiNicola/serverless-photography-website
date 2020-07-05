@@ -11,19 +11,20 @@
   color: white;
   text-align: left;
   display: inline-block;
-  width: 30%;
+  width: 45%;
+  font-size: 1em;;
 }
 
 .portrait-image {
   float: left;
-  height: 800px;
+  width: 40%;
 }
 
 .about-text {
   color: white;
   text-align: left;
   font-family: 'Sans-Serif';
-  font-size: 3.5em;
+  font-size: 3em;
   padding-top: 3vh;
 }
 
