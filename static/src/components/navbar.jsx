@@ -16,6 +16,11 @@ export default class NavBar extends Component {
       this.activePhotoPage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
       this.parentNavClass = "navbar navbar-expand"
     }
+    else if (currentWindow.includes("All") || currentWindow.includes("All")) {
+      this.activePhotoPage = 'nav-item activated-photo';
+      this.activeHomePage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
+      this.parentNavClass = "navbar navbar-expand"
+    }
     else if (currentWindow.includes("About") || currentWindow.includes("All")) {
       this.activeAboutPage = 'nav-item activated-about';
       this.activeHomePage = this.activePhotoPage = this.activeVideoPage = this.activeContactPage ='nav-item';

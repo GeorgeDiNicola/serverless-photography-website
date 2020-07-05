@@ -11,9 +11,33 @@
   color: white;
   text-align: left;
   display: inline-block;
-  width: 45%;
+  width: 30%;
 }
 
 .portrait-image {
   float: left;
+  height: 800px;
+}
+
+.about-text {
+  color: white;
+  text-align: left;
+  font-family: 'Sans-Serif';
+  font-size: 3.5em;
+  padding-top: 3vh;
+}
+
+.w3-animate-bottom {
+  position:relative;
+  animation:animatebottom 1s
+}
+@keyframes animatebottom {
+  from {
+    bottom:-300px;
+    opacity:0
+  } 
+  to {
+    bottom:0;
+    opacity:1
+  }
 }
