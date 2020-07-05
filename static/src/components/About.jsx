@@ -7,7 +7,7 @@ const About = () => (
     <div className="left-aligned-image">
       <img 
         className="portrait-image"
-        src={require("../brand/image4.jpeg")}
+        src={require("../brand/portrait2.jpg")}
         height={800}
       ></img>
     <div className="right-aligned-text">
