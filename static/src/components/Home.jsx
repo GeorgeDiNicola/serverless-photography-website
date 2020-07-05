@@ -17,7 +17,7 @@ const homeImages = [
 
 const Home = () => (
   
-  <Carousel interval="5500" pause={false}>
+  <Carousel interval="4500" pause={false}>
     {homeImages.map((image, index) =>
       <Carousel.Item>
         <img 
