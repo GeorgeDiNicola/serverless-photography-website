@@ -4,7 +4,6 @@ import '../css/about.css';
 const About = () => (
   
   <div className="main-container w3-animate-bottom">
-    <div className="left-aligned-image">
       <img 
         className="portrait-image"
         src={require("../brand/billy.png")}
@@ -12,10 +11,15 @@ const About = () => (
       <div className="about-text">Billy Denham
       </div>
     <div className="right-aligned-text">
-      is an experienced content creator in the marketing and advertising industry. Skilled in photography, film production, as well as Adobe Lightroom, After Effects, and Premiere Pro. Strong media and communication professional with a Bachelor of Arts - BA focused in Directing and Film/Video Production from Temple University. 
-    </div>
+      is an experienced content creator in the marketing and advertising industry. Billy is currently a Content Creator at Milk Street Marketing, where he oversees, edits, recommends, and reviews video projects to deliver superior content to achieve clients’ expectations. His skillset includes photography, videography, video editing, film production, screenwriting, and lighting design.
+      <br/>
+      <br/>
+      <b>Temple University Graduate:</b> BA - Cinematography and Film/Video Production
     </div>
   </div>
 
 )
 export default About;
+
+//Lighting Design, Short Films, Lightroom, Adobe Premiere Pro, 
+//After Effects, Adobe Encore, Photography, Video Editing, Film Production
