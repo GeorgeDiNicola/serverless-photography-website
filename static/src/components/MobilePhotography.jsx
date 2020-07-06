@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import Gallery from 'react-photo-gallery';
-import Carousel, { Modal, ModalGateway } from "react-images";
 import "../css/photography.css";
 
 export default function GridGallery() { 
@@ -10,16 +9,6 @@ export default function GridGallery() {
   var listOfImages = [];  
   var images = [];  
   var categorizedPhotos = [];
-
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
-  }, []);
-
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
 
   const getMeta = (src) => {
     src = src + '';
@@ -70,7 +59,6 @@ export default function GridGallery() {
     var currentWindow = window.location.href;
     console.log(currentWindow);
     listOfImages = filterPhotos(currentWindow);
-    console.log('retrieved list of images');
     var index;
     for (index = 0; index < listOfImages.length; ++index) {
        var meta = getMeta(listOfImages[index]);
@@ -79,38 +67,10 @@ export default function GridGallery() {
   }
 
   return (
-    <React.Fragment>
       <Gallery 
         direction={"column"} 
         photos={categorizedPhotos} 
-        onClick={openLightbox}
         onLoad={getPhotos()}
       />
-      <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel  // TODO: FORMAT THIS FOR MOBILE!
-              currentIndex={currentImage}
-              views={
-                categorizedPhotos.map(x => ({
-                  ...x,
-                  srcset: x.srcSet,
-                 }))
-              }
-              styles={{
-                view: base => ({
-                ...base,
-                overflow: 'hidden',
-                height: "50vh !important",
-                backgroundColor: 'transparent',
-                display: 'block',
-                margin: 'auto',
-                }),
-              }}
-            />
-          </Modal>   
-        ) : null}
-      </ModalGateway>
-    </React.Fragment>
   );   
 }
