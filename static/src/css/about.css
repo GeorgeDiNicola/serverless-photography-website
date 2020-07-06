@@ -1,20 +1,21 @@
 .main-container {
-  padding-top: 2vh;
+  padding-top: 1.5vh;
   overflow-x: hidden;
 }
 
 .right-aligned-text {
   color: white;
   text-align: left;
-  display: inline-block;
-  width: 45%;
-  font-size: 1em;;
-  float: left;
+  font-size: 1em;
+  padding-right: 15%;
+  min-width: 45%;
 }
 
 .portrait-image {
   float: left;
-  width: 40%;
+  display: inline-block;
+  width: 45%;
+  max-width: 450px;
 }
 
 .about-text {
@@ -22,7 +23,7 @@
   text-align: left;
   font-family: 'Sans-Serif';
   font-size: 3em;
-  padding-top: 3.5vh;
+  padding-top: 6vh;
 }
 
 .w3-animate-bottom {
