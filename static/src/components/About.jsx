@@ -14,7 +14,9 @@ const About = () => (
       is an experienced photographer, videographer, and editor in the marketing and advertising industry. Billy is currently a Content Creator at Milk Street Marketing, where he oversees, edits, recommends, and reviews video projects to deliver superior content to achieve clients’ expectations. His skillset includes photography, videography, video editing, film production, screenwriting, and lighting design.
       <br/>
       <br/>
-      <b>Temple University Graduate:</b> BA - Cinematography and Film/Video Production
+      <b>Temple University Graduate:</b> 
+      <br/>
+      BA - Cinematography and Film/Video Production
     </div>
   </div>
 
