@@ -1,16 +1,16 @@
 /*--- text styling selectors ---*/
 h2 {
-  color: white;
+  color: #F5DEB3;
   text-align: center;
 }
 
 h6 {
-  color: white;
+  color: #F5DEB3;
 	text-align: center;
 }
 
 .header-text {
-  color: #D3D3D3;
+  color: #F5DEB3;
   text-align: center;
   font-family: 'Sans-Serif';
   font-size: 3.5em;
@@ -24,13 +24,13 @@ h6 {
 
 .footer-text {
   font-size: 0.8em;
-  color: #D3D3D3;
+  color: #F5DEB3;
   text-align: center;
 }
 
 /*--- form styling selectors ---*/
 input[type=text], select {
-  border: 1px solid white;
+  border: 1px solid #F5DEB3;
   border-radius: 4px; /* Rounded borders */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
@@ -73,7 +73,7 @@ input, select, textarea{
 }
 
 .name-text-box {
-  border: 1px solid white;
+  border: 1px solid #F5DEB3;
   border-radius: 4px; /* Rounded borders */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
@@ -84,18 +84,18 @@ input, select, textarea{
 }
 
 .email-text-box {
-  border: 1px solid white;
+  border: 1px solid #F5DEB3;
   border-radius: 4px; /* Rounded borders */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 1vh;
-  width: 35vw;
+  width: 40vw;
   max-width: 500px;
   min-width: 250px;
 }
 
 textarea {
-  border: 1px solid white;
+  border: 1px solid #F5DEB3;
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
@@ -134,7 +134,7 @@ textarea {
 
 .footer-mobile {
   text-align: center;
-  padding-top: 3%;
+  padding-top: 5%;
 }
 
 /*--- animation selectors ---*/
@@ -224,7 +224,7 @@ textarea {
 
 .fa-linkedin {
   /*background: #007bb5;*/
-  color: white;
+  color: #007bb5;
 }
 
 .fa-youtube {
@@ -234,5 +234,5 @@ textarea {
 
 .fa-instagram {
   /*background: #E1306C;*/
-  color: white;
+  color: #E1306C;
 }

@@ -1,14 +1,33 @@
 .main-container {
-  padding-top: 1.5vh;
   overflow-x: hidden;
 }
 
 .right-aligned-text {
-  color: #D3D3D3;
+  color: #F5DEB3;
   text-align: left;
   font-size: 1em;
   padding-right: 15%;
   min-width: 45%;
+}
+
+.center-aligned-text {
+  color: #F5DEB3;
+  display: block;
+  text-align: left;
+  font-size: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+}
+
+.center-aligned-text2 {
+  color: #F5DEB3;
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
 }
 
 .portrait-image {
@@ -18,12 +37,25 @@
   max-width: 450px;
 }
 
+.mobile-portrait-image {
+  display: inline-block;
+  width: 100%;
+
+}
+
 .about-text {
-  color: #D3D3D3;
+  color: #F5DEB3;
   text-align: left;
   font-family: 'Sans-Serif';
   font-size: 3em;
-  padding-top: 6vh;
+  padding-top: 4.5vh;
+}
+
+.mobile-about-text {
+  color: #F5DEB3;
+  text-align: center;
+  font-family: 'Sans-Serif';
+  font-size: 3em;
 }
 
 .w3-animate-bottom {

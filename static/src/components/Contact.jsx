@@ -102,8 +102,6 @@ export default class Contact extends Component {
             <br/>
             Philadelphia, PA
             <br/>
-            <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
-            <br/>
             <br/>
           </h6>
         </div>

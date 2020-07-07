@@ -8,7 +8,7 @@ import Videography from './Videography.jsx';
 import MobileContact from './MobileContact.jsx';
 import MobileGridGallery from './MobileGridGallery.js';
 import NavBar from './navbar.jsx';
-import About from './About.jsx';
+import MobileAbout from './MobileAbout.jsx';
 
 const AppRouter = () => (
 
@@ -18,7 +18,7 @@ const AppRouter = () => (
       <div className="page-body">
         <Route exact path="/" component={MobileHome}/>
         <Route path="/Home" component={MobileHome}/>
-        <Route path="/About" component={About}/>
+        <Route path="/About" component={MobileAbout}/>
         <Route path="/Photography" component={MobilePhotography}/>
         <Route path="/Videography" component={Videography}/>
         <Route path="/Contact" component={MobileContact}/>
