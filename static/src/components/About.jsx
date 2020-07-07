@@ -12,9 +12,9 @@ const About = () => (
       <div className="about-text">Billy Denham
       </div>
     <div className="right-aligned-text">
-      an experienced photographer, videographer, and editor in the marketing and advertising industry.
-      As a Content Creator at Milk Street Marketing, Billy oversees, edits, recommends, and reviews video projects to deliver superior content, consistently achieving clients’ expectations.
-      Along with a BA in Cinematography and Film/Video Production from Temple University, Billy's skillset includes film production, drone piloting, screenwriting, and lighting design.
+      An experienced photographer, videographer, and editor in the marketing and advertising industry with a Bachelor of Arts in Cinematography and Film/Video Production from Temple University. 
+      Billy’s skillset includes film production, drone piloting, screenwriting, and lighting design. 
+      Currently, Billy works as a Content Creator at Milk Street Marketing in Philadelphia where he recommends, oversees, edits, and reviews video projects to deliver superior content, consistently achieving clients’ expectations.
     </div>
   </div>
 
