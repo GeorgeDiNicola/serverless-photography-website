@@ -1,0 +1,73 @@
+.main-container {
+  overflow-x: hidden;
+}
+
+.right-aligned-text {
+  color: #F5DEB3;
+  text-align: left;
+  font-size: 1em;
+  padding-right: 15%;
+  min-width: 45%;
+}
+
+.center-aligned-text {
+  color: #F5DEB3;
+  display: block;
+  text-align: left;
+  font-size: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+}
+
+.center-aligned-text2 {
+  color: #F5DEB3;
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 95%;
+}
+
+.portrait-image {
+  float: left;
+  display: inline-block;
+  width: 45%;
+}
+
+.mobile-portrait-image {
+  display: inline-block;
+  width: 100%;
+}
+
+.about-text {
+  color: #F5DEB3;
+  text-align: left;
+  font-family: 'Sans-Serif';
+  font-weight: bolder;
+  font-size: 3em;
+  padding-top: 4.5vh;
+}
+
+.mobile-about-text {
+  color: #F5DEB3;
+  text-align: center;
+  font-family: 'Sans-Serif';
+  font-size: 3em;
+}
+
+.w3-animate-bottom {
+  position:relative;
+  animation:animatebottom 1s
+}
+@keyframes animatebottom {
+  from {
+    bottom:-300px;
+    opacity:0
+  } 
+  to {
+    bottom:0;
+    opacity:1
+  }
+}

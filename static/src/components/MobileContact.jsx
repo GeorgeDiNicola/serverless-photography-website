@@ -102,8 +102,6 @@ export default class Contact extends Component {
             <br/>
             Philadelphia, PA
             <br/>
-            <a href="mailto:williamdenham107@gmail.com">williamdenham107@gmail.com</a>
-            <br/>
             <br/>
           </h6>
         </div>
@@ -174,8 +172,8 @@ export default class Contact extends Component {
       <div className="footer-mobile">
         <div className="w3-animate-right">
           <span className="footer-text">
-            <a href="https://www.linkedin.com/in/william-denham-33724b180/" class="fa fa-linkedin" target="_blank"></a>
-            <a href="https://www.instagram.com/billy.denham/?hl=en" class="fa fa-instagram" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/william-denham-33724b180/" class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://www.instagram.com/billy.denham/?hl=en" class="fa fa-instagram" target="_blank" rel="noopener noreferrer"></a>
             <br/>
             Web Design & Development: George DiNicola 
           </span> 

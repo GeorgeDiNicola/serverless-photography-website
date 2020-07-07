@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Route, BrowserRouter} from 'react-router-dom';
 
 /* Desktop components */
 import Home from './Home.jsx';
+import About from './About.jsx';
 import Photography from './Photography.jsx';
 import Videography from './Videography.jsx';
 import Contact from './Contact.jsx';
@@ -18,6 +19,7 @@ const AppRouter = () => (
       <div className="page-body">
         <Route exact path="/" component={Home}/>
         <Route path="/Home" component={Home}/>
+        <Route path="/About" component={About}/>
         <Route path="/Photography" component={Photography}/>
         <Route path="/Videography" component={Videography}/>
         <Route path="/Contact" component={Contact}/>

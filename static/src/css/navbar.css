@@ -16,9 +16,12 @@
 .activated-contact {
     background-size: 100% 2px, auto;
 }
+.activated-about {
+    background-size: 100% 2px, auto;
+}
 
 .nav-link {
-  color: white !important;
+  color: #F5DEB3 !important;
   font-weight: bold;
 }
 
@@ -27,7 +30,7 @@ a.nav-link:hover {
 }
 
 li {
-  background-image: linear-gradient(white, white);
+  background-image: linear-gradient(#D3D3D3, #D3D3D3);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -49,10 +52,10 @@ a {
   background-position: center bottom;
   transition: all .3s ease-out;
   background-color: transparent;
-  color: white !important;
+  color: #F5DEB3 !important;
   font-weight: bold;
   border: none !important;
-  padding-top: 10%;
+  padding-top: 8.2% !important;
   outline: none !important;
 }
 
