@@ -1,11 +1,9 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import Gallery from 'react-photo-gallery';
 import "../css/photography.css";
 
 export default function GridGallery() { 
 
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
   var listOfImages = [];  
   var images = [];  
   var categorizedPhotos = [];
