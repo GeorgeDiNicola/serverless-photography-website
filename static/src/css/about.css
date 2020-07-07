@@ -40,13 +40,13 @@
 .mobile-portrait-image {
   display: inline-block;
   width: 100%;
-
 }
 
 .about-text {
   color: #F5DEB3;
   text-align: left;
   font-family: 'Sans-Serif';
+  font-weight: bolder;
   font-size: 3em;
   padding-top: 4.5vh;
 }

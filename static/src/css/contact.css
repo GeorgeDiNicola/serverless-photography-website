@@ -89,7 +89,7 @@ input, select, textarea{
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: black;
   padding: 1vh;
-  width: 40vw;
+  width: 36vw;
   max-width: 500px;
   min-width: 250px;
 }
