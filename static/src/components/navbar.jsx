@@ -14,41 +14,41 @@ export default class NavBar extends Component {
       this.activeHomePage = 'nav-item activated-home';
       this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
       this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar navbar-expand";
+      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
     }
     else if (currentWindow.includes("All") || currentWindow.includes("All")) {
       this.activePhotoPage = 'nav-item dropdown activated-photo';
       this.activeHomePage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand";
+      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
     }
     else if (currentWindow.includes("About") || currentWindow.includes("All")) {
       this.activeAboutPage = 'nav-item activated-about';
       this.activeHomePage = this.activeVideoPage = this.activeContactPage ='nav-item';
       this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar navbar-expand";
+      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
     }
     else if (currentWindow.includes("Photography") || currentWindow.includes("All")) {
       this.activePhotoPage = 'nav-item dropdown activated-photo';
       this.activeHomePage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand";
+      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
     }
     else if (currentWindow.includes("Videography")) {
       this.activeVideoPage = 'nav-item activated-video';
       this.activeHomePage = this.activeContactPage = this.activeAboutPage = 'nav-item';
       this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar fixed-top navbar-expand";
+      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black sticky-top";
     }
     else if (currentWindow.includes("Contact")) {
       this.activeContactPage = 'nav-item active activated-contact';
       this.activeHomePage = this.activeVideoPage = this.activeAboutPage = 'nav-item';
       this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar navbar-expand";
+      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
     }
     else {
       this.activeHomePage = 'nav-item activated-home';
       this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
       this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar navbar-expand";
+      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
     }
   }
 
@@ -57,7 +57,11 @@ export default class NavBar extends Component {
   
     return (
       <nav class={this.parentNavClass}>
-            <ul class="navbar-nav navbar-expand-sm">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li className={this.activeHomePage}>
                 <a class="nav-link" href="/">Home</a>
               </li>
@@ -87,6 +91,7 @@ export default class NavBar extends Component {
                 <a class="nav-link" href="/Contact">Contact</a>
               </li>
             </ul>
+        </div>
       </nav>
     );
   }
