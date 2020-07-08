@@ -13,38 +13,43 @@ export default class NavBar extends Component {
     var currentWindow = window.location.href;
     if (currentWindow.includes("Home")) {
       this.activeHomePage = 'nav-item activated-home';
-      this.activePhotoPage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand"
+      this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
+      this.activePhotoPage = 'nav-item dropdown';
+      this.parentNavClass = "navbar navbar-expand";
     }
     else if (currentWindow.includes("All") || currentWindow.includes("All")) {
-      this.activePhotoPage = 'nav-item activated-photo';
+      this.activePhotoPage = 'nav-item dropdown activated-photo';
       this.activeHomePage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand"
+      this.parentNavClass = "navbar navbar-expand";
     }
     else if (currentWindow.includes("About") || currentWindow.includes("All")) {
       this.activeAboutPage = 'nav-item activated-about';
-      this.activeHomePage = this.activePhotoPage = this.activeVideoPage = this.activeContactPage ='nav-item';
-      this.parentNavClass = "navbar navbar-expand"
+      this.activeHomePage = this.activeVideoPage = this.activeContactPage ='nav-item';
+      this.activePhotoPage = 'nav-item dropdown';
+      this.parentNavClass = "navbar navbar-expand";
     }
     else if (currentWindow.includes("Photography") || currentWindow.includes("All")) {
-      this.activePhotoPage = 'nav-item activated-photo';
+      this.activePhotoPage = 'nav-item dropdown activated-photo';
       this.activeHomePage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand"
+      this.parentNavClass = "navbar navbar-expand";
     }
     else if (currentWindow.includes("Videography")) {
       this.activeVideoPage = 'nav-item activated-video';
-      this.activeHomePage = this.activePhotoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar fixed-top navbar-expand"
+      this.activeHomePage = this.activeContactPage = this.activeAboutPage = 'nav-item';
+      this.activePhotoPage = 'nav-item dropdown';
+      this.parentNavClass = "navbar fixed-top navbar-expand";
     }
     else if (currentWindow.includes("Contact")) {
       this.activeContactPage = 'nav-item active activated-contact';
-      this.activeHomePage = this.activePhotoPage = this.activeVideoPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand"
+      this.activeHomePage = this.activeVideoPage = this.activeAboutPage = 'nav-item';
+      this.activePhotoPage = 'nav-item dropdown';
+      this.parentNavClass = "navbar navbar-expand";
     }
     else {
       this.activeHomePage = 'nav-item activated-home';
-      this.activePhotoPage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand"
+      this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
+      this.activePhotoPage = 'nav-item dropdown';
+      this.parentNavClass = "navbar navbar-expand";
     }
   }
 
@@ -60,17 +65,21 @@ export default class NavBar extends Component {
               <li className={this.activeAboutPage}>
                 <a class="nav-link" href="/About">About</a>
               </li>
-              <li className={this.activePhotoPage}>
-                <DropdownButton id="dropdown-item-button" class="nav-link" title="Photos" onSelect={this.handleSelect}>
-                  <Dropdown.Item className="dropdown-item" href="/All">All</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="/Photography#events">Events</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="/Photography#nature">Nature</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="/Photography#portraits">Portraits</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="/Photography#still_life">Still Life</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="/Photography#street">Street</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-itemn" href="/Photography#weddings">Weddings</Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item" href="/Photography#wild_life">Wild Life</Dropdown.Item>
-                </DropdownButton>
+              <li class={this.activePhotoPage}>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Photos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/All">All</a>
+                  {/*<div class="dropdown-divider"></div>*/}
+                  <a class="dropdown-item" href="/Photography#events">Events</a>
+                  <a class="dropdown-item" href="/Photography#nature">Nature</a>
+                  <a class="dropdown-item" href="/Photography#portraits">Portraits</a>
+                  <a class="dropdown-item" href="/Photography#still_life">Still Life</a>
+                  <a class="dropdown-item" href="/Photography#street">Street</a>
+                  <a class="dropdown-item" href="/Photography#weddings">Weddings</a>
+                  <a class="dropdown-item" href="/Photography#wild_life">Wild Life</a>
+                </div>
               </li>
               <li className={this.activeVideoPage}>
                 <a class="nav-link" href="/Videography">Videos</a>
