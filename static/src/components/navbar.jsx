@@ -76,7 +76,6 @@ export default class NavBar extends Component {
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="/All">All</a>
-                  {/*<div class="dropdown-divider"></div>*/}
                   <a class="dropdown-item" href="/Photography#events">Events</a>
                   <a class="dropdown-item" href="/Photography#nature">Nature</a>
                   <a class="dropdown-item" href="/Photography#portraits">Portraits</a>
