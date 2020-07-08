@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
 import '../css/navbar.css'
 
 export default class NavBar extends Component {
