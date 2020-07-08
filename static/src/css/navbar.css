@@ -69,11 +69,16 @@ a {
 }
 
 .dropdown-item {
-  background-image: linear-gradient(DarkGray, DarkGray);
+  background-image: linear-gradient(#F5DEB3, #F5DEB3);
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: all .2s ease-in;
   background-color: transparent;
+  border: none !important;
+  outline: none !important;
+}
+
+.dropdown-item:focus {
   border: none !important;
   outline: none !important;
 }
