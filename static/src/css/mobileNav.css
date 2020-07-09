@@ -1,0 +1,126 @@
+.navbar .navbar-nav {
+  margin: auto;
+  white-space: nowrap;
+  color: black;
+}
+
+.activated-home {
+    background-size: 100%, auto;
+}
+.activated-photo {
+    background-size: 100%, auto;
+}
+.activated-video {
+    background-size: 100%, auto;
+}
+.activated-contact {
+    background-size: 100%, auto;
+}
+.activated-about {
+    background-size: 100%, auto;
+}
+
+.nav-link {
+  color: #F5DEB3 !important;
+  font-weight: bold;
+}
+
+li {
+  background-image: linear-gradient(black, black);
+  background-size: 0 2px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
+}
+
+a {
+  background-image: linear-gradient(black, black);
+  background-size: 0 2px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
+}
+
+#dropdown-item-button {
+  background-image: linear-gradient(black, black);
+  background-size: 0 2px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
+  background-color: transparent;
+  color: #F5DEB3 !important;
+  font-weight: bold;
+  border: none !important;
+  padding-top: 8.2% !important;
+  outline: none !important;
+}
+
+#dropdown-item-button:hover {
+  background-size: 100% 2px, auto;
+}
+
+#dropdown-item-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.dropdown-item {
+  background-image: linear-gradient(#F5DEB3, #F5DEB3);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .2s ease-in;
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+}
+
+.dropdown-item:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+.dropdown-item:hover {
+  background-size: 100% 200px, auto;
+}
+
+.icon-bar {
+  width: 25px; 
+  height: 2px;
+  background-color: #B6B6B6;
+  display: block;
+  transition: all 0.2s;
+  margin-top: 5px;
+  outline: none !important;
+}
+ 
+.navbar-toggler {
+  border: none;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+ 
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+ 
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+ 
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+ 
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+ 
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
