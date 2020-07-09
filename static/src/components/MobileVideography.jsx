@@ -11,6 +11,7 @@ var listOfYoutubeLinks = [
 const MobileVideography = () => (
 
   <Carousel
+    interval={null}
     pause={false} 
     controls={false}
     fade={false}
@@ -20,12 +21,12 @@ const MobileVideography = () => (
    >
     {listOfYoutubeLinks.map(url_text => 
       <Carousel.Item>
-	    <ReactPlayer
-		  className='react-player'
-		  url={url_text}
-	      controls={true}
-		  width='100%'
-		/>
+  	    <ReactPlayer
+  		    className='react-player'
+  		    url={url_text}
+  	      controls={true}
+  		    width='100%'
+  		  />
       </Carousel.Item>
     )}
   </Carousel>

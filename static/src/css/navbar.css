@@ -38,7 +38,7 @@ li {
 }
 
 a {
-  background-image: linear-gradient(yellow, yellow);
+  background-image: linear-gradient(#F5DEB3, #F5DEB3);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -46,7 +46,7 @@ a {
 }
 
 #dropdown-item-button {
-  background-image: linear-gradient(yellow, yellow);
+  background-image: linear-gradient(#F5DEB3, yellow);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -94,11 +94,10 @@ a {
   display: block;
   transition: all 0.2s;
   margin-top: 5px;
-  outline: none !important;
 }
  
 .navbar-toggler {
-  border: none;
+  border: none !important;
   outline: none !important;
   background: transparent !important;
 }
