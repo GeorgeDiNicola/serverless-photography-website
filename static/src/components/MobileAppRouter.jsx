@@ -7,14 +7,14 @@ import MobilePhotography from './MobilePhotography.jsx';
 import Videography from './Videography.jsx';
 import MobileContact from './MobileContact.jsx';
 import MobileGridGallery from './MobileGridGallery.js';
-import NavBar from './navbar.jsx';
+import MobileNavBar from './MobileNavBar.jsx';
 import MobileAbout from './MobileAbout.jsx';
 
 const AppRouter = () => (
 
 	  <BrowserRouter>
       <div>
-      <NavBar />
+      <MobileNavBar />
       <div className="page-body">
         <Route exact path="/" component={MobileHome}/>
         <Route path="/Home" component={MobileHome}/>
