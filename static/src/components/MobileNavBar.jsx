@@ -10,44 +10,10 @@ export default class MobileNavBar extends Component {
   
   detectBrowserChange() {
     var currentWindow = window.location.href;
-    if (currentWindow.includes("Home")) {
-      this.activeHomePage = 'nav-item activated-home';
-      this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
-    }
-    else if (currentWindow.includes("All") || currentWindow.includes("All")) {
-      this.activePhotoPage = 'nav-item dropdown activated-photo';
-      this.activeHomePage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
-    }
-    else if (currentWindow.includes("About") || currentWindow.includes("All")) {
-      this.activeAboutPage = 'nav-item activated-about';
-      this.activeHomePage = this.activeVideoPage = this.activeContactPage ='nav-item';
-      this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
-    }
-    else if (currentWindow.includes("Photography") || currentWindow.includes("All")) {
-      this.activePhotoPage = 'nav-item dropdown activated-photo';
-      this.activeHomePage = this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
-    }
-    else if (currentWindow.includes("Videography")) {
-      this.activeVideoPage = 'nav-item activated-video';
-      this.activeHomePage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.activePhotoPage = 'nav-item dropdown';
+    if (currentWindow.includes("Videography")) {
       this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black sticky-top";
     }
-    else if (currentWindow.includes("Contact")) {
-      this.activeContactPage = 'nav-item active activated-contact';
-      this.activeHomePage = this.activeVideoPage = this.activeAboutPage = 'nav-item';
-      this.activePhotoPage = 'nav-item dropdown';
-      this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
-    }
     else {
-      this.activeHomePage = 'nav-item activated-home';
-      this.activeVideoPage = this.activeContactPage = this.activeAboutPage = 'nav-item';
-      this.activePhotoPage = 'nav-item dropdown';
       this.parentNavClass = "navbar navbar-expand-sm navbar-dark bg-black";
     }
   }
