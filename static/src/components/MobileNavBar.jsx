@@ -66,13 +66,13 @@ export default class MobileNavBar extends Component {
         </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
-              <li className={this.activeHomePage}>
+              <li className="nav-item">
                 <a class="nav-link" href="/">Home</a>
               </li>
-              <li className={this.activeAboutPage}>
+              <li className="nav-item">
                 <a class="nav-link" href="/About">About</a>
               </li>
-              <li class={this.activePhotoPage}>
+              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Photos
                 </a>
@@ -87,10 +87,10 @@ export default class MobileNavBar extends Component {
                   <a class="dropdown-item" href="/Photography#wild_life">Wild Life</a>
                 </div>
               </li>
-              <li className={this.activeVideoPage}>
+              <li className="nav-item">
                 <a class="nav-link" href="/Videography">Videos</a>
               </li>
-              <li className={this.activeContactPage}>
+              <li className="nav-item">
                 <a class="nav-link" href="/Contact">Contact</a>
               </li>
             </ul>

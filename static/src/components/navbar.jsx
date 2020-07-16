@@ -65,7 +65,7 @@ export default class NavBar extends Component {
           <span class="icon-bar bottom-bar"></span>       
         </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav desktop">
+            <ul class="navbar-nav">
               <li className={this.activeHomePage}>
                 <a class="nav-link" href="/">Home</a>
               </li>

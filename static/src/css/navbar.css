@@ -25,10 +25,6 @@
   font-weight: bold;
 }
 
-a.nav-link:hover {
-  background-size: 100% 2px, auto;
-}
-
 li {
   background-image: linear-gradient(#D3D3D3, #D3D3D3);
   background-size: 0 2px, auto;
@@ -43,6 +39,10 @@ a {
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: all .3s ease-out;
+}
+
+a.nav-link:hover {
+  background-size: 100% 2px, auto;
 }
 
 #dropdown-item-button {
