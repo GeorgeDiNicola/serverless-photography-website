@@ -15,6 +15,8 @@
   height: 750px;
   margin-left: auto;
   margin-right: auto;
+  top-padding: 0px !important;
+  margin-top: 0px !important;
   display: block;
   object-fit: contain;
   background-position: center center;

@@ -20,10 +20,10 @@ const MobileHome = () => (
   
   <React.Fragment>
   <Carousel
-    interval="4000" 
+    interval="4500" 
     pause={false} 
     controls={false}
-    fade={false}
+    fade={true}
     indicators={false}
     touch={false}  // prevents accidental pausing on mobile devices
     keyboard={false} // prevents accidental pausing on mobile devices
