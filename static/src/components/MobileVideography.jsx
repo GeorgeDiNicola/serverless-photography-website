@@ -10,6 +10,7 @@ var listOfYoutubeLinks = [
 
 const MobileVideography = () => (
 
+  <React.Fragment>
   <Carousel
     interval={null}
     pause={false} 
@@ -30,5 +31,8 @@ const MobileVideography = () => (
       </Carousel.Item>
     )}
   </Carousel>
+  <br/>
+  <br/>
+  </React.Fragment>
 )
 export default MobileVideography;
