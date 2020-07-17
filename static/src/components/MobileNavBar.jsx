@@ -23,7 +23,9 @@ export default class MobileNavBar extends Component {
   
     return (
       <nav class={this.parentNavClass}>
-        <a class="navbar-brand" href="/Home">
+        <a class="navbar-brand" href="/">
+          <img src={require("../brand/aperture_logo.png")} width="30" height="30" class="d-inline-block align-top" alt=""></img>
+          &nbsp;Billy Denham
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="icon-bar top-bar"></span>
