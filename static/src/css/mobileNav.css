@@ -5,19 +5,19 @@
 }
 
 .activated-home {
-    background-size: 100% 2px, auto;
+    background-size: 100%, auto;
 }
 .activated-photo {
-    background-size: 100% 2px, auto;
+    background-size: 100%, auto;
 }
 .activated-video {
-    background-size: 100% 2px, auto;
+    background-size: 100%, auto;
 }
 .activated-contact {
-    background-size: 100% 2px, auto;
+    background-size: 100%, auto;
 }
 .activated-about {
-    background-size: 100% 2px, auto;
+    background-size: 100%, auto;
 }
 
 .nav-link {
@@ -26,7 +26,7 @@
 }
 
 li {
-  background-image: linear-gradient(#D3D3D3, #D3D3D3);
+  background-image: linear-gradient(black, black);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -34,19 +34,15 @@ li {
 }
 
 a {
-  background-image: linear-gradient(#F5DEB3, #F5DEB3);
+  background-image: linear-gradient(black, black);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: all .3s ease-out;
 }
 
-a.nav-link:hover {
-  background-size: 100% 2px, auto;
-}
-
 #dropdown-item-button {
-  background-image: linear-gradient(#F5DEB3, yellow);
+  background-image: linear-gradient(black, black);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -94,10 +90,11 @@ a.nav-link:hover {
   display: block;
   transition: all 0.2s;
   margin-top: 5px;
+  outline: none !important;
 }
  
 .navbar-toggler {
-  border: none !important;
+  border: none;
   outline: none !important;
   background: transparent !important;
 }

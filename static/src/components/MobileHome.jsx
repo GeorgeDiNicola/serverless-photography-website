@@ -1,22 +1,26 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
+import MobileAbout from './MobileAbout.jsx';
+import MobileVideography from './MobileVideography.jsx';
+import MobileContact from './MobileContact.jsx';
 import "../css/home.css";
 
 const homeImages = [
-          require("../brand/branded_black_portrait.jpg"),
-          require("../images/street/14_1367_2048.jpg"),
-          require("../brand/branded_black_portrait.jpg"),
-          require("../images/nature/10_1367_2048.jpg"),
-          require("../brand/branded_black_portrait.jpg"),
-          require("../images/events/5_1367_2048.jpg"),
-          require("../brand/branded_black_portrait.jpg"),
-          require("../images/still_life/10_2686_4055.jpg"),
+          require("../images/wild_life/3_2905_1939.jpg"),
+          require("../images/nature/9_2048_1367.jpg"),
+          require("../images/wild_life/2_4777_3164.jpg"),
+          require("../images/street/2_2048_1367.jpg"),
+          require("../images/nature/3_4257_2820.jpg"),
+          require("../images/nature/14_4185_2772.jpg"),
+          require("../images/wild_life/1_3872_2592.jpg"),
+          require("../images/street/6_2048_1367.jpg"),
 ];
 
 const MobileHome = () => (
   
+  <React.Fragment>
   <Carousel
-    interval="2500" 
+    interval="4500" 
     pause={false} 
     controls={false}
     fade={true}
@@ -34,6 +38,9 @@ const MobileHome = () => (
       </Carousel.Item>
     )}
   </Carousel>
+  <br/>
+  <MobileAbout />
+  </React.Fragment>
 
 )
 export default MobileHome;
