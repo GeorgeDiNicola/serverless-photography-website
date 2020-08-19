@@ -2,6 +2,8 @@
 
 The goal of this project is to create a severless static web application to host on AWS.
 
+The website: https://billydenham.com
+
 # Technology Used:
 * React
 * Javascript
@@ -9,6 +11,7 @@ The goal of this project is to create a severless static web application to host
 * CSS3
 * Webpack
 * Amazon Web Services (AWS)
+**
 
 # Project Dependencies:
 * emailjs-com
