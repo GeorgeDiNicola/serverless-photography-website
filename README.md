@@ -1,6 +1,6 @@
 # serverless-photography-website
 
-The goal of this project is to create a severless static web application to host on AWS.
+The goal of this project was to create a severless static web application and host it on AWS.
 
 The website: https://billydenham.com
 
