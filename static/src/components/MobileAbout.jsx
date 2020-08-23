@@ -14,7 +14,7 @@ const About = () => (
     <img 
         className="mobile-portrait-image"
         alt=""
-        src={require("../brand/billy.png")}
+        src={require("../brand/billy_mobile.png")}
       ></img>
   </div>
 
